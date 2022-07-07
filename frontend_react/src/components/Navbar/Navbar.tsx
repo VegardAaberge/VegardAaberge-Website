@@ -1,13 +1,17 @@
 import React from "react";
+
+import { images } from "../../constants";
 import "./Navbar.scss";
 
 interface Props {}
 
 const Navbar: React.FC<Props> = () => {
   return (
-    <div>
-      <div>Navbar</div>
-    </div>
+    <nav>
+      <div>
+        <img src={images.logo} alt="logo" />
+      </div>
+    </nav>
   );
 };
 
