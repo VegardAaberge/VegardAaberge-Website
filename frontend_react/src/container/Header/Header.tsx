@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import "./Header.scss";
+import HeaderInfo from "./HeaderInfo/HeaderInfo";
+import HeaderImg from "./HeaderImg/HeaderImg";
+import HeaderCircles from "./HeaderCircles/HeaderCircles";
 
 const scaleVariants = {
   whileInView: {
@@ -20,58 +23,9 @@ interface Props {}
 const Header: React.FC<Props> = () => {
   return (
     <div id="home" className="app__header app__flex-center">
-      <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
-        className="app__header-info"
-      >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex-center">
-            <span>👋</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Miceal</h1>
-            </div>
-          </div>
-
-          <div className="tag-cmp app__flex-center">
-            <p className="p-text">App Developer</p>
-            <p className="p-text">Freelancer</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
-      >
-        <img src={images.profile} alt="profile_bg" />
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.circle}
-          alt="profile_bg"
-          className="overlay_circle"
-        />
-      </motion.div>
-
-      <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
-      >
-        {[images.flutter, images.redux, images.sass].map(
-          (circle: string, index) => (
-            <div
-              className="circle-cmp app__flex-center"
-              key={`circle-${index}`}
-            >
-              <img src={circle} alt="circle" />
-            </div>
-          )
-        )}
-      </motion.div>
+      <HeaderInfo />
+      <HeaderImg />
+      <HeaderCircles />
     </div>
   );
 };
