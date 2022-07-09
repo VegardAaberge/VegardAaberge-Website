@@ -24,7 +24,7 @@ const About: React.FC = () => {
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
-          <AboutCard about={about} index={index} />
+          <AboutCard about={about} key={about.title + index} />
         ))}
       </div>
     </div>
