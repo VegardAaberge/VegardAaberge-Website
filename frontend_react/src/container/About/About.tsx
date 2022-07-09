@@ -3,37 +3,26 @@ import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import "./About.scss";
+import { urlFor, client } from "../../client";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 interface AboutItem {
   title: string;
   description: string;
-  imageUrl: string;
+  imgUrl: SanityImageSource;
 }
 
-const abouts: AboutItem[] = [
-  {
-    title: "Android Development",
-    description: "I am a good web developer",
-    imageUrl: images.about01,
-  },
-  {
-    title: "Xamarin",
-    description: "I am a good web developer",
-    imageUrl: images.about02,
-  },
-  {
-    title: "Spring Boot",
-    description: "I am a good web developer",
-    imageUrl: images.about03,
-  },
-  {
-    title: "React",
-    description: "I am a good web developer",
-    imageUrl: images.about04,
-  },
-];
-
 const About: React.FC = () => {
+  const [abouts, setAbouts] = useState<AboutItem[]>([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
@@ -50,7 +39,7 @@ const About: React.FC = () => {
             className="app__profiles-item"
             key={about.title + index}
           >
-            <img src={about.imageUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl).url()} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
