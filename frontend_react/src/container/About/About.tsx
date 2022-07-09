@@ -37,20 +37,17 @@ const About: React.FC = () => {
   return (
     <>
       <h2 className="head-text">
-        I know that
-        <span>Good Design</span>
-        <br />
-        means
-        <span>Good business</span>
+        I know that <span>Good Apps</span>
+        <br /> means <span>Good business</span>
       </h2>
 
-      <div className="app_profiles">
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
-            className="app_profiles-item"
+            className="app__profiles-item"
             key={about.title + index}
           >
             <img src={about.imageUrl} alt={about.title} />
