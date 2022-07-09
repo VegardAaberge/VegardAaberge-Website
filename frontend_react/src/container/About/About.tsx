@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { images } from "../../constants";
 import "./About.scss";
+import { AppWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
@@ -53,4 +53,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");
