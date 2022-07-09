@@ -15,7 +15,7 @@ const NavigationDots: React.FC<Props> = ({ activeItem }) => {
         <a
           href={`#${item}`}
           key={item + index}
-          className="app_navigation-dot"
+          className="app__navigation-dot"
           style={activeItem === item ? { backgroundColor: "#313BAC" } : {}}
         />
       ))}

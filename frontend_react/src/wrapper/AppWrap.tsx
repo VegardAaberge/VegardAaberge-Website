@@ -6,7 +6,7 @@ import { NavigationDots, SocialMedia } from "../components";
 const AppWrap = (Component: React.FC, idName: string, className?: string) =>
   function HOC() {
     return (
-      <div id={idName} className={`app_container ${className}`}>
+      <div id={idName} className={`app__container ${className}`}>
         <SocialMedia />
 
         <div className="app__wrapper app__flex-center">
