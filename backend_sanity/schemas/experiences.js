@@ -1,18 +1,23 @@
-export default{
-    name:'experiences',
-    title:'Experiences',
-    type: 'document',
-    fields:[
+export default {
+  name: "experiences",
+  title: "Experiences",
+  type: "document",
+  fields: [
+    {
+      name: "year",
+      title: "Year",
+      type: "string",
+    },
+    {
+      name: "works",
+      title: "Works",
+      type: "array",
+      of: [
         {
-            name:'year',
-            title:'Year',
-            type:'string'
+          type: "reference",
+          to: [{ type: "workExperience" }],
         },
-        {
-            name:'works',
-            title:'Works',
-            type:'array',
-            of:[{ type:'workExperience'}]
-        },
-    ]
-}
+      ],
+    },
+  ],
+};
