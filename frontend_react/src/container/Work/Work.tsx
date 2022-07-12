@@ -27,9 +27,7 @@ const Work: React.FC = () => {
   const [filterWorks, setFilterWorks] = useState<WorkItem[]>([]);
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
-
-    client.fetch(query).then((data) => {
+    client.fetch(strings.QUERY_WORKS).then((data) => {
       works = data;
       setFilterWorks(data);
     });

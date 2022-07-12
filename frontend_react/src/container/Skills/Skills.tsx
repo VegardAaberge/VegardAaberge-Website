@@ -15,17 +15,13 @@ const Skills: React.FC = () => {
   const [skills, setSkills] = useState<SkillItem[]>([]);
 
   useEffect(() => {
-    const worksQuery = '*[_type == "workExperience"]';
-    const experienceQuery = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(worksQuery).then((data) => {
+    client.fetch(strings.QUERY_WORK_EXPERIENCE).then((data) => {
       setWorks(data);
     });
-    client.fetch(experienceQuery).then((data) => {
+    client.fetch(strings.QUERY_EXPERIENCES).then((data) => {
       setExperiences(data);
     });
-    client.fetch(skillsQuery).then((data) => {
+    client.fetch(strings.QUERY_SKILLS).then((data) => {
       setSkills(data);
     });
   }, []);

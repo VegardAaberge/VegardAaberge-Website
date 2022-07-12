@@ -13,13 +13,10 @@ const Testimonial: React.FC = () => {
   const [testimonials, setTestimonals] = useState<TestimonialItem[]>([]);
 
   useEffect(() => {
-    const brandsQuery = '*[_type == "brands"]';
-    const testimonalsQuery = '*[_type == "testimonials"]';
-
-    client.fetch(brandsQuery).then((data) => {
+    client.fetch(strings.QUERY_BRANDS).then((data) => {
       setBrands(data);
     });
-    client.fetch(testimonalsQuery).then((data) => {
+    client.fetch(strings.QUERY_TESTIMONIALS).then((data) => {
       setTestimonals(data);
     });
   }, []);

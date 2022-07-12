@@ -12,9 +12,7 @@ const About: React.FC = () => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
-
-    client.fetch(query).then((data) => {
+    client.fetch(strings.QUERY_ABOUT).then((data) => {
       setAbouts(data);
     });
   }, []);
