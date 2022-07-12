@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { ExperienceItem, SkillItem, WorkExperienceItem } from "./models";
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
@@ -50,9 +50,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default AppWrap(
-  Skills,
-  constants.ID_SKILLS,
-  true,
-  constants.CLASS_WHITE_BG
-);
+export default AppWrap(Skills, strings.ID_SKILLS, true, strings.CLASS_WHITE_BG);

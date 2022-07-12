@@ -1,2 +1,2 @@
 export { default as images } from "./images";
-export * as constants from "./constants";
+export * as strings from "./strings";

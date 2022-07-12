@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import { client } from "../../client";
 import { WorkItem } from "./WorkItem";
 import AppWrap from "../../wrapper/AppWrap";
@@ -72,9 +72,4 @@ const Work: React.FC = () => {
   );
 };
 
-export default AppWrap(
-  Work,
-  constants.ID_WORK,
-  true,
-  constants.CLASS_PRIMARY_BG
-);
+export default AppWrap(Work, strings.ID_WORK, true, strings.CLASS_PRIMARY_BG);

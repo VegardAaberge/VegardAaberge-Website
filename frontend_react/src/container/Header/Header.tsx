@@ -1,6 +1,6 @@
 import React from "react";
 
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import AppWrap from "../../wrapper/AppWrap";
 import HeaderInfo from "./HeaderInfo/HeaderInfo";
 import HeaderImg from "./HeaderImg/HeaderImg";
@@ -17,4 +17,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default AppWrap(Header, constants.ID_HOME, false);
+export default AppWrap(Header, strings.ID_HOME, false);

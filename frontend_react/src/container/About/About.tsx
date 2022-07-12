@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { client } from "../../client";
 import { AboutItem } from "./AboutItem";
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import AppWrap from "../../wrapper/AppWrap";
 import AboutHeader from "./AboutHeader/AboutHeader";
 import AboutCard from "./AboutCard/AboutCard";
@@ -32,9 +32,4 @@ const About: React.FC = () => {
   );
 };
 
-export default AppWrap(
-  About,
-  constants.ID_ABOUT,
-  true,
-  constants.CLASS_WHITE_BG
-);
+export default AppWrap(About, strings.ID_ABOUT, true, strings.CLASS_WHITE_BG);

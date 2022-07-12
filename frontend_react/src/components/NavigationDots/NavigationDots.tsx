@@ -1,6 +1,6 @@
 import React from "react";
 
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import "./NavigationDots.scss";
 
 interface Props {
@@ -8,12 +8,12 @@ interface Props {
 }
 
 const links = [
-  constants.ID_HOME,
-  constants.ID_ABOUT,
-  constants.ID_WORK,
-  constants.ID_SKILLS,
-  constants.ID_TESTIMONIALS,
-  constants.ID_CONTACT,
+  strings.ID_HOME,
+  strings.ID_ABOUT,
+  strings.ID_WORK,
+  strings.ID_SKILLS,
+  strings.ID_TESTIMONIALS,
+  strings.ID_CONTACT,
 ];
 
 const NavigationDots: React.FC<Props> = ({ activeItem }) => {

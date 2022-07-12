@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { BrandItem, TestimonialItem } from "./models";
-import { constants } from "../../constants/";
+import { strings } from "../../constants/";
 import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
 import "./Testimonial.scss";
@@ -39,7 +39,7 @@ const Testimonial: React.FC = () => {
 
 export default AppWrap(
   Testimonial,
-  constants.ID_TESTIMONIALS,
+  strings.ID_TESTIMONIALS,
   true,
-  constants.CLASS_PRIMARY_BG
+  strings.CLASS_PRIMARY_BG
 );
