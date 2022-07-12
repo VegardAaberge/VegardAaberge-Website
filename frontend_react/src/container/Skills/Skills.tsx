@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import { constants } from "../../constants/";
 import { client } from "../../client";
 import { ExperienceItem } from "./models/ExperienceItem";
 import { SkillItem } from "./models/SkillItem";
@@ -53,4 +54,9 @@ const Skills: React.FC<Props> = () => {
   );
 };
 
-export default AppWrap(Skills, "skills", true, "app__whitebg");
+export default AppWrap(
+  Skills,
+  constants.ID_SKILLS,
+  true,
+  constants.CLASS_WHITE_BG
+);
