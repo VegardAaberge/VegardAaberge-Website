@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import { ExperienceItem, SkillItem, WorkExperienceItem } from "./models";
 import { constants } from "../../constants/";
 import { client } from "../../client";
-import { ExperienceItem } from "./models/ExperienceItem";
-import { SkillItem } from "./models/SkillItem";
-import { WorkExperienceItem } from "./models/WorkExperienceItem";
 import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
 import "./Skills.scss";
 
-interface Props {}
-
-const Skills: React.FC<Props> = () => {
+const Skills: React.FC = () => {
   const [works, setWorks] = useState<WorkExperienceItem[]>([]);
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
   const [skills, setSkills] = useState<SkillItem[]>([]);

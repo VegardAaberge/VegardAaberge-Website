@@ -12,7 +12,7 @@ const links = [
   constants.ID_ABOUT,
   constants.ID_WORK,
   constants.ID_SKILLS,
-  constants.ID_TESTIMONALS,
+  constants.ID_TESTIMONIALS,
   constants.ID_CONTACT,
 ];
 

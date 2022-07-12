@@ -9,7 +9,6 @@ interface Props {
 
 const WorkExperience: React.FC<Props> = ({ work }) => {
   const [tooltip, setTooltip] = useState(false);
-  console.log(tooltip);
 
   return (
     <div
