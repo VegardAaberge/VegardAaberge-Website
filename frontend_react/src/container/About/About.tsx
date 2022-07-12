@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import "./About.scss";
-import { AppWrap } from "../../wrapper";
 import { client } from "../../client";
 import { AboutItem } from "./AboutItem";
+import AppWrap from "../../wrapper/AppWrap";
 import AboutHeader from "./AboutHeader/AboutHeader";
 import AboutCard from "./AboutCard/AboutCard";
+import "./About.scss";
 
 const About: React.FC = () => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);
@@ -31,4 +31,4 @@ const About: React.FC = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(About, "about", true, "app__whitebg");

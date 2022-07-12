@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { client } from "../../client";
-import "./Skills.scss";
 import { ExperienceItem } from "./models/ExperienceItem";
 import { SkillItem } from "./models/SkillItem";
 import { WorkExperienceItem } from "./models/WorkExperienceItem";
+import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
-import { AppWrap } from "../../wrapper";
+import "./Skills.scss";
 
 interface Props {}
 
@@ -53,4 +53,4 @@ const Skills: React.FC<Props> = () => {
   );
 };
 
-export default AppWrap(Skills, "skills");
+export default AppWrap(Skills, "skills", true, "app__whitebg");

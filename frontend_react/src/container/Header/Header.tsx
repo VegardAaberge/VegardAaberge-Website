@@ -1,10 +1,10 @@
 import React from "react";
 
-import { AppWrap } from "../../wrapper";
-import "./Header.scss";
+import AppWrap from "../../wrapper/AppWrap";
 import HeaderInfo from "./HeaderInfo/HeaderInfo";
 import HeaderImg from "./HeaderImg/HeaderImg";
 import HeaderCircles from "./HeaderCircles/HeaderCircles";
+import "./Header.scss";
 
 const Header: React.FC = () => {
   return (
@@ -16,4 +16,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, "home", false);

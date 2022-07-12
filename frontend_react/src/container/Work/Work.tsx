@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { AppWrap } from "../../wrapper";
 import { client } from "../../client";
 import { WorkItem } from "./WorkItem";
+import AppWrap from "../../wrapper/AppWrap";
 import WorkHeader from "./WorkHeader/WorkHeader";
 import WorkCard from "./WorkCard/WorkCard";
 import WorkFilter from "./WorkFilter/WorkFilter";
@@ -71,4 +71,4 @@ const Work: React.FC = () => {
   );
 };
 
-export default AppWrap(Work, "work");
+export default AppWrap(Work, "work", true, "app__primarybg");

@@ -1,25 +1,38 @@
 import React from "react";
-
 import "./AppWrap.scss";
-import { NavigationDots, SocialMedia } from "../components";
+import { motion } from "framer-motion";
+import AppWrapBody from "./AppWrapBody";
 
-const AppWrap = (Component: React.FC, idName: string, className?: string) =>
-  function HOC() {
-    return (
-      <div id={idName} className={`app__container ${className}`}>
-        <SocialMedia />
-
-        <div className="app__wrapper app__flex-center">
-          <Component />
-
-          <div className="copyright">
-            <p className="p-text">@2022 Vegard</p>
-            <p className="p-text">All rights reserved</p>
-          </div>
-        </div>
-        <NavigationDots activeItem={idName} />
-      </div>
-    );
+const AppWrap = (
+  Component: React.FC,
+  idName: string,
+  motionWrap: boolean,
+  className?: string
+) =>
+  function HOC(): JSX.Element {
+    if (motionWrap) {
+      return (
+        <motion.div
+          whileInView={{ y: [150, 50, 0], opacity: [0, 0, 1] }}
+          transition={{ duration: 0.5 }}
+          className={`app__${className} app__flex-center`}
+        >
+          <AppWrapBody
+            Component={Component}
+            idName={idName}
+            className={className}
+          />
+        </motion.div>
+      );
+    } else {
+      return (
+        <AppWrapBody
+          Component={Component}
+          idName={idName}
+          className={className}
+        />
+      );
+    }
   };
 
 export default AppWrap;

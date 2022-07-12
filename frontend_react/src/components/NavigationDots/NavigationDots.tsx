@@ -6,7 +6,7 @@ interface Props {
   activeItem: string;
 }
 
-const links = ["home", "about", "work", "skill", "testimonals", "contact"];
+const links = ["home", "about", "work", "skills", "testimonals", "contact"];
 
 const NavigationDots: React.FC<Props> = ({ activeItem }) => {
   return (
