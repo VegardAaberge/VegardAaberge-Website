@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { images } from "../../../constants";
-import "./HeaderImg.scss";
+import "./HomeImg.scss";
 
-const HeaderImg: React.FC = () => {
+const HomeImg: React.FC = () => {
   return (
     <motion.div
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
-      className="app__header-img"
+      className="app__home-img"
     >
       <img src={images.profile} alt="profile_bg" />
       <motion.img
@@ -23,4 +23,4 @@ const HeaderImg: React.FC = () => {
   );
 };
 
-export default HeaderImg;
+export default HomeImg;

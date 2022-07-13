@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { images } from "../../../constants";
-import "./HeaderCircles.scss";
+import "./HomeCircles.scss";
 
 const scaleVariants = {
   whileInView: {
@@ -15,12 +15,12 @@ const scaleVariants = {
   },
 };
 
-const HeaderCircles: React.FC = () => {
+const HomeCircles: React.FC = () => {
   return (
     <motion.div
       variants={scaleVariants}
       whileInView={scaleVariants.whileInView}
-      className="app__header-circles"
+      className="app__home-circles"
     >
       {[images.flutter, images.redux, images.sass].map(
         (circle: string, index) => (
@@ -33,4 +33,4 @@ const HeaderCircles: React.FC = () => {
   );
 };
 
-export default HeaderCircles;
+export default HomeCircles;
