@@ -15,11 +15,6 @@ const AppWrapBody: React.FC<Props> = ({ Component, idName, className }) => {
 
       <div className="app__wrapper app__flex-center">
         <Component />
-
-        <div className="copyright">
-          <p className="p-text">@2022 Vegard</p>
-          <p className="p-text">All rights reserved</p>
-        </div>
       </div>
       <NavigationDots activeItem={idName} />
     </div>
