@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { client } from "../../../client";
-import "./FooterForm.scss";
+import "./ContactForm.scss";
 
 interface FormData {
   name: string;
@@ -20,7 +20,7 @@ interface Props {
   handleFormSubmitted: (isSubmitted: boolean) => void;
 }
 
-const FooterForm: React.FC<Props> = ({ handleFormSubmitted }) => {
+const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -57,7 +57,7 @@ const FooterForm: React.FC<Props> = ({ handleFormSubmitted }) => {
   };
 
   return (
-    <div className="app__footer-form app__flex-center">
+    <div className="app__contact-form app__flex-center">
       <div className="app__flex-center">
         <input
           className="p-text"
@@ -95,4 +95,4 @@ const FooterForm: React.FC<Props> = ({ handleFormSubmitted }) => {
   );
 };
 
-export default FooterForm;
+export default ContactForm;

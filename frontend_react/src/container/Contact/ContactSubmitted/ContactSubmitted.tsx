@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {}
 
-const FooterSubmitted: React.FC<Props> = () => {
+const ContactSubmitted: React.FC<Props> = () => {
   return (
     <div>
       <h3 className="head-text">Thank you for getting in touch</h3>
@@ -10,4 +10,4 @@ const FooterSubmitted: React.FC<Props> = () => {
   );
 };
 
-export default FooterSubmitted;
+export default ContactSubmitted;

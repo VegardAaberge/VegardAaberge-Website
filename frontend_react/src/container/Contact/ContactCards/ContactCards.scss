@@ -1,4 +1,4 @@
-.app__footer-cards {
+.app__contact-cards {
   width: 60%;
   display: flex;
   justify-content: space-evenly;
@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   margin: 4rem 2rem 2rem;
 
-  .app__footer-card {
+  .app__contact-card {
     min-width: 290px;
     display: flex;
     flex-direction: row;
@@ -48,6 +48,6 @@
   }
 }
 
-.app__footer-cards .app__footer-card:last-child {
+.app__contact-cards .app__contact-card:last-child {
   background-color: #f2f7fb;
 }

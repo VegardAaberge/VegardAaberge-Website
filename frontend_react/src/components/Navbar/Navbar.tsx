@@ -1,12 +1,18 @@
 import React from "react";
 
-import { images } from "../../constants";
+import { images, strings } from "../../constants";
 import "./Navbar.scss";
 
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
-const links = ["home", "about", "work", "skill", "contact"];
+const links = [
+  strings.ID_HOME,
+  strings.ID_ABOUT,
+  strings.ID_WORK,
+  strings.ID_SKILLS,
+  strings.ID_CONTACT,
+];
 
 const Navbar: React.FC = () => {
   return (

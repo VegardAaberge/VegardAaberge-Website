@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 import { strings } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
-import "./Footer.scss";
-import FooterCards from "./FooterCards/FooterCards";
-import FooterForm from "./FooterForm/FooterForm";
-import FooterSubmitted from "./FooterSubmitted/FooterSubmitted";
+import "./Contact.scss";
+import ContactCards from "./ContactCards/ContactCards";
+import ContactForm from "./ContactForm/ContactForm";
+import ContactSubmitted from "./ContactSubmitted/ContactSubmitted";
 
-const Footer: React.FC = () => {
+const Contact: React.FC = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const handleFormSubmitted = (isSubmitted: boolean) => {
@@ -18,15 +18,20 @@ const Footer: React.FC = () => {
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
-      <FooterCards />
+      <ContactCards />
 
       {!isFormSubmitted ? (
-        <FooterForm handleFormSubmitted={handleFormSubmitted} />
+        <ContactForm handleFormSubmitted={handleFormSubmitted} />
       ) : (
-        <FooterSubmitted />
+        <ContactSubmitted />
       )}
     </>
   );
 };
 
-export default AppWrap(Footer, strings.ID_FOOTER, true, strings.CLASS_WHITE_BG);
+export default AppWrap(
+  Contact,
+  strings.ID_CONTACT,
+  true,
+  strings.CLASS_WHITE_BG
+);
