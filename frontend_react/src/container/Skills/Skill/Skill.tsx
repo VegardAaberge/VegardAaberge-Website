@@ -16,10 +16,7 @@ const Skill: React.FC<Props> = ({ skill }) => {
       transition={{ duration: 0.5 }}
       className="app__skills-item app__flex-center"
     >
-      <div
-        className="app__flex-center"
-        style={{ backgroundColor: skill.bgColor }}
-      >
+      <div className="app__flex-center">
         <img src={urlFor(skill.icon).url()} alt={skill.name} />
       </div>
       <p className="p-text">{skill.name}</p>

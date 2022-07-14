@@ -22,7 +22,7 @@ const HomeCircles: React.FC = () => {
       whileInView={scaleVariants.whileInView}
       className="app__home-circles"
     >
-      {[images.flutter, images.redux, images.sass].map(
+      {[images.xamarin, images.kotlin, images.typescript].map(
         (circle: string, index) => (
           <div className="circle-cmp app__flex-center" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
