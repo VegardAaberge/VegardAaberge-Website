@@ -9,13 +9,22 @@ import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
 import "./Skills.scss";
 
+export interface SelectedWorkItem {
+  item: WorkExperienceItem | null;
+  year?: string;
+}
+
 const Skills: React.FC = () => {
   const [works, setWorks] = useState<WorkExperienceItem[]>([]);
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
   const [skills, setSkills] = useState<SkillItem[]>([]);
+  const [selectedWorkItem, setSelectedWorkItem] = useState<SelectedWorkItem>({
+    item: null,
+  });
 
   useEffect(() => {
     client.fetch(strings.QUERY_WORK_EXPERIENCE).then((data) => {
+      console.log(data);
       setWorks(data);
     });
     client.fetch(strings.QUERY_EXPERIENCES).then((data) => {
@@ -29,10 +38,26 @@ const Skills: React.FC = () => {
     });
   }, []);
 
+  const containSkill = (
+    skill: SkillItem,
+    selectedWorkItem: SelectedWorkItem
+  ) => {
+    if (selectedWorkItem.item?.skillsUsed === undefined) return false;
+
+    return selectedWorkItem.item.skillsUsed.find(
+      (usedSkill) => usedSkill._ref === skill._id
+    );
+  };
+
+  const filteredSkills =
+    selectedWorkItem.item === null
+      ? skills
+      : skills.filter((s) => containSkill(s, selectedWorkItem));
+
   return (
     <div className="app__skills-container">
       <motion.div className="app__skills-list">
-        {skills.map((skill) => (
+        {filteredSkills.map((skill) => (
           <Skill key={skill.name} skill={skill} />
         ))}
       </motion.div>
@@ -42,6 +67,7 @@ const Skills: React.FC = () => {
             key={experience.year}
             experience={experience}
             works={works}
+            setSelectedWorkItem={setSelectedWorkItem}
           />
         ))}
       </motion.div>

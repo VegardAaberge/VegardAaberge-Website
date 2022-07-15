@@ -4,35 +4,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { WorkExperienceItem } from "../models/WorkExperienceItem";
 
 interface Props {
-  work: WorkExperienceItem;
+  workItem: WorkExperienceItem;
   workDescription: string;
-  setWorkDescription: React.Dispatch<React.SetStateAction<string>>;
+  setCurrentWorkItem: (workItem: WorkExperienceItem | null) => void;
 }
 
 const WorkExperience: React.FC<Props> = ({
-  work,
+  workItem: work,
   workDescription,
-  setWorkDescription,
+  setCurrentWorkItem,
 }) => {
-  let newDesc = "";
+  let newWorkItem: WorkExperienceItem | null = null;
 
   return (
     <div
       className="app__skills-exp-work-item"
       key={work.name}
-      onMouseEnter={() => {
-        newDesc = work.desc;
-        setTimeout(() => {
-          setWorkDescription(newDesc);
-        }, 300);
-      }}
-      onMouseLeave={() => {
-        newDesc = "";
-        setWorkDescription(newDesc);
-      }}
       onClick={() => {
-        newDesc = workDescription !== work.desc ? work.desc : "";
-        setWorkDescription(newDesc);
+        newWorkItem = workDescription !== work.desc ? work : null;
+        setCurrentWorkItem(newWorkItem);
       }}
     >
       <motion.div
