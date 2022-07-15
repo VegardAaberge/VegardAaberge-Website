@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  height: fit-content;
 
   @media screen and (max-width: 900px) {
     margin-top: 2rem;

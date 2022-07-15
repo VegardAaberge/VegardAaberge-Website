@@ -10,21 +10,21 @@ import WorkExperience from "./WorkExperience";
 interface Props {
   experience: ExperienceItem;
   works: WorkExperienceItem[];
+  selectedWorkItem: SelectedWorkItem;
   setSelectedWorkItem: React.Dispatch<React.SetStateAction<SelectedWorkItem>>;
 }
 
 const Experience: React.FC<Props> = ({
   experience,
   works,
+  selectedWorkItem,
   setSelectedWorkItem,
 }) => {
-  const [currentWorkItem, setCurrentWorkItem] =
-    useState<WorkExperienceItem | null>(null);
-
   const workItemSelected = (item: WorkExperienceItem | null) => {
-    setCurrentWorkItem(item);
     setSelectedWorkItem({ item: item, year: experience.year });
   };
+  const currentWorkItem =
+    selectedWorkItem.year === experience.year ? selectedWorkItem.item : null;
 
   return (
     <motion.div className="app__skills-exp-item">

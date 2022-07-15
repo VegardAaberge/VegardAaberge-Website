@@ -56,19 +56,21 @@ const Skills: React.FC = () => {
 
   return (
     <div className="app__skills-container">
-      <motion.div className="app__skills-list">
-        {filteredSkills.map((skill) => (
-          <Skill key={skill.name} skill={skill} />
-        ))}
-      </motion.div>
       <motion.div className="app__skills-exp">
         {experiences.map((experience) => (
           <Experience
             key={experience.year}
             experience={experience}
             works={works}
+            selectedWorkItem={selectedWorkItem}
             setSelectedWorkItem={setSelectedWorkItem}
           />
+        ))}
+      </motion.div>
+      <div className="app__skills-divider"></div>
+      <motion.div className="app__skills-list">
+        {filteredSkills.map((skill) => (
+          <Skill key={skill.name} skill={skill} />
         ))}
       </motion.div>
     </div>
