@@ -5,29 +5,36 @@ import { WorkExperienceItem } from "../models/WorkExperienceItem";
 
 interface Props {
   work: WorkExperienceItem;
+  workDescription: string;
+  setWorkDescription: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const WorkExperience: React.FC<Props> = ({ work }) => {
-  const [tooltip, setTooltip] = useState(false);
+const WorkExperience: React.FC<Props> = ({
+  work,
+  workDescription,
+  setWorkDescription,
+}) => {
+  let newDesc = "";
 
   return (
     <div
       className="app__skills-exp-work-item"
       key={work.name}
       onMouseEnter={() => {
-        setTooltip(true);
+        newDesc = work.desc;
+        setTimeout(() => {
+          setWorkDescription(newDesc);
+        }, 300);
       }}
       onMouseLeave={() => {
-        setTimeout(() => {
-          setTooltip(false);
-        }, 50);
+        newDesc = "";
+        setWorkDescription(newDesc);
+      }}
+      onClick={() => {
+        newDesc = workDescription !== work.desc ? work.desc : "";
+        setWorkDescription(newDesc);
       }}
     >
-      {tooltip && (
-        <div id={work.name} className="app__skill-exp-tooltip">
-          <p>{work.desc}</p>
-        </div>
-      )}
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}

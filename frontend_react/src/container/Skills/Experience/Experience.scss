@@ -28,7 +28,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 1rem;
   cursor: pointer;
 
   h4 {
@@ -44,6 +43,8 @@
 
 .app__skills-exp-work-item {
   position: relative;
+  cursor: default;
+  margin-bottom: 1rem;
 }
 
 .app__skills-exp-year {
@@ -60,7 +61,7 @@
 }
 
 .app__skill-exp-tooltip {
-  position: absolute;
+  position: relative;
   max-width: 300px;
   background-color: var(--white-color);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);

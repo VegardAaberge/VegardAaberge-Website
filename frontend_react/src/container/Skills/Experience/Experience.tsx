@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "./Experience.scss";
@@ -12,6 +12,8 @@ interface Props {
 }
 
 const Experience: React.FC<Props> = ({ experience, works }) => {
+  const [workDescription, setWorkDescription] = useState("");
+
   return (
     <motion.div className="app__skills-exp-item">
       <div className="app__skills-exp-year">
@@ -21,9 +23,21 @@ const Experience: React.FC<Props> = ({ experience, works }) => {
         {experience.works.map((workReference) => {
           const work = works.find((work) => work._id === workReference._ref);
           if (work !== undefined) {
-            return <WorkExperience work={work} key={work._id} />;
+            return (
+              <WorkExperience
+                work={work}
+                workDescription={workDescription}
+                setWorkDescription={setWorkDescription}
+                key={work._id}
+              />
+            );
           }
         })}
+        {workDescription.length > 0 && (
+          <div className="app__skill-exp-tooltip">
+            <p>{workDescription}</p>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );
