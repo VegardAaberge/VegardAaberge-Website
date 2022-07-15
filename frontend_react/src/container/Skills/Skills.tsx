@@ -19,6 +19,9 @@ const Skills: React.FC = () => {
       setWorks(data);
     });
     client.fetch(strings.QUERY_EXPERIENCES).then((data) => {
+      data.sort((a: ExperienceItem, b: ExperienceItem) => {
+        return parseInt(b.year, 0) - parseInt(a.year, 0);
+      });
       setExperiences(data);
     });
     client.fetch(strings.QUERY_SKILLS).then((data) => {
