@@ -1,11 +1,15 @@
 import React from "react";
+import "./AboutHeader.scss";
 
 const AboutHeader: React.FC = () => {
   return (
-    <h2 className="head-text">
-      I know that <span>Good Apps</span>
-      <br /> means <span>Good business</span>
-    </h2>
+    <div className="home-heading-container">
+      <h2 className="home-text section-Heading">About Me</h2>
+      <span className="home-text1 section-Text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero. Sed cursus ante dapibus diam.
+      </span>
+    </div>
   );
 };
 
