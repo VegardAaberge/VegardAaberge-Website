@@ -19,14 +19,12 @@ const About = () => {
   }, []);
 
   return (
-    <div className="home-container">
-      <div id="features" className="home-features">
-        <AboutHeader />
-        <div className="home-cards-container">
-          {abouts.map((about, index) => (
-            <AboutCard about={about} key={about.title + index} />
-          ))}
-        </div>
+    <div className="app__about app__about-features">
+      <AboutHeader />
+      <div className="app__about-cards">
+        {abouts.map((about, index) => (
+          <AboutCard about={about} key={about.title + index} />
+        ))}
       </div>
     </div>
   );

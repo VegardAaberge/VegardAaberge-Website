@@ -9,14 +9,14 @@ interface Props {
 
 const AboutCard: React.FC<Props> = ({ about }) => {
   return (
-    <div className="home-feature-card">
+    <div className="app__about-card">
       <img
         alt={about.title}
         src={urlFor(about.imgUrl).url()}
-        className="home-image"
+        className="app__about-card-image"
       />
-      <span className="home-heading card-Heading">{about.title}</span>
-      <span className="home-text2 card-Text">{about.description}</span>
+      <span className="app__about-card-title">{about.title}</span>
+      <span className="app__about-card-description">{about.description}</span>
     </div>
   );
 };
