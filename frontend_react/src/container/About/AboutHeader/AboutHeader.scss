@@ -1,0 +1,16 @@
+.home-heading-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-fiveunits);
+  flex-direction: column;
+}
+
+.home-text {
+  text-align: center;
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.home-text1 {
+  color: var(--dl-color-gray-500);
+  text-align: center;
+}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 
 import { client } from "../../client";
 import { AboutItem } from "./AboutItem";
@@ -7,7 +6,7 @@ import { strings } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
 import AboutHeader from "./AboutHeader/AboutHeader";
 import AboutCard from "./AboutCard/AboutCard";
-import "./About.css";
+import "./About.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);
