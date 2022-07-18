@@ -6,8 +6,17 @@ const AboutHeader: React.FC = () => {
     <div className="app__about-header">
       <h2 className="app__about-header-title">About Me</h2>
       <span className="app__about-header-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-        odio. Praesent libero. Sed cursus ante dapibus diam.
+        I am a software developer with professional experience since 2015. I did
+        a mechatronics degree in New Zealand where I learned how to combine
+        programming with engineering.
+      </span>
+      <br />
+      <span className="app__about-header-content">
+        After the degree I moved back to Norway and did a freelance project for
+        Lundin before I got a job at Unizite where I provided support for
+        clients, developed tools and created the app used in Unizite to manage
+        projects. In 2018 I moved to China as she wanted to setup a busieness in
+        China and kept working for Unizite remotely.
       </span>
     </div>
   );
