@@ -1,20 +1,18 @@
 import React from "react";
 
-import { strings } from "../../constants";
-import AppWrap from "../../wrapper/AppWrap";
-import HomeInfo from "./HomeInfo/HomeInfo";
-import HomeImg from "./HomeImg/HomeImg";
-import HomeCircles from "./HomeCircles/HomeCircles";
 import "./Home.scss";
+import HomeImg from "./HomeImg/HomeImg";
+import HomeInfo from "./HomeInfo/HomeInfo";
 
-const Home: React.FC = () => {
+interface Props {}
+
+const Home: React.FC<Props> = () => {
   return (
-    <div className="app__home app__flex-center">
+    <div className="app__home-wrapper">
       <HomeInfo />
       <HomeImg />
-      <HomeCircles />
     </div>
   );
 };
 
-export default AppWrap(Home, strings.ID_HOME, false);
+export default Home;

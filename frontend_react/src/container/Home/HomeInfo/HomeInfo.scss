@@ -1,57 +1,71 @@
-.app__home-info {
-  flex: 0.65;
+.app__home-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__home-left-wrapper {
+  padding: 50px;
+  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.app__home-intro {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.app__home-name {
+  font-size: 60px;
+}
+
+.app__home-title {
+  height: 50px;
+  overflow: hidden;
+}
+
+.app__home-title-wrapper {
   height: 100%;
-  margin: 0 2rem;
+  animation: move 10s ease-in-out infinite alternate;
+}
 
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-    margin-right: 0rem;
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.app__home-title-item {
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #59b256;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .app__home-left-wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
   }
 
-  .app__home-badge {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-
-    .badge-cmp,
-    .tag-cmp {
-      padding: 1rem 2rem;
-      border: var(--white-color);
-      border-radius: 15px;
-      flex-direction: row;
-      width: auto;
-
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .tag-cmp {
-      flex-direction: column;
-      margin-top: 3rem;
-
-      p {
-        width: 100%;
-        text-transform: uppercase;
-        text-align: right;
-      }
-    }
-
-    span {
-      font-size: 2.5rem;
-
-      @media screen and (min-width: 1600px) {
-        font-size: 5rem;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    justify-content: flex-start;
-    align-items: flex-start;
+  .app__home-desc {
+    display: none;
   }
 }
