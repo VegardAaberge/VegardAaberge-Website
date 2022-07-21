@@ -1,6 +1,10 @@
 .app__home-wrapper {
   display: flex;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .app__home-left {
@@ -9,10 +13,4 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-@media screen and (max-width: 480px) {
-  .app__home-wrapper {
-    flex-direction: column;
-  }
 }
