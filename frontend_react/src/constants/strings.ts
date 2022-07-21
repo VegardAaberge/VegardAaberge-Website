@@ -15,3 +15,11 @@ export const QUERY_EXPERIENCES = '*[_type == "experiences"]';
 export const QUERY_SKILLS = '*[_type == "skills"]';
 export const QUERY_BRANDS = '*[_type == "brands"]';
 export const QUERY_TESTIMONIALS = '*[_type == "testimonials"]';
+
+export const ERROR_FORM_NAME = "Name cannot be empty";
+export const ERROR_FORM_EMAIL = "Email is not valid";
+export const ERROR_FORM_MESSAGE = "Message cannot be empty";
+
+export const REGEX_EMAIL = new RegExp(
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+);

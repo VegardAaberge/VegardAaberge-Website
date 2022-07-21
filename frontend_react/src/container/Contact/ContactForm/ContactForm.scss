@@ -3,9 +3,13 @@
   flex-direction: column;
   margin: 1rem 2rem;
 
+  p {
+    width: 100%;
+  }
+
   div {
     width: 100%;
-    margin: 0.75rem 0;
+    margin: 1.5rem 0 0 0;
     border-radius: 10px;
     cursor: pointer;
     background-color: var(--primary-color);
@@ -40,7 +44,7 @@
     font-weight: 500;
     color: var(--white-color);
     outline: none;
-    margin: 2rem 0 0 0;
+    margin: 2.75rem 0 0 0;
     font-family: var(--font-base);
     cursor: pointer;
   }
