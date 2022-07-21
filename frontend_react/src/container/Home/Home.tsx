@@ -21,4 +21,4 @@ const Home: React.FC<Props> = () => {
   );
 };
 
-export default AppWrap(Home, strings.ID_HOME, true, strings.CLASS_PRIMARY_BG);
+export default AppWrap(Home, strings.ID_HOME, false, strings.CLASS_PRIMARY_BG);
