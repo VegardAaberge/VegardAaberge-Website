@@ -12,24 +12,21 @@
 }
 
 .app__about-card-image {
-  width: 150px;
+  width: 120px;
   object-fit: cover;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1600px) {
+    width: 150px;
+  }
 }
 
 .app__about-card-title {
-  font-size: 24px;
-  font-style: normal;
-  font-family: Roboto;
-  font-weight: 700;
-  line-height: 1.55;
-  text-transform: none;
-  text-decoration: none;
   margin-bottom: var(--dl-space-space-tripleunit);
 }
 
 .app__about-card-description {
-  font-size: 16px;
+  font-size: 0.8rem;
   font-style: normal;
   font-family: Open Sans;
   font-weight: 400;
@@ -38,6 +35,10 @@
   text-decoration: none;
   color: var(--dl-color-gray-500);
   text-align: center;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 991px) {

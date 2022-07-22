@@ -1,8 +1,16 @@
 .app__home-info {
-  height: 300px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    height: 300px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    height: 350px;
+  }
 
   @media (max-width: 768px) {
     width: 350px;
@@ -13,13 +21,25 @@
   }
 }
 
-.app__home-info-info-intro {
-  font-size: 30px;
-  font-weight: 300;
+.app__home-info-intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.35rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.6rem;
+  }
 }
 
 .app__home-info-name {
-  font-size: 60px;
+  font-size: 2rem;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 3rem;
+  }
 }
 
 .app__home-info-title {
@@ -49,11 +69,19 @@
 
 .app__home-info-title-item {
   height: 50px;
-  font-size: 30px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #59b256;
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 480px) {

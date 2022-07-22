@@ -4,7 +4,7 @@ import "./AboutHeader.scss";
 const AboutHeader: React.FC = () => {
   return (
     <div className="app__about-header">
-      <h2 className="app__about-header-title">About Me</h2>
+      <p className="app__about-header-title head-text">About Me</p>
       <span className="app__about-header-content">
         I am a software developer with professional experience since 2015. I did
         a mechatronics degree in New Zealand where I learned how to combine

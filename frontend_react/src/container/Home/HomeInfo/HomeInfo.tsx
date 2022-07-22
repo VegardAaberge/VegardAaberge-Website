@@ -16,7 +16,7 @@ const HomeInfo: React.FC = () => {
           )}
         </div>
       </div>
-      <p className="app__home-info-desc">
+      <p className="app__home-info-desc p-text">
         I have severall years of experience developing mobile apps and web
         applications for both small and large customers.
       </p>

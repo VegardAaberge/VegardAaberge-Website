@@ -47,7 +47,7 @@ const Experience: React.FC<Props> = ({
         })}
         {currentWorkItem != null && (
           <div className="app__skill-exp-tooltip">
-            <p>{currentWorkItem.desc}</p>
+            <p className="p-text">{currentWorkItem.desc}</p>
           </div>
         )}
       </motion.div>

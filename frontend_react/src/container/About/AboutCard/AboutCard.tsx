@@ -15,7 +15,7 @@ const AboutCard: React.FC<Props> = ({ about }) => {
         src={urlFor(about.imgUrl).url()}
         className="app__about-card-image"
       />
-      <span className="app__about-card-title">{about.title}</span>
+      <span className="app__about-card-title bold-title">{about.title}</span>
       <span className="app__about-card-description">{about.description}</span>
     </div>
   );
