@@ -4,9 +4,11 @@ import { BrandItem, TestimonialItem } from "./models";
 import { strings } from "../../constants/";
 import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
-import "./Testimonial.module.scss";
 import TestimonialCarousel from "./TestimonialCarousel/TestimonialCarousel";
 import Brand from "./Brand/Brand";
+
+import styles from "./Testimonial.module.scss";
+import mainStyles from "../../styles/App.module.scss";
 
 const Testimonial: React.FC = () => {
   const [brands, setBrands] = useState<BrandItem[]>([]);
@@ -25,7 +27,7 @@ const Testimonial: React.FC = () => {
     <>
       <TestimonialCarousel testimonials={testimonials} />
 
-      <div className="testimonial-brands flex-center">
+      <div className={`${styles.testimonial_brands} ${mainStyles.flex_center}`}>
         {brands.map((brand) => (
           <Brand key={brand._id} brand={brand} />
         ))}

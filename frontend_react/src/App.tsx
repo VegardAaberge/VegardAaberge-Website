@@ -14,6 +14,8 @@ const App: React.FC<Props> = () => {
       <About />
       <Work />
       <Skills />
+      <Testimonial />
+      <Contact />
     </div>
   );
 };

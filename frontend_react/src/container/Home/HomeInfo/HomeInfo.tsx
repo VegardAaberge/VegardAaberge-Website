@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import React from "react";
 
 import styles from "./HomeInfo.module.scss";
-import globalStyles from "../../../styles/App.module.scss";
+import mainStyles from "../../../styles/App.module.scss";
 
 const HomeInfo: NextPage = () => {
   return (
@@ -20,7 +20,7 @@ const HomeInfo: NextPage = () => {
           )}
         </div>
       </div>
-      <p className={`${styles.home_info_desc} ${globalStyles.p_text}`}>
+      <p className={`${styles.home_info_desc} ${mainStyles.p_text}`}>
         I have severall years of experience developing mobile apps and web
         applications for both small and large customers.
       </p>

@@ -3,7 +3,9 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { urlFor } from "../../../client";
 import { TestimonialItem } from "../models";
-import "./TestimonialCarousel.module.scss";
+
+import styles from "./TestimonialCarousel.module.scss";
+import mainStyles from "../../../styles/App.module.scss";
 
 interface Props {
   testimonials: TestimonialItem[];
@@ -32,27 +34,29 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
   }
 
   return (
-    <div className="testimonial-carousel">
-      <div className="testimonial-carousel-item">
+    <div className={styles.testimonial_carousel}>
+      <div className={styles.testimonial_carousel_item}>
         <img src={urlFor(testimonal.imgurl).url()} alt={testimonal.name} />
-        <div className="testimonial-carousel-content">
-          <p className="p-text">{testimonal.feedback}</p>
+        <div className={styles.testimonial_carousel_content}>
+          <p className={mainStyles.p_text}>{testimonal.feedback}</p>
           <div>
-            <h4 className="bold-text">{testimonal.name}</h4>
-            <h5 className="p-text">{testimonal.company}</h5>
+            <h4 className={mainStyles.bold_text}>{testimonal.name}</h4>
+            <h5 className={mainStyles.p_text}>{testimonal.company}</h5>
           </div>
         </div>
       </div>
 
-      <div className="testimonial-carousel-btns flex-center">
+      <div
+        className={`${styles.testimonial_carousel_btns} ${mainStyles.flex_center}`}
+      >
         <div
-          className="flex-center"
+          className={mainStyles.flex_center}
           onClick={() => navigateToIndex(Direction.Back)}
         >
           <HiChevronLeft />
         </div>
         <div
-          className="flex-center"
+          className={mainStyles.flex_center}
           onClick={() => navigateToIndex(Direction.Forward)}
         >
           <HiChevronRight />

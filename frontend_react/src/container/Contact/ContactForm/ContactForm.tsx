@@ -3,7 +3,9 @@ import React, { useState } from "react";
 
 import { strings } from "../../../constants";
 import { client } from "../../../client";
-import "./ContactForm.module.scss";
+
+import styles from "./ContactForm.module.scss";
+import mainStyles from "../../../styles/App.module.scss";
 
 interface SubmitData {
   _type: string;
@@ -76,10 +78,10 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
   };
 
   return (
-    <div className="contact-form flex-center">
-      <div className="flex-center">
+    <div className={`${styles.contact_form} ${mainStyles.flex_center}`}>
+      <div className="{flex_center}">
         <input
-          className="p-text"
+          className={mainStyles.p_text}
           type="text"
           placeholder="Your name"
           name="name"
@@ -88,13 +90,13 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         />
       </div>
       {nameError.length > 0 && (
-        <FormHelperText className="contact-form-error" error={true}>
+        <FormHelperText className="contact_form_error" error={true}>
           {nameError}
         </FormHelperText>
       )}
-      <div className="flex-center">
+      <div className={mainStyles.flex_center}>
         <input
-          className="p-text"
+          className={mainStyles.p_text}
           type="email"
           placeholder="Your email"
           name="email"
@@ -103,13 +105,13 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         />
       </div>
       {emailError.length > 0 && (
-        <FormHelperText className="contact-form-error" error={true}>
+        <FormHelperText className="contact_form_error" error={true}>
           {emailError}
         </FormHelperText>
       )}
       <div>
         <textarea
-          className="p-text"
+          className={mainStyles.p_text}
           placeholder="Your Message"
           value={message}
           name="message"
@@ -117,11 +119,15 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         ></textarea>
       </div>
       {messageError.length > 0 && (
-        <FormHelperText className="contact-form-error" error={true}>
+        <FormHelperText className="contact_form_error" error={true}>
           {messageError}
         </FormHelperText>
       )}
-      <button type="button" className="p-text" onClick={handleSubmit}>
+      <button
+        type="button"
+        className={mainStyles.p_text}
+        onClick={handleSubmit}
+      >
         {loading ? "Sending..." : "Send Message"}
       </button>
     </div>

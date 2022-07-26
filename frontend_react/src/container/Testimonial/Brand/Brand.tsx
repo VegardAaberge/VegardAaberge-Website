@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { urlFor } from "../../../client";
-import "./Brand.module.scss";
 import { BrandItem } from "../models";
 
 interface Props {

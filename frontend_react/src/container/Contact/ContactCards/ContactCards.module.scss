@@ -1,4 +1,4 @@
-.contact-cards {
+.contact_cards {
   width: 60%;
   display: flex;
   justify-content: space-evenly;
@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   margin: 4rem 1.25rem 2rem;
 
-  .contact-card {
+  .contact_card {
     min-width: 290px;
     display: flex;
     flex-direction: row;
@@ -20,9 +20,9 @@
     transition: all 0.3s ease-in-out;
 
     img {
-      width: 40px;
-      height: 40px;
-      margin: 0 0.7rem;
+      width: 40px !important;
+      height: 40px !important;
+      margin: 0 0.7rem !important;
     }
 
     p {
@@ -48,6 +48,6 @@
   }
 }
 
-.contact-cards .contact-card:last-child {
+.contact_-cards .contact_card:last-child {
   background-color: #f2f7fb;
 }
