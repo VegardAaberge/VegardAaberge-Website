@@ -1,4 +1,4 @@
-.work-filter {
+.work_filter {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   margin: 4rem 0 2rem;
 
-  .work-filter-item {
+  .work_filter_item {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
@@ -27,7 +27,7 @@
     }
   }
 
-  .item-active {
+  .item_active {
     background-color: var(--secondary-color);
     color: #fff;
   }

@@ -8,7 +8,7 @@ import AppWrap from "../../wrapper/AppWrap";
 import WorkHeader from "./WorkHeader/WorkHeader";
 import WorkCard from "./WorkCard/WorkCard";
 import WorkFilter from "./WorkFilter/WorkFilter";
-import "./Work.module.scss";
+import styles from "./Work.module.scss";
 
 interface AnimateCard {
   y: number;
@@ -49,7 +49,7 @@ const Work: React.FC = () => {
   };
 
   return (
-    <div className="work">
+    <div className={styles.work}>
       <WorkHeader />
 
       <WorkFilter
@@ -60,7 +60,7 @@ const Work: React.FC = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="work-portfolio"
+        className={styles.work_portfolio}
       >
         {filterWorks.map((work, index) => (
           <WorkCard work={work} key={index} />

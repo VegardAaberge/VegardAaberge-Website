@@ -1,5 +1,7 @@
 import React from "react";
-import "./WorkFilter.module.scss";
+
+import styles from "./WorkFilter.module.scss";
+import mainStyles from "./../../../styles/App.module.scss";
 
 interface Props {
   activeFilter: string;
@@ -8,14 +10,14 @@ interface Props {
 
 const WorkFilter: React.FC<Props> = ({ activeFilter, handleWorkFilter }) => {
   return (
-    <div className="work-filter">
+    <div className={styles.work_filter}>
       {["Website", "Mobile App", "Software", "All"].map((item, index) => (
         <div
           key={index}
           onClick={() => handleWorkFilter(item)}
-          className={`work-filter-item flex-center p-text ${
-            activeFilter === item ? "item-active" : ""
-          }`}
+          className={`${styles.work_filter_item} ${mainStyles.flex_center} ${
+            mainStyles.p_text
+          } ${activeFilter === item ? styles.item_active : ""}`}
         >
           {item}
         </div>

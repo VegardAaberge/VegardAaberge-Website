@@ -12,6 +12,7 @@ const App: React.FC<Props> = () => {
       <Navbar />
       <Home />
       <About />
+      <Work />
     </div>
   );
 };
