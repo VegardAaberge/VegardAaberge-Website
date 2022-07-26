@@ -1,4 +1,4 @@
-.skills-exp {
+.skills_exp {
   flex: 1;
   display: flex;
   justify-content: flex-start;
@@ -11,7 +11,7 @@
   }
 }
 
-.skills-exp-item {
+.skills_exp_item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -20,11 +20,11 @@
   margin: 1rem 0;
 }
 
-.skills-exp-works {
+.skills_exp_works {
   flex: 1;
 }
 
-.skills-exp-work {
+.skills_exp_work {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -42,13 +42,13 @@
   }
 }
 
-.skills-exp-work-item {
+.skills_exp_work_item {
   position: relative;
   cursor: pointer;
   margin-bottom: 1rem;
 }
 
-.skills-exp-year {
+.skills_exp_year {
   margin-right: 3rem;
 
   p {
@@ -61,7 +61,7 @@
   }
 }
 
-.skill-exp-tooltip {
+.skill_exp_tooltip {
   position: relative;
   max-width: 300px;
   background-color: var(--white-color);

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import "./Experience.module.scss";
 import { ExperienceItem } from "../models/ExperienceItem";
 import { WorkExperienceItem } from "../models/WorkExperienceItem";
 import { SelectedWorkItem } from "../Skills";
 import WorkExperience from "./WorkExperience";
+
+import styles from "./Experience.module.scss";
+import mainStyles from "../../../styles/App.module.scss";
 
 interface Props {
   experience: ExperienceItem;
@@ -27,11 +29,11 @@ const Experience: React.FC<Props> = ({
     selectedWorkItem.year === experience.year ? selectedWorkItem.item : null;
 
   return (
-    <motion.div className="skills-exp-item">
-      <div className="skills-exp-year">
-        <p className="bold-text">{experience.year}</p>
+    <motion.div className={styles.skills_exp_item}>
+      <div className={styles.skills_exp_year}>
+        <p className={mainStyles.bold_text}>{experience.year}</p>
       </div>
-      <motion.div className="skills-exp-works">
+      <motion.div className={styles.skills_exp_works}>
         {experience.works.map((workReference) => {
           const work = works.find((work) => work._id === workReference._ref);
           if (work !== undefined) {
@@ -46,8 +48,8 @@ const Experience: React.FC<Props> = ({
           }
         })}
         {currentWorkItem != null && (
-          <div className="skill-exp-tooltip">
-            <p className="p-text">{currentWorkItem.desc}</p>
+          <div className={styles.skill_exp_tooltip}>
+            <p className={mainStyles.p_text}>{currentWorkItem.desc}</p>
           </div>
         )}
       </motion.div>

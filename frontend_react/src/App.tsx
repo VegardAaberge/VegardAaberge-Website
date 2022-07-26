@@ -13,6 +13,7 @@ const App: React.FC<Props> = () => {
       <Home />
       <About />
       <Work />
+      <Skills />
     </div>
   );
 };

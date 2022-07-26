@@ -7,7 +7,8 @@ import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
-import "./Skills.module.scss";
+
+import styles from "./Skills.module.scss";
 
 export interface SelectedWorkItem {
   item: WorkExperienceItem | null;
@@ -55,8 +56,8 @@ const Skills: React.FC = () => {
       : skills.filter((s) => containSkill(s, selectedWorkItem));
 
   return (
-    <div className="skills-container">
-      <motion.div className="skills-exp">
+    <div className={styles.skills_container}>
+      <motion.div className={styles.skills_exp}>
         {experiences.map((experience) => (
           <Experience
             key={experience.year}
@@ -67,8 +68,8 @@ const Skills: React.FC = () => {
           />
         ))}
       </motion.div>
-      <div className="skills-divider"></div>
-      <motion.div className="skills-list">
+      <div className={styles.skills_divider}></div>
+      <motion.div className={styles.skills_list}>
         {filteredSkills.map((skill) => (
           <Skill key={skill.name} skill={skill} />
         ))}
