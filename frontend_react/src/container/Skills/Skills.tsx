@@ -7,7 +7,7 @@ import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
-import "./Skills.scss";
+import "./Skills.module.scss";
 
 export interface SelectedWorkItem {
   item: WorkExperienceItem | null;

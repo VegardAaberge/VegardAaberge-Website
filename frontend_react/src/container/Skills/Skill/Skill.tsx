@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { urlFor } from "../../../client";
 
-import "./Skill.scss";
+import "./Skill.module.scss";
 import { SkillItem } from "../models/SkillItem";
 
 interface Props {

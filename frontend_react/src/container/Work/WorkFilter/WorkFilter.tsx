@@ -1,5 +1,5 @@
 import React from "react";
-import "./WorkFilter.scss";
+import "./WorkFilter.module.scss";
 
 interface Props {
   activeFilter: string;

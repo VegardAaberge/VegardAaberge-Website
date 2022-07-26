@@ -4,7 +4,7 @@ import { BrandItem, TestimonialItem } from "./models";
 import { strings } from "../../constants/";
 import { client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
-import "./Testimonial.scss";
+import "./Testimonial.module.scss";
 import TestimonialCarousel from "./TestimonialCarousel/TestimonialCarousel";
 import Brand from "./Brand/Brand";
 

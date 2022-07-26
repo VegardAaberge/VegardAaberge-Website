@@ -1,4 +1,4 @@
-.app__home-img {
+.home_img {
   flex: 1;
   display: flex;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.app__home-img-bg {
+.home_img_bg {
   clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   background-color: #59b256;
   width: 100%;
@@ -22,7 +22,7 @@
   }
 }
 
-.app__home-img-img {
+.home_img_img {
   height: 100%;
   object-fit: cover;
   position: absolute;

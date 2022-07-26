@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutHeader.scss";
+import "./AboutHeader.module.scss";
 
 const AboutHeader: React.FC = () => {
   return (

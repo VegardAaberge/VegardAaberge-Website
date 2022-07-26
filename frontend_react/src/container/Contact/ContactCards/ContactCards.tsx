@@ -1,7 +1,7 @@
 import React from "react";
 
 import { images } from "../../../constants";
-import "./ContactCards.scss";
+import "./ContactCards.module.scss";
 
 interface Props {}
 

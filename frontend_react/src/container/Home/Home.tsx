@@ -5,14 +5,14 @@ import AppWrap from "../../wrapper/AppWrap";
 import HomeBtns from "./HomeBtns/HomeBtns";
 import HomeImg from "./HomeImg/HomeImg";
 import HomeInfo from "./HomeInfo/HomeInfo";
-import "./Home.scss";
+import styles from "./Home.module.scss";
 
 interface Props {}
 
 const Home: React.FC<Props> = () => {
   return (
-    <div className="app__home-wrapper">
-      <div className="app__home-left">
+    <div className={styles.home_wrapper}>
+      <div className={styles.home_left}>
         <HomeInfo />
         <HomeBtns />
       </div>

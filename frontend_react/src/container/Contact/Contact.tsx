@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { strings } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
-import "./Contact.scss";
+import "./Contact.module.scss";
 import ContactCards from "./ContactCards/ContactCards";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactSubmitted from "./ContactSubmitted/ContactSubmitted";

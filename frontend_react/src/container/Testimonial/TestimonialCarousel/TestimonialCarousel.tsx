@@ -3,7 +3,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { urlFor } from "../../../client";
 import { TestimonialItem } from "../models";
-import "./TestimonialCarousel.scss";
+import "./TestimonialCarousel.module.scss";
 
 interface Props {
   testimonials: TestimonialItem[];

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { urlFor } from "../../../client";
 import { WorkItem } from "../WorkItem";
-import "./WorkCard.scss";
+import "./WorkCard.module.scss";
 
 interface Props {
   work: WorkItem;

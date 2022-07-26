@@ -1,13 +1,14 @@
 import React from "react";
+import Image from "next/image";
 
 import { images } from "../../../constants";
-import "./HomeImg.scss";
+import styles from "./HomeImg.module.scss";
 
 const HomeImg: React.FC = () => {
   return (
-    <div className="app__home-img">
-      <div className="app__home-img-bg"></div>
-      <img src={images.profile} alt="" className="app__home-img-img" />
+    <div className={styles.home_img}>
+      <div className={styles.home_img_bg}></div>
+      <Image src={images.profile} alt="" className={styles.home_img_img} />
     </div>
   );
 };

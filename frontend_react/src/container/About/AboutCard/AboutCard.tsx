@@ -1,7 +1,7 @@
 import React from "react";
 import { urlFor } from "../../../client";
 import { AboutItem } from "../AboutItem";
-import "./AboutCard.scss";
+import "./AboutCard.module.scss";
 
 interface Props {
   about: AboutItem;

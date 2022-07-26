@@ -8,7 +8,7 @@ import AppWrap from "../../wrapper/AppWrap";
 import WorkHeader from "./WorkHeader/WorkHeader";
 import WorkCard from "./WorkCard/WorkCard";
 import WorkFilter from "./WorkFilter/WorkFilter";
-import "./Work.scss";
+import "./Work.module.scss";
 
 interface AnimateCard {
   y: number;

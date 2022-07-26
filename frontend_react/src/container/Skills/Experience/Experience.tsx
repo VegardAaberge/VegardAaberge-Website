@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import "./Experience.scss";
+import "./Experience.module.scss";
 import { ExperienceItem } from "../models/ExperienceItem";
 import { WorkExperienceItem } from "../models/WorkExperienceItem";
 import { SelectedWorkItem } from "../Skills";

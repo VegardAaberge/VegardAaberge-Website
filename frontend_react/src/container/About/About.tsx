@@ -6,7 +6,7 @@ import { strings } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
 import AboutHeader from "./AboutHeader/AboutHeader";
 import AboutCard from "./AboutCard/AboutCard";
-import "./About.scss";
+import "./About.module.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);

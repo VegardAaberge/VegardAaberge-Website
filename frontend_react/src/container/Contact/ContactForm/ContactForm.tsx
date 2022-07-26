@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import { strings } from "../../../constants";
 import { client } from "../../../client";
-import "./ContactForm.scss";
+import "./ContactForm.module.scss";
 
 interface SubmitData {
   _type: string;

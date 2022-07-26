@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NavbarMenu.scss";
+import styles from "./NavbarMenu.module.scss";
 import { motion } from "framer-motion";
 import { HiX, HiMenuAlt4 } from "react-icons/hi";
 
@@ -11,7 +11,7 @@ const NavbarMenu: React.FC<Props> = ({ links }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="app__navbar-menu">
+    <div className={styles.navbar_menu}>
       <HiMenuAlt4 onClick={() => setToggle(true)} />
 
       {toggle && (

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { strings } from "../../constants/";
-import "./NavigationDots.scss";
+import styles from "./NavigationDots.module.scss";
 
 interface Props {
   activeItem: string;
@@ -18,13 +18,13 @@ const links = [
 
 const NavigationDots: React.FC<Props> = ({ activeItem }) => {
   return (
-    <div className="app__navigation">
+    <div className={styles.navigation}>
       {links.map((item, index) => (
         // eslint-disable-next-line jsx-a11y/anchor-has-content
         <a
           href={`#${item}`}
           key={item + index}
-          className="app__navigation-dot"
+          className={styles.navigation_dot}
           style={activeItem === item ? { backgroundColor: "#313BAC" } : {}}
         />
       ))}
