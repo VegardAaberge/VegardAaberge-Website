@@ -76,8 +76,8 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
   };
 
   return (
-    <div className="app__contact-form app__flex-center">
-      <div className="app__flex-center">
+    <div className="contact-form flex-center">
+      <div className="flex-center">
         <input
           className="p-text"
           type="text"
@@ -88,11 +88,11 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         />
       </div>
       {nameError.length > 0 && (
-        <FormHelperText className="app__contact-form-error" error={true}>
+        <FormHelperText className="contact-form-error" error={true}>
           {nameError}
         </FormHelperText>
       )}
-      <div className="app__flex-center">
+      <div className="flex-center">
         <input
           className="p-text"
           type="email"
@@ -103,7 +103,7 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         />
       </div>
       {emailError.length > 0 && (
-        <FormHelperText className="app__contact-form-error" error={true}>
+        <FormHelperText className="contact-form-error" error={true}>
           {emailError}
         </FormHelperText>
       )}
@@ -117,7 +117,7 @@ const ContactForm: React.FC<Props> = ({ handleFormSubmitted }) => {
         ></textarea>
       </div>
       {messageError.length > 0 && (
-        <FormHelperText className="app__contact-form-error" error={true}>
+        <FormHelperText className="contact-form-error" error={true}>
           {messageError}
         </FormHelperText>
       )}

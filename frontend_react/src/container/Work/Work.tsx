@@ -49,7 +49,7 @@ const Work: React.FC = () => {
   };
 
   return (
-    <div className="app__work">
+    <div className="work">
       <WorkHeader />
 
       <WorkFilter
@@ -60,7 +60,7 @@ const Work: React.FC = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        className="work-portfolio"
       >
         {filterWorks.map((work, index) => (
           <WorkCard work={work} key={index} />

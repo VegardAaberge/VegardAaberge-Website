@@ -32,10 +32,10 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
   }
 
   return (
-    <div className="app__testimonial-carousel">
-      <div className="app__testimonial-carousel-item">
+    <div className="testimonial-carousel">
+      <div className="testimonial-carousel-item">
         <img src={urlFor(testimonal.imgurl).url()} alt={testimonal.name} />
-        <div className="app__testimonial-carousel-content">
+        <div className="testimonial-carousel-content">
           <p className="p-text">{testimonal.feedback}</p>
           <div>
             <h4 className="bold-text">{testimonal.name}</h4>
@@ -44,15 +44,15 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
         </div>
       </div>
 
-      <div className="app__testimonial-carousel-btns app__flex-center">
+      <div className="testimonial-carousel-btns flex-center">
         <div
-          className="app__flex-center"
+          className="flex-center"
           onClick={() => navigateToIndex(Direction.Back)}
         >
           <HiChevronLeft />
         </div>
         <div
-          className="app__flex-center"
+          className="flex-center"
           onClick={() => navigateToIndex(Direction.Forward)}
         >
           <HiChevronRight />

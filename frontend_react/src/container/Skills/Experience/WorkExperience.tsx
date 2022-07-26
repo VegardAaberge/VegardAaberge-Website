@@ -18,7 +18,7 @@ const WorkExperience: React.FC<Props> = ({
 
   return (
     <div
-      className="app__skills-exp-work-item"
+      className="skills-exp-work-item"
       key={work.name}
       onClick={() => {
         newWorkItem = workDescription !== work.desc ? work : null;
@@ -28,7 +28,7 @@ const WorkExperience: React.FC<Props> = ({
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="app__skill-exp-work"
+        className="skill-exp-work"
         data-tip
         data-for={work.name}
         key={work.name}

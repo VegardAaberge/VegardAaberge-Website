@@ -1,4 +1,4 @@
-.app__testimonial-carousel-item {
+.testimonial-carousel-item {
   width: 60%;
   min-height: 320px;
   background-color: var(--white-color);
@@ -35,7 +35,7 @@
   }
 }
 
-.app__testimonial-carousel-content {
+.testimonial-carousel-content {
   flex: 1;
   height: 100%;
   padding: 0 2rem;
@@ -65,7 +65,7 @@
   }
 }
 
-.app__testimonial-carousel-btns {
+.testimonial-carousel-btns {
   flex-direction: row;
   margin-top: 1rem;
 

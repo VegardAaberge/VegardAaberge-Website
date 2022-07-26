@@ -55,8 +55,8 @@ const Skills: React.FC = () => {
       : skills.filter((s) => containSkill(s, selectedWorkItem));
 
   return (
-    <div className="app__skills-container">
-      <motion.div className="app__skills-exp">
+    <div className="skills-container">
+      <motion.div className="skills-exp">
         {experiences.map((experience) => (
           <Experience
             key={experience.year}
@@ -67,8 +67,8 @@ const Skills: React.FC = () => {
           />
         ))}
       </motion.div>
-      <div className="app__skills-divider"></div>
-      <motion.div className="app__skills-list">
+      <div className="skills-divider"></div>
+      <motion.div className="skills-list">
         {filteredSkills.map((skill) => (
           <Skill key={skill.name} skill={skill} />
         ))}

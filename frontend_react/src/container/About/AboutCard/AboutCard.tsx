@@ -1,7 +1,9 @@
 import React from "react";
 import { urlFor } from "../../../client";
 import { AboutItem } from "../AboutItem";
-import "./AboutCard.module.scss";
+
+import styles from "./AboutCard.module.scss";
+import mainStyles from "./../../../styles/App.module.scss";
 
 interface Props {
   about: AboutItem;
@@ -9,14 +11,16 @@ interface Props {
 
 const AboutCard: React.FC<Props> = ({ about }) => {
   return (
-    <div className="app__about-card">
+    <div className={styles.about_card}>
       <img
         alt={about.title}
         src={urlFor(about.imgUrl).url()}
-        className="app__about-card-image"
+        className={styles.about_card_image}
       />
-      <span className="app__about-card-title bold-title">{about.title}</span>
-      <span className="app__about-card-description">{about.description}</span>
+      <span className={`${styles.about_card_title} ${mainStyles.bold_title}`}>
+        {about.title}
+      </span>
+      <span className={styles.about_card_description}>{about.description}</span>
     </div>
   );
 };

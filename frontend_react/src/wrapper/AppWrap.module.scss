@@ -1,4 +1,4 @@
-.app__container {
+.container {
   width: 100%;
   min-height: 100vh;
 
@@ -6,7 +6,7 @@
   flex-direction: row;
 }
 
-.app__wrapper {
+.wrapper {
   flex: 1;
   width: 100%;
   flex-direction: column;

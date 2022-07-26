@@ -25,7 +25,7 @@ const Testimonial: React.FC = () => {
     <>
       <TestimonialCarousel testimonials={testimonials} />
 
-      <div className="app__testimonial-brands app__flex-center">
+      <div className="testimonial-brands flex-center">
         {brands.map((brand) => (
           <Brand key={brand._id} brand={brand} />
         ))}

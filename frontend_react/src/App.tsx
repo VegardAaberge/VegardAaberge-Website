@@ -11,6 +11,7 @@ const App: React.FC<Props> = () => {
     <div className={styles.app}>
       <Navbar />
       <Home />
+      <About />
     </div>
   );
 };

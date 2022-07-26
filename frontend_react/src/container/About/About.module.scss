@@ -1,4 +1,4 @@
-.app__about {
+.about {
   width: 100%;
   height: auto;
   display: flex;
@@ -12,7 +12,7 @@
   padding-bottom: var(--dl-space-space-tenunits);
 }
 
-.app__about-cards {
+.about_cards {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 767px) {
-  .app__about-cards {
+  .about_cards {
     align-items: center;
     flex-direction: column;
   }

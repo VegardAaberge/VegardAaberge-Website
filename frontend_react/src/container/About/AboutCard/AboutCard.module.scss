@@ -1,4 +1,4 @@
-.app__about-card {
+.about_card {
   width: 30%;
   display: flex;
   position: relative;
@@ -11,7 +11,7 @@
   padding-bottom: var(--dl-space-space-doubleunit);
 }
 
-.app__about-card-image {
+.about_card_image {
   width: 120px;
   object-fit: cover;
   margin-bottom: 20px;
@@ -21,11 +21,11 @@
   }
 }
 
-.app__about-card-title {
+.about_card_title {
   margin-bottom: var(--dl-space-space-tripleunit);
 }
 
-.app__about-card-description {
+.about_card_description {
   font-size: 0.8rem;
   font-style: normal;
   font-family: Open Sans;
@@ -42,18 +42,18 @@
 }
 
 @media (max-width: 991px) {
-  .app__about-card {
+  .about_card {
     align-self: center;
   }
 }
 @media (max-width: 767px) {
-  .app__about-card {
+  .about_card {
     width: 70%;
     margin-bottom: var(--dl-space-space-tripleunit);
   }
 }
 @media (max-width: 479px) {
-  .app__about-card {
+  .about_card {
     width: 100%;
   }
 }

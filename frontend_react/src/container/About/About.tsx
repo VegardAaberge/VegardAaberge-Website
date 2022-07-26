@@ -6,7 +6,9 @@ import { strings } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
 import AboutHeader from "./AboutHeader/AboutHeader";
 import AboutCard from "./AboutCard/AboutCard";
-import "./About.module.scss";
+
+import styles from "./About.module.scss";
+import mainStyles from "./../../styles/App.module.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);
@@ -19,9 +21,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="app__about app__about-features">
+    <div className={styles.about}>
       <AboutHeader />
-      <div className="app__about-cards">
+      <div className={styles.about_cards}>
         {abouts.map((about, index) => (
           <AboutCard about={about} key={about.title + index} />
         ))}

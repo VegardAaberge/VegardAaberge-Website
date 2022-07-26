@@ -8,12 +8,12 @@ interface Props {
 
 const WorkFilter: React.FC<Props> = ({ activeFilter, handleWorkFilter }) => {
   return (
-    <div className="app__work-filter">
+    <div className="work-filter">
       {["Website", "Mobile App", "Software", "All"].map((item, index) => (
         <div
           key={index}
           onClick={() => handleWorkFilter(item)}
-          className={`app__work-filter-item app__flex-center p-text ${
+          className={`work-filter-item flex-center p-text ${
             activeFilter === item ? "item-active" : ""
           }`}
         >

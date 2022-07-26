@@ -27,11 +27,11 @@ const Experience: React.FC<Props> = ({
     selectedWorkItem.year === experience.year ? selectedWorkItem.item : null;
 
   return (
-    <motion.div className="app__skills-exp-item">
-      <div className="app__skills-exp-year">
+    <motion.div className="skills-exp-item">
+      <div className="skills-exp-year">
         <p className="bold-text">{experience.year}</p>
       </div>
-      <motion.div className="app__skills-exp-works">
+      <motion.div className="skills-exp-works">
         {experience.works.map((workReference) => {
           const work = works.find((work) => work._id === workReference._ref);
           if (work !== undefined) {
@@ -46,7 +46,7 @@ const Experience: React.FC<Props> = ({
           }
         })}
         {currentWorkItem != null && (
-          <div className="app__skill-exp-tooltip">
+          <div className="skill-exp-tooltip">
             <p className="p-text">{currentWorkItem.desc}</p>
           </div>
         )}
