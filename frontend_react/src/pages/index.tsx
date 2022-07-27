@@ -1,10 +1,38 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import App from "../App";
+import { client } from "../client";
+import { Navbar } from "../components";
+import { strings } from "../constants";
+import { About, Contact, Home, Skills, Testimonial, Work } from "../container";
+import {
+  ExperienceItem,
+  SkillItem,
+  WorkExperienceItem,
+} from "../container/Skills/models";
+import { BrandItem, TestimonialItem } from "../container/Testimonial/models";
+import { WorkItem } from "../container/Work/WorkItem";
+
+import mainStyles from "../styles/App.module.scss";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+interface Props {
+  works: WorkItem[];
+  brands: BrandItem[];
+  testimonials: TestimonialItem[];
+  workExperience: WorkExperienceItem[];
+  experiences: ExperienceItem[];
+  skills: SkillItem[];
+}
+
+const Main: NextPage<Props> = ({
+  works,
+  brands,
+  testimonials,
+  workExperience,
+  experiences,
+  skills,
+}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +42,19 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <App />
+        <div className={mainStyles.app}>
+          <Navbar />
+          <Home />
+          <About />
+          <Work iWorks={works} />
+          <Skills
+            iWorks={workExperience}
+            iExperiences={experiences}
+            iSkills={skills}
+          />
+          <Testimonial iBrands={brands} iTestimonials={testimonials} />
+          <Contact />
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -33,4 +73,42 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  let works: WorkItem[] = await client.fetch(strings.QUERY_WORKS);
+  let brands: BrandItem[] = await client.fetch(strings.QUERY_BRANDS);
+  let testimonials: TestimonialItem[] = await client.fetch(
+    strings.QUERY_TESTIMONIALS
+  );
+  let workExperience: WorkExperienceItem[] = await client.fetch(
+    strings.QUERY_WORK_EXPERIENCE
+  );
+  let experiences: ExperienceItem[] = await client.fetch(
+    strings.QUERY_EXPERIENCES
+  );
+  let skills: SkillItem[] = await client.fetch(strings.QUERY_SKILLS);
+
+  works = verify(works);
+  brands = verify(brands);
+  testimonials = verify(testimonials);
+  workExperience = verify(workExperience);
+  experiences = verify(experiences);
+  skills = verify(skills);
+
+  return {
+    props: {
+      works,
+      brands,
+      testimonials,
+      workExperience,
+      experiences,
+      skills,
+    },
+  };
+};
+
+function verify<T>(data: any): Array<T> {
+  if (data === undefined || data === null) return new Array<T>();
+  return data;
+}
+
+export default Main;

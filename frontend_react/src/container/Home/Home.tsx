@@ -7,9 +7,7 @@ import HomeImg from "./HomeImg/HomeImg";
 import HomeInfo from "./HomeInfo/HomeInfo";
 import styles from "./Home.module.scss";
 
-interface Props {}
-
-const Home: React.FC<Props> = () => {
+const Home: React.FC = () => {
   return (
     <div className={styles.home_wrapper}>
       <div className={styles.home_left}>

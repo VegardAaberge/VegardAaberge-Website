@@ -10,17 +10,18 @@ import Brand from "./Brand/Brand";
 import styles from "./Testimonial.module.scss";
 import mainStyles from "../../styles/App.module.scss";
 
-const Testimonial: React.FC = () => {
+interface Props {
+  iBrands: BrandItem[];
+  iTestimonials: TestimonialItem[];
+}
+
+const Testimonial: React.FC<Props> = ({ iBrands, iTestimonials }) => {
   const [brands, setBrands] = useState<BrandItem[]>([]);
   const [testimonials, setTestimonals] = useState<TestimonialItem[]>([]);
 
   useEffect(() => {
-    client.fetch(strings.QUERY_BRANDS).then((data) => {
-      setBrands(data);
-    });
-    client.fetch(strings.QUERY_TESTIMONIALS).then((data) => {
-      setTestimonals(data);
-    });
+    setBrands(iBrands);
+    setTestimonals(iTestimonials);
   }, []);
 
   return (
@@ -36,9 +37,4 @@ const Testimonial: React.FC = () => {
   );
 };
 
-export default AppWrap(
-  Testimonial,
-  strings.ID_TESTIMONIALS,
-  true,
-  strings.CLASS_PRIMARY_BG
-);
+export default Testimonial;

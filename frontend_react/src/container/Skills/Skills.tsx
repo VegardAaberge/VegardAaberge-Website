@@ -15,7 +15,13 @@ export interface SelectedWorkItem {
   year?: string;
 }
 
-const Skills: React.FC = () => {
+interface Props {
+  iWorks: WorkExperienceItem[];
+  iExperiences: ExperienceItem[];
+  iSkills: SkillItem[];
+}
+
+const Skills: React.FC<Props> = ({ iWorks, iExperiences, iSkills }) => {
   const [works, setWorks] = useState<WorkExperienceItem[]>([]);
   const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
   const [skills, setSkills] = useState<SkillItem[]>([]);
@@ -24,19 +30,9 @@ const Skills: React.FC = () => {
   });
 
   useEffect(() => {
-    client.fetch(strings.QUERY_WORK_EXPERIENCE).then((data) => {
-      console.log(data);
-      setWorks(data);
-    });
-    client.fetch(strings.QUERY_EXPERIENCES).then((data) => {
-      data.sort((a: ExperienceItem, b: ExperienceItem) => {
-        return parseInt(b.year, 0) - parseInt(a.year, 0);
-      });
-      setExperiences(data);
-    });
-    client.fetch(strings.QUERY_SKILLS).then((data) => {
-      setSkills(data);
-    });
+    setWorks(iWorks);
+    setExperiences(iExperiences);
+    setSkills(iSkills);
   }, []);
 
   const containSkill = (
@@ -78,4 +74,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default AppWrap(Skills, strings.ID_SKILLS, true, strings.CLASS_WHITE_BG);
+export default Skills;

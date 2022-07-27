@@ -17,7 +17,11 @@ interface AnimateCard {
 
 let works: WorkItem[] = [];
 
-const Work: React.FC = () => {
+interface Props {
+  iWorks: WorkItem[];
+}
+
+const Work: React.FC<Props> = ({ iWorks }) => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState<AnimateCard>({
     y: 0,
@@ -27,10 +31,8 @@ const Work: React.FC = () => {
   const [filterWorks, setFilterWorks] = useState<WorkItem[]>([]);
 
   useEffect(() => {
-    client.fetch(strings.QUERY_WORKS).then((data) => {
-      works = data;
-      setFilterWorks(data);
-    });
+    works = iWorks;
+    setFilterWorks(works);
   }, []);
 
   const handleWorkFilter = (item: string) => {
@@ -70,4 +72,4 @@ const Work: React.FC = () => {
   );
 };
 
-export default AppWrap(Work, strings.ID_WORK, true, strings.CLASS_PRIMARY_BG);
+export default Work;
