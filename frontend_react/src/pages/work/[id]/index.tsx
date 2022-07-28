@@ -1,4 +1,6 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-css-tags */
+import Head from "next/head";
+
 import { useRouter } from "next/router";
 import { GetStaticProps, NextPage } from "next";
 import { WorkItem } from "../../../container/Work/WorkItem";
@@ -11,7 +13,25 @@ interface Props {
 }
 
 const Work: NextPage<Props> = ({ projectLink }) => {
-  return <WorkApp projectLink={projectLink} />;
+  return (
+    <div>
+      <Head>
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="../assets/js/jquery.js" defer />
+        <script src="../assets/js/bootstrap.min.js" defer />
+      </Head>
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-10 col-lg-9 col-sm-8">
+            <div className="panel panel-default" id="article1">
+              <WorkApp projectLink={projectLink} />;
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
