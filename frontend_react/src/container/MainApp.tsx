@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "../components";
 import { strings } from "../constants";
 import { MainProps } from "./MainProps";
-import { About, Contact, Home, Skills, Testimonial, Work } from "../container";
+import { About, Contact, Home, Skills, Testimonial, Works } from "./";
 import AppWrap from "../wrapper/AppWrap";
 
 import styles from "../styles/App.module.scss";
@@ -14,6 +14,7 @@ const MainApp: React.FC<MainProps> = ({
   workExperience,
   experiences,
   skills,
+  abouts,
 }) => {
   return (
     <div className={styles.app}>
@@ -30,14 +31,14 @@ const MainApp: React.FC<MainProps> = ({
         motionWrap={true}
         classBackground={strings.CLASS_WHITE_BG}
       >
-        <About />
+        <About iAbouts={abouts} />
       </AppWrap>
       <AppWrap
         idName={strings.ID_WORK}
         motionWrap={true}
         classBackground={strings.CLASS_PRIMARY_BG}
       >
-        <Work iWorks={works} />
+        <Works iWorks={works} />
       </AppWrap>
       <AppWrap
         idName={strings.ID_SKILLS}

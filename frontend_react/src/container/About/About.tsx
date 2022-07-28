@@ -9,14 +9,15 @@ import AboutCard from "./AboutCard/AboutCard";
 import styles from "./About.module.scss";
 import mainStyles from "./../../styles/App.module.scss";
 
-const About = () => {
+interface Props {
+  iAbouts: AboutItem[];
+}
+
+const About: React.FC<Props> = ({ iAbouts }) => {
   const [abouts, setAbouts] = useState<AboutItem[]>([]);
 
   useEffect(() => {
-    client.fetch(strings.QUERY_ABOUT).then((data) => {
-      data.length = 3;
-      setAbouts(data);
-    });
+    setAbouts(iAbouts);
   }, []);
 
   return (
