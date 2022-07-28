@@ -8,6 +8,7 @@ import { WorkItem } from "../WorkItem";
 
 import styles from "./WorkCard.module.scss";
 import mainStyles from "./../../../styles/App.module.scss";
+import Link from "next/link";
 
 interface Props {
   work: WorkItem;
@@ -28,7 +29,7 @@ const WorkCard: React.FC<Props> = ({ work }) => {
           }}
           className={`${styles.work_hover} ${mainStyles.flex_center}`}
         >
-          <a href={work.projectLink} target="_blank" rel="noreferrer">
+          <Link href={"/work/[id]"} as={`/work/${work.projectLink}`}>
             <motion.div
               whileInView={{ scale: [0, 1] }}
               whileHover={{ scale: [0, 0.9] }}
@@ -37,7 +38,7 @@ const WorkCard: React.FC<Props> = ({ work }) => {
             >
               <AiFillEye />
             </motion.div>
-          </a>
+          </Link>
           <a href={work.codeLink} target="_blank" rel="noreferrer">
             <motion.div
               whileInView={{ scale: [0, 1] }}

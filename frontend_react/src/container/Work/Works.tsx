@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { strings } from "../../constants/";
+import { strings } from "../../constants";
 import { client } from "../../client";
 import { WorkItem } from "./WorkItem";
 import AppWrap from "../../wrapper/AppWrap";
@@ -21,7 +21,7 @@ interface Props {
   iWorks: WorkItem[];
 }
 
-const Work: React.FC<Props> = ({ iWorks }) => {
+const Works: React.FC<Props> = ({ iWorks }) => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState<AnimateCard>({
     y: 0,
@@ -72,4 +72,4 @@ const Work: React.FC<Props> = ({ iWorks }) => {
   );
 };
 
-export default Work;
+export default Works;

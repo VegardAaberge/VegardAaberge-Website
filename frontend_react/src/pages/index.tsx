@@ -13,7 +13,6 @@ import {
 import { BrandItem, TestimonialItem } from "../container/Testimonial/models";
 import { WorkItem } from "../container/Work/WorkItem";
 
-import mainStyles from "../styles/App.module.scss";
 import styles from "../styles/Home.module.css";
 
 const Main: NextPage<MainProps> = ({
@@ -23,6 +22,7 @@ const Main: NextPage<MainProps> = ({
   workExperience,
   experiences,
   skills,
+  abouts,
 }) => {
   return (
     <div className={styles.container}>
@@ -40,6 +40,7 @@ const Main: NextPage<MainProps> = ({
           workExperience={workExperience}
           experiences={experiences}
           skills={skills}
+          abouts={abouts}
         />
       </main>
 
@@ -72,6 +73,7 @@ export const getStaticProps: GetStaticProps = async () => {
     strings.QUERY_EXPERIENCES
   );
   let skills: SkillItem[] = await client.fetch(strings.QUERY_SKILLS);
+  let abouts = await client.fetch(strings.QUERY_ABOUT);
 
   works = verify(works);
   brands = verify(brands);
@@ -79,6 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
   workExperience = verify(workExperience);
   experiences = verify(experiences);
   skills = verify(skills);
+  abouts = verify(abouts);
 
   return {
     props: {
@@ -88,6 +91,7 @@ export const getStaticProps: GetStaticProps = async () => {
       workExperience,
       experiences,
       skills,
+      abouts,
     },
   };
 };
