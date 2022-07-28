@@ -2,9 +2,9 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { client } from "../client";
-import { Navbar } from "../components";
 import { strings } from "../constants";
-import { About, Contact, Home, Skills, Testimonial, Work } from "../container";
+import MainApp from "../container/MainApp";
+import { MainProps } from "../container/MainProps";
 import {
   ExperienceItem,
   SkillItem,
@@ -16,16 +16,7 @@ import { WorkItem } from "../container/Work/WorkItem";
 import mainStyles from "../styles/App.module.scss";
 import styles from "../styles/Home.module.css";
 
-interface Props {
-  works: WorkItem[];
-  brands: BrandItem[];
-  testimonials: TestimonialItem[];
-  workExperience: WorkExperienceItem[];
-  experiences: ExperienceItem[];
-  skills: SkillItem[];
-}
-
-const Main: NextPage<Props> = ({
+const Main: NextPage<MainProps> = ({
   works,
   brands,
   testimonials,
@@ -42,19 +33,14 @@ const Main: NextPage<Props> = ({
       </Head>
 
       <main className={styles.main}>
-        <div className={mainStyles.app}>
-          <Navbar />
-          <Home />
-          <About />
-          <Work iWorks={works} />
-          <Skills
-            iWorks={workExperience}
-            iExperiences={experiences}
-            iSkills={skills}
-          />
-          <Testimonial iBrands={brands} iTestimonials={testimonials} />
-          <Contact />
-        </div>
+        <MainApp
+          works={works}
+          brands={brands}
+          testimonials={testimonials}
+          workExperience={workExperience}
+          experiences={experiences}
+          skills={skills}
+        />
       </main>
 
       <footer className={styles.footer}>

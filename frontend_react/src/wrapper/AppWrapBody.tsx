@@ -7,12 +7,12 @@ import styles from "./AppWrap.module.scss";
 import mainStyles from "../styles/App.module.scss";
 
 interface Props {
-  Component: React.FC;
   idName: string;
   className?: string;
+  children: React.ReactNode;
 }
 
-const AppWrapBody: React.FC<Props> = ({ Component, idName, className }) => {
+const AppWrapBody: React.FC<Props> = ({ idName, className, children }) => {
   const style =
     className === strings.CLASS_WHITE_BG
       ? mainStyles.whitebg
@@ -23,7 +23,7 @@ const AppWrapBody: React.FC<Props> = ({ Component, idName, className }) => {
       <SocialMedia />
 
       <div className={`${styles.wrapper} ${mainStyles.flex_center}`}>
-        <Component />
+        {children}
       </div>
       <NavigationDots activeItem={idName} />
     </div>

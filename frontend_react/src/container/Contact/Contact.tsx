@@ -31,9 +31,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default AppWrap(
-  Contact,
-  strings.ID_CONTACT,
-  true,
-  strings.CLASS_WHITE_BG
-);
+export default Contact;

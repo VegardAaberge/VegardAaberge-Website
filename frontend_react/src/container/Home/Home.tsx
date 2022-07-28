@@ -19,4 +19,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default AppWrap(Home, strings.ID_HOME, false, strings.CLASS_PRIMARY_BG);
+export default Home;
