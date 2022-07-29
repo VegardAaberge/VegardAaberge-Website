@@ -13,11 +13,7 @@ interface Props {
 
 const Skill: React.FC<Props> = ({ skill }) => {
   return (
-    <motion.div
-      whileInView={{ opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
-      className={`${styles.skills_item} ${mainStyles.flex_center}`}
-    >
+    <div className={`${styles.skills_item} ${mainStyles.flex_center}`}>
       <div className={mainStyles.flex_center}>
         <div className={styles.skills_item_image}>
           <Image
@@ -29,7 +25,7 @@ const Skill: React.FC<Props> = ({ skill }) => {
         </div>
       </div>
       <p className={mainStyles.p_text}>{skill.name}</p>
-    </motion.div>
+    </div>
   );
 };
 

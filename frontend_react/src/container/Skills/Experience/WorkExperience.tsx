@@ -29,8 +29,8 @@ const WorkExperience: React.FC<Props> = ({
       }}
     >
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
+        whileInView={{ opacity: [0.5, 1] }}
+        transition={{ duration: 0.3 }}
         className={styles.skill_exp_work}
         key={work.name}
       >
