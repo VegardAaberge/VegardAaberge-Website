@@ -18,7 +18,12 @@ const WorkCard: React.FC<Props> = ({ work }) => {
   return (
     <div className={`${styles.work_item} ${mainStyles.flex_center}`}>
       <div className={`${styles.work_img} ${mainStyles.flex_center}`}>
-        <img src={urlFor(work.imgUrl).url()} alt={work.title} />
+        <Image
+          src={urlFor(work.imgUrl).url()}
+          alt={work.title}
+          layout="fill"
+          objectFit="contain"
+        />
 
         <motion.div
           whileHover={{ opacity: [0, 1] }}

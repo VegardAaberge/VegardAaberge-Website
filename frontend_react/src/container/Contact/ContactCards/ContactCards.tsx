@@ -12,13 +12,28 @@ const ContactCards: React.FC<Props> = () => {
   return (
     <div className={styles.contact_cards}>
       <div className={styles.contact_card}>
-        <Image src={images.email} alt="email" />
+        <div className={styles.contact_card_image}>
+          <Image
+            src={images.email}
+            alt="email"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+
         <a href="mailto:vegard.aaberge@gmail.com" className={mainStyles.p_text}>
           vegard.aaberge@gmail.com
         </a>
       </div>
       <div className={styles.contact_card}>
-        <Image src={images.mobile} alt="email" />
+        <div className={styles.contact_card_image}>
+          <Image
+            src={images.mobile}
+            alt="email"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <a href="tel: +47 46285023" className={mainStyles.p_text}>
           +47 46285023
         </a>

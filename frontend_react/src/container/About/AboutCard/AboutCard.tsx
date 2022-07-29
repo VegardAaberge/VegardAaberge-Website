@@ -4,6 +4,7 @@ import { AboutItem } from "../AboutItem";
 
 import styles from "./AboutCard.module.scss";
 import mainStyles from "./../../../styles/App.module.scss";
+import Image from "next/image";
 
 interface Props {
   about: AboutItem;
@@ -12,11 +13,14 @@ interface Props {
 const AboutCard: React.FC<Props> = ({ about }) => {
   return (
     <div className={styles.about_card}>
-      <img
-        alt={about.title}
-        src={urlFor(about.imgUrl).url()}
-        className={styles.about_card_image}
-      />
+      <div className={styles.about_card_image}>
+        <Image
+          alt={about.title}
+          src={urlFor(about.imgUrl).url()}
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
       <span className={`${styles.about_card_title} ${mainStyles.bold_title}`}>
         {about.title}
       </span>

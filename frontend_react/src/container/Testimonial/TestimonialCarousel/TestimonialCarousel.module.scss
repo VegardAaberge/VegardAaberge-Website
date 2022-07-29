@@ -10,11 +10,15 @@
 
   transition: all 0.3s ease-in-out;
 
-  img {
+  .testimonial_carousel_item_image {
+    position: relative;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+
+    img {
+      border-radius: 50px;
+      object-fit: cover;
+    }
   }
 
   @media screen and (min-width: 1600px) {

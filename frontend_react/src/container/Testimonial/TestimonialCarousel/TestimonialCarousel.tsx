@@ -6,6 +6,7 @@ import { TestimonialItem } from "../models";
 
 import styles from "./TestimonialCarousel.module.scss";
 import mainStyles from "../../../styles/App.module.scss";
+import Image from "next/image";
 
 interface Props {
   testimonials: TestimonialItem[];
@@ -36,7 +37,14 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
   return (
     <div className={styles.testimonial_carousel}>
       <div className={styles.testimonial_carousel_item}>
-        <img src={urlFor(testimonal.imgurl).url()} alt={testimonal.name} />
+        <div className={styles.testimonial_carousel_item_image}>
+          <Image
+            src={urlFor(testimonal.imgurl).url()}
+            alt={testimonal.name}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <div className={styles.testimonial_carousel_content}>
           <p className={mainStyles.p_text}>{testimonal.feedback}</p>
           <div>

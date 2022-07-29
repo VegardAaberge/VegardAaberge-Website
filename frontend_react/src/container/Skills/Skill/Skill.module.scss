@@ -12,9 +12,11 @@
     margin-right: 15px;
     background-color: var(--primary-color);
 
-    img {
+    .skills_item_image {
+      position: relative;
       width: 50%;
       height: 50%;
+      margin: auto;
     }
 
     &:hover {
