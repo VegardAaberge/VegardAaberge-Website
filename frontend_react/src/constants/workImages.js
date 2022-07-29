@@ -13,6 +13,10 @@ import mapNormal from "../assets/lundin/mapNormal.png";
 import norlex from "../assets/lundin/norlex.png";
 import norlexFormations from "../assets/lundin/norlexFormations.png";
 import strategrafi from "../assets/lundin/strategrafi.png";
+import bestill from "../assets/brudesalong/bestill.png";
+import database from "../assets/brudesalong/database.png";
+import database2 from "../assets/brudesalong/database2.png";
+import startside from "../assets/brudesalong/startside.jpg";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -30,4 +34,8 @@ export default {
   norlex,
   norlexFormations,
   strategrafi,
+  bestill,
+  database,
+  database2,
+  startside,
 };
