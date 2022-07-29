@@ -17,8 +17,6 @@ const Work: NextPage<Props> = ({ projectLink }) => {
     <div>
       <Head>
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="../assets/js/jquery.js" async />
-        <script src="../assets/js/bootstrap.min.js" defer />
       </Head>
       <div className="container">
         <div className="row">
