@@ -4,17 +4,61 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import AlignItemsList from "./AlignItemsList";
-import { Card } from "@mui/material";
+import { Card, ListItem } from "@mui/material";
+
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Divider from "@mui/material/Divider";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import CodeIcon from "@mui/icons-material/Code";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
 
 const PortfolioWebsite: React.FC = () => {
   return (
     <Grid container spacing={3}>
       <Grid item md={4}>
-        <Card variant="outlined" sx={{ p: 3 }}>
-          <p>Made with React, Next.js, scss, javascript</p>
-          <p>Hosted on ubuntu server</p>
-          <p>Github: https://github.com/</p>
-          <p>Website: https://vegardaaberge.no</p>
+        <Card variant="outlined">
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <ApartmentIcon />
+              </ListItemIcon>
+              Personal
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
+              React, Next.js, scss, javascript
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <GitHubIcon />
+              </ListItemIcon>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/
+              </a>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <LanguageIcon />
+              </ListItemIcon>
+              <a
+                href="https://vegardaaberge.no"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://vegardaaberge.no
+              </a>
+            </ListItem>
+          </List>
         </Card>
       </Grid>
       <Grid item md={8}>
