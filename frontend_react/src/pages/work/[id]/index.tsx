@@ -1,35 +1,34 @@
 /* eslint-disable @next/next/no-css-tags */
 import Head from "next/head";
 
-import { useRouter } from "next/router";
 import { GetStaticProps, NextPage } from "next";
 import { WorkItem } from "../../../container/Work/WorkItem";
 import { client } from "../../../client";
 import { strings } from "../../../constants";
-import WorkApp from "../../../workContainer/WorkApp";
+import LegacyWorkWrap from "../../../wrapper/LegacyWorkWrap";
+import WorkWrap from "../../../wrapper/WorkWrap";
 
 interface Props {
   projectLink: string;
 }
 
 const Work: NextPage<Props> = ({ projectLink }) => {
-  return (
-    <div>
-      <Head>
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-      </Head>
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-10 col-lg-9 col-sm-8">
-            <div className="panel panel-default" id="article1">
-              <WorkApp projectLink={projectLink} />;
-            </div>
-            <br />
-          </div>
-        </div>
+  if (
+    projectLink === "aaberge_brudesalong" ||
+    projectLink === "black_oil_calculator"
+  ) {
+    return (
+      <div>
+        <Head>
+          <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+        </Head>
+
+        <LegacyWorkWrap projectLink={projectLink} />
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <WorkWrap projectLink={projectLink} />;
+  }
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
