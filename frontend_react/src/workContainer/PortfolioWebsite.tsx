@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import AlignItemsList from "./AlignItemsList";
+import AlignItemsList from "../components/NavWorkList/NavWorkList";
 import { Card, ListItem } from "@mui/material";
 
 import List from "@mui/material/List";

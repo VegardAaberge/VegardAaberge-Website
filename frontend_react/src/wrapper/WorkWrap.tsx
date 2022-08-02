@@ -3,24 +3,27 @@ import React from "react";
 import {
   AppBar,
   Box,
+  Card,
   Container,
-  createTheme,
+  Divider,
   Grid,
   Toolbar,
   Typography,
 } from "@mui/material";
 import WorkApp from "../workContainer/WorkApp";
-import AlignItemsList from "../workContainer/AlignItemsList";
 import { red } from "@mui/material/colors";
 import styles from "./AppWrap.module.scss";
+import { WorkItem } from "../container/Work/WorkItem";
+import NavWorkList from "../components/NavWorkList/NavWorkList";
 
 interface Props {
   projectLink: string;
+  works: WorkItem[];
 }
 
 const primary = red[500]; // #f44336
 
-const WorkWrap: React.FC<Props> = ({ projectLink }) => {
+const WorkWrap: React.FC<Props> = ({ projectLink, works }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -41,7 +44,13 @@ const WorkWrap: React.FC<Props> = ({ projectLink }) => {
             <WorkApp projectLink={projectLink} />
           </Grid>
           <Grid item md={3} sx={{ display: { xs: "none", md: "block" } }}>
-            <AlignItemsList />
+            <Card variant="outlined">
+              <Typography variant="h5" align="center" sx={{ p: 3 }}>
+                Portfolio projects
+              </Typography>
+              <Divider sx={{ marginInline: 3 }} />
+              <NavWorkList projectLink={projectLink} works={works} />
+            </Card>
           </Grid>
         </Grid>
       </Box>

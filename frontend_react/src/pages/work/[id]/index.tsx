@@ -5,14 +5,15 @@ import { GetStaticProps, NextPage } from "next";
 import { WorkItem } from "../../../container/Work/WorkItem";
 import { client } from "../../../client";
 import { strings } from "../../../constants";
-import LegacyWorkWrap from "../../../wrapper/LegacyWorkWrap";
+import LegacyWorkWrap from "../../../wrapper/WorkWrapLegacy";
 import WorkWrap from "../../../wrapper/WorkWrap";
 
 interface Props {
   projectLink: string;
+  works: WorkItem[];
 }
 
-const Work: NextPage<Props> = ({ projectLink }) => {
+const Work: NextPage<Props> = ({ projectLink, works }) => {
   if (
     projectLink === "aaberge_brudesalong" ||
     projectLink === "black_oil_calculator"
@@ -27,7 +28,7 @@ const Work: NextPage<Props> = ({ projectLink }) => {
       </div>
     );
   } else {
-    return <WorkWrap projectLink={projectLink} />;
+    return <WorkWrap projectLink={projectLink} works={works} />;
   }
 };
 
@@ -42,9 +43,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const projectLink = context.params.id;
 
+  let works: WorkItem[] = await client.fetch(strings.QUERY_WORKS);
+
   return {
     props: {
       projectLink: projectLink,
+      works: works,
     },
   };
 };

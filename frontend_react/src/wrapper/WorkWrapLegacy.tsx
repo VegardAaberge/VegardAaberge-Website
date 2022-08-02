@@ -5,7 +5,7 @@ interface Props {
   projectLink: string;
 }
 
-const LegacyWorkWrap: React.FC<Props> = ({ projectLink }) => {
+const WorkWrapLegacy: React.FC<Props> = ({ projectLink }) => {
   return (
     <div className="container">
       <div className="row">
@@ -54,4 +54,4 @@ const LegacyWorkWrap: React.FC<Props> = ({ projectLink }) => {
   );
 };
 
-export default LegacyWorkWrap;
+export default WorkWrapLegacy;
