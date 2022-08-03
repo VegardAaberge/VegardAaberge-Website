@@ -21,9 +21,9 @@ interface Props {
   works: WorkItem[];
 }
 
-const primary = red[500]; // #f44336
-
 const WorkWrap: React.FC<Props> = ({ projectLink, works }) => {
+  const currentWork = works.find((work) => work.projectLink == projectLink);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -41,7 +41,7 @@ const WorkWrap: React.FC<Props> = ({ projectLink, works }) => {
       <Box component="main" sx={{ p: 3 }} className={styles.work_wrap}>
         <Grid container sx={{ paddingInline: 3 }} maxWidth="xl">
           <Grid item md={9} sx={{ paddingRight: 3 }}>
-            <WorkApp projectLink={projectLink} />
+            <WorkApp work={currentWork} />
           </Grid>
           <Grid item md={3} sx={{ display: { xs: "none", md: "block" } }}>
             <Card variant="outlined">

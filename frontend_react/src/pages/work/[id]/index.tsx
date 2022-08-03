@@ -7,6 +7,7 @@ import { client } from "../../../client";
 import { strings } from "../../../constants";
 import LegacyWorkWrap from "../../../wrapper/WorkWrapLegacy";
 import WorkWrap from "../../../wrapper/WorkWrap";
+import { SkillItem } from "../../../container/Skills/models";
 
 interface Props {
   projectLink: string;
@@ -24,7 +25,7 @@ const Work: NextPage<Props> = ({ projectLink, works }) => {
           <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
         </Head>
 
-        <LegacyWorkWrap projectLink={projectLink} />
+        <LegacyWorkWrap projectLink={projectLink} works={works} />
       </div>
     );
   } else {
@@ -44,6 +45,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const projectLink = context.params.id;
 
   let works: WorkItem[] = await client.fetch(strings.QUERY_WORKS);
+  let skills: SkillItem[] = await client.fetch(strings.QUERY_SKILLS);
+
+  works.map((work) => {
+    work.skillsUsedStrings = work.skillsUsed
+      .map((sRef) => skills.find((s) => s._id == sRef._ref)?.name)
+      .filter((s): s is string => !!s);
+  });
 
   return {
     props: {

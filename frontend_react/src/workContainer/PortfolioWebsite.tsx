@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import AlignItemsList from "../components/NavWorkList/NavWorkList";
-import { Card, ListItem } from "@mui/material";
+import { Card, ListItem, Typography } from "@mui/material";
 
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -15,54 +15,26 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import CodeIcon from "@mui/icons-material/Code";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
+import { WorkItem } from "../container/Work/WorkItem";
+import WorkSummary from "./WorkSummary/WorkSummary";
 
-const PortfolioWebsite: React.FC = () => {
+interface Props {
+  work: WorkItem;
+}
+
+const PortfolioWebsite: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
       <Grid item md={4}>
         <Card variant="outlined">
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <ApartmentIcon />
-              </ListItemIcon>
-              Personal
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <CodeIcon />
-              </ListItemIcon>
-              React, Next.js, scss, javascript
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <GitHubIcon />
-              </ListItemIcon>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://github.com/
-              </a>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <LanguageIcon />
-              </ListItemIcon>
-              <a
-                href="https://vegardaaberge.no"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://vegardaaberge.no
-              </a>
-            </ListItem>
-          </List>
+          <WorkSummary work={work} />
         </Card>
       </Grid>
       <Grid item md={8}>
         <Card variant="outlined" sx={{ p: 3 }}>
+          <Typography variant="h5" align="center" sx={{ p: 1 }}>
+            {work.title}
+          </Typography>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

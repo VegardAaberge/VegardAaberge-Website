@@ -1,17 +1,21 @@
 import React from "react";
+import { WorkItem } from "../container/Work/WorkItem";
 import WorkApp from "../workContainer/WorkApp";
 
 interface Props {
   projectLink: string;
+  works: WorkItem[];
 }
 
-const WorkWrapLegacy: React.FC<Props> = ({ projectLink }) => {
+const WorkWrapLegacy: React.FC<Props> = ({ projectLink, works }) => {
+  const currentWork = works.find((work) => work.projectLink == projectLink);
+
   return (
     <div className="container">
       <div className="row">
         <div className="col-xl-10 col-lg-9 col-sm-8">
           <div className="panel panel-default" id="article1">
-            <WorkApp projectLink={projectLink} />;
+            <WorkApp work={currentWork} />;
           </div>
           <br />
         </div>
