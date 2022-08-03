@@ -1,7 +1,7 @@
 import React from "react";
 import { WorkItem } from "../../container/Work/WorkItem";
 
-import { Card, ListItem } from "@mui/material";
+import { Card, ListItem, Typography } from "@mui/material";
 
 import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -30,30 +30,21 @@ const Home: React.FC<Props> = ({ work }) => {
           </ListItemIcon>
           {work.skillsUsedStrings.join(", ")}
         </ListItem>
-        <ListItem sx={{ paddingTop: 2 }}>
-          <ListItemIcon>
-            <GitHubIcon sx={{ fontSize: 30 }} />
-          </ListItemIcon>
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://github.com/
-          </a>
-        </ListItem>
-        <ListItem sx={{ paddingTop: 2, paddingBottom: 2 }}>
-          <ListItemIcon>
-            <LanguageIcon sx={{ fontSize: 30 }} />
-          </ListItemIcon>
-          <a
-            href="https://vegardaaberge.no"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://vegardaaberge.no
-          </a>
-        </ListItem>
+        {work.codeLink.length > 0 && (
+          <ListItem sx={{ paddingTop: 2 }}>
+            <ListItemIcon>
+              <GitHubIcon sx={{ fontSize: 30 }} />
+            </ListItemIcon>
+            <Typography
+              style={{ wordWrap: "break-word" }}
+              sx={{ width: "100%", paddingRight: 6 }}
+            >
+              <a href={work.codeLink} target="_blank" rel="noopener noreferrer">
+                {work.codeLink}
+              </a>
+            </Typography>
+          </ListItem>
+        )}
       </List>
     </Card>
   );

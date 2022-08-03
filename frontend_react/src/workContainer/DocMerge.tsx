@@ -22,7 +22,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
       <Grid item md={8}>
         <Card variant="outlined" sx={{ p: 3 }}>
           <WorkHeader title={work.title} />
-          <p>Portfolio website description</p>
+          <p>DocMerge Description</p>
         </Card>
       </Grid>
     </Grid>
