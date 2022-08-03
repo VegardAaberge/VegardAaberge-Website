@@ -7,6 +7,7 @@ import {
   Container,
   Divider,
   Grid,
+  IconButton,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -15,6 +16,8 @@ import { red } from "@mui/material/colors";
 import styles from "./AppWrap.module.scss";
 import { WorkItem } from "../container/Work/WorkItem";
 import NavWorkList from "../components/NavWorkList/NavWorkList";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconMenu from "../workContainer/Components/IconMenu";
 
 interface Props {
   projectLink: string;
@@ -28,6 +31,15 @@ const WorkWrap: React.FC<Props> = ({ projectLink, works }) => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2, display: { xs: "block", md: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography
             variant="h6"
             noWrap
@@ -37,6 +49,7 @@ const WorkWrap: React.FC<Props> = ({ projectLink, works }) => {
             {projectLink.replaceAll("_", " ")}
           </Typography>
         </Toolbar>
+        <IconMenu />
       </AppBar>
       <Box component="main" sx={{ p: 3 }} className={styles.work_wrap}>
         <Grid container sx={{ paddingInline: 3 }} maxWidth="xl">
