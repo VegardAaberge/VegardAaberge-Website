@@ -8,13 +8,45 @@ import { strings } from "../../../constants";
 import { SkillItem } from "../../../container/Skills/models";
 import WorkApp from "../../../workContainer/WorkApp";
 
+import {
+  ThemeProvider,
+  createTheme,
+  experimental_sx as sx,
+} from "@mui/material/styles";
+
 interface Props {
   projectLink: string;
   works: WorkItem[];
 }
 
+const workTheme = createTheme({
+  components: {
+    MuiImageListItemBar: {
+      styleOverrides: {
+        root: sx({
+          fontStyle: "italic",
+          alignSelf: "center",
+          fontWeight: 600,
+        }),
+      },
+    },
+    MuiImageList: {
+      styleOverrides: {
+        root: sx({
+          paddingTop: "0.5rem",
+          paddingBottom: "0.5rem",
+        }),
+      },
+    },
+  },
+});
+
 const Work: NextPage<Props> = ({ projectLink, works }) => {
-  return <WorkApp projectLink={projectLink} works={works} />;
+  return (
+    <ThemeProvider theme={workTheme}>
+      <WorkApp projectLink={projectLink} works={works} />
+    </ThemeProvider>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {

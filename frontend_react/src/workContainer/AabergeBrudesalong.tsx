@@ -48,18 +48,12 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             under. Her kan kunden sende en melding, finne informasjon, og
             navigere seg til andre sider med topmenyen og bildene.
           </p>
-          <ImageListItem key={workImages.startside.src}>
-            <img
-              className="featureImg"
-              src={workImages.startside.src}
-              alt="image"
-            />
-            <ImageListItemBar
-              position="below"
-              title="Hovedmeny"
-              sx={{ fontStyle: "italic" }}
-            />
-          </ImageListItem>
+          <ImageList cols={1}>
+            <ImageListItem key={workImages.startside.src}>
+              <img src={workImages.startside.src} alt="image" />
+              <ImageListItemBar position="below" title="Hovedmeny" />
+            </ImageListItem>
+          </ImageList>
 
           <p>
             Bestillingskjemaet er koblet til Aaberge Brudesalong AS sin
@@ -71,18 +65,12 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             på engelsk istedenfor.
           </p>
 
-          <ImageListItem key={workImages.bestill.src}>
-            <img
-              className="featureImg"
-              src={workImages.bestill.src}
-              alt="image"
-            />
-            <ImageListItemBar
-              position="below"
-              title="Bestille time"
-              sx={{ fontStyle: "italic" }}
-            />
-          </ImageListItem>
+          <ImageList cols={1}>
+            <ImageListItem key={workImages.bestill.src}>
+              <img src={workImages.bestill.src} alt="image" />
+              <ImageListItemBar position="below" title="Bestille time" />
+            </ImageListItem>
+          </ImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Databasen
@@ -107,29 +95,13 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
 
           <ImageList cols={1}>
             <ImageListItem key={portfolioImg.sanityDir.src}>
-              <img
-                className="featureImg"
-                src={workImages.database.src}
-                alt="image"
-              />
-              <ImageListItemBar
-                position="below"
-                title="Database login"
-                sx={{ fontStyle: "italic" }}
-              />
+              <img src={workImages.database.src} alt="image" />
+              <ImageListItemBar position="below" title="Database login" />
             </ImageListItem>
 
             <ImageListItem key={portfolioImg.sanitySchemas.src}>
-              <img
-                className="featureImg"
-                src={workImages.database2.src}
-                alt="image"
-              />
-              <ImageListItemBar
-                position="below"
-                title="Database kunder"
-                sx={{ fontStyle: "italic" }}
-              />
+              <img src={workImages.database2.src} alt="image" />
+              <ImageListItemBar position="below" title="Database kunder" />
             </ImageListItem>
           </ImageList>
         </Card>

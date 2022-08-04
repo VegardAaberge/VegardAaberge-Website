@@ -41,36 +41,30 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             språkene og hvordan man bruker dem. Først så laget jeg kalkulatoren
             og lastefunksjonene, og så brukte jeg en del tid på kartet og
             strategrafi bildeserien. Til slutt la jeg til flere funksjoner på
-            kartet og la til Norlex databasen.{" "}
+            kartet og la til Norlex databasen.
           </p>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Kalkulatoren
           </Typography>
-          Kalkulatoren ble laget med sliders for å gjøre det enkelt å gjøre
-          kalkulasjoner. Resultatet blir da oppdatert i real time, slik at det
-          er mulig å se hvordan hver faktor påvirker resultatet. Den husker også
-          dataene slik at det er mulig å komme tilbake til de samme
-          kalkulasjonene. Under other options er det mulig å laste inn data som
-          er lagret på serveren. Dette var den første siden jeg laget, men fikk
-          så en del oppdateringer iløpet av perioden.
-          <ImageList cols={2}>
+          <p>
+            Kalkulatoren ble laget med sliders for å gjøre det enkelt å gjøre
+            kalkulasjoner. Resultatet blir da oppdatert i real time, slik at det
+            er mulig å se hvordan hver faktor påvirker resultatet. Den husker
+            også dataene slik at det er mulig å komme tilbake til de samme
+            kalkulasjonene. Under other options er det mulig å laste inn data
+            som er lagret på serveren. Dette var den første siden jeg laget, men
+            fikk så en del oppdateringer iløpet av perioden.
+          </p>
+          <ImageList cols={2} sx={{ p: "0.5rem" }}>
             <ImageListItem key={portfolioImg.sanityDir.src}>
               <img src={workImages.calculateOil.src} alt="Oljekalkulator" />
-              <ImageListItemBar
-                position="below"
-                title="Oljekalkulator"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Oljekalkulator" />
             </ImageListItem>
 
             <ImageListItem key={portfolioImg.sanitySchemas.src}>
               <img src={workImages.calculateGas.src} alt="Gaskalkulator" />
 
-              <ImageListItemBar
-                position="below"
-                title="Gaskalkulator"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Gaskalkulator" />
             </ImageListItem>
           </ImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
@@ -80,11 +74,11 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             Jeg startet med å lage kartet med polygoner, men etter å ha vist
             lisensene og oljefeltene, fant jeg ut at det var altfor tregt og
             fungerte ikke i det hele tatt på apple produkter. Jeg bestemte meg
-            da for å bruke google fusion data istedenfor. Dataene er hentet fra{" "}
+            da for å bruke google fusion data istedenfor. Dataene er hentet fra
             <a href="http://factpages.npd.no/ReportServer?/FactPages/geography/geography_all&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=1&CultureCode=nb-no">
               factpages
-            </a>{" "}
-            og så modifisert til mine formål og deretter lastet opp med{" "}
+            </a>
+            og så modifisert til mine formål og deretter lastet opp med
             <a href="http://shpescape.com/">shpescape</a>
           </p>
           <p>
@@ -92,35 +86,23 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             med javascript, og brukte where filtre til å vise dataene som
             brukeren etterspurte. Brukeren kan styre hvilke filter han ønsker
             ved å bruke knappene. Bildekartene (gravitasjon, bathemetri,
-            magnetisme) er laget med maptiler og så lagt til programmet.{" "}
+            magnetisme) er laget med maptiler og så lagt til programmet.
           </p>
-          <ImageList cols={3}>
+          <ImageList cols={3} sx={{ p: "0.5rem" }}>
             <ImageListItem key={workImages.mapNormal.src}>
               <img src={workImages.mapNormal.src} alt="Oljekalkulator" />
-              <ImageListItemBar
-                position="below"
-                title="Normal Kart"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Normal Kart" />
             </ImageListItem>
 
             <ImageListItem key={workImages.mapGeology.src}>
               <img src={workImages.mapGeology.src} alt="Gaskalkulator" />
 
-              <ImageListItemBar
-                position="below"
-                title="Geologi Kart"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Geologi Kart" />
             </ImageListItem>
             <ImageListItem key={workImages.mapBathemetry.src}>
               <img src={workImages.mapBathemetry.src} alt="Gaskalkulator" />
 
-              <ImageListItemBar
-                position="below"
-                title="Bathemetri Kart"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Bathemetri Kart" />
             </ImageListItem>
           </ImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
@@ -133,7 +115,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             bruke på mobil. Utenom formasjonsdata tok jeg alle hans lister og
             underlister og gjorde dem om til Jquery Mobile datalister. Jeg
             linket til hans interaktive grafer, fordi de fungerte greit på
-            mobilen.{" "}
+            mobilen.
           </p>
           <p>
             Formasjonsdata kan vi se i bildet til høyre, og den var en viktig
@@ -143,14 +125,10 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             mulig å trykke på, og da vil den finne formasjonstopper for brønnen
             som er etterspurt.
           </p>
-          <ImageList cols={2}>
+          <ImageList cols={2} sx={{ p: "0.5rem" }}>
             <ImageListItem key={workImages.norlex.src}>
               <img src={workImages.norlex.src} alt="Norlex Hovedindeks" />
-              <ImageListItemBar
-                position="below"
-                title="Norlex Hovedindeks"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Norlex Hovedindeks" />
             </ImageListItem>
 
             <ImageListItem key={workImages.norlexFormations.src}>
@@ -158,11 +136,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
                 src={workImages.norlexFormations.src}
                 alt="Norlex Formasjoner"
               />
-              <ImageListItemBar
-                position="below"
-                title="Norlex Formasjoner"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Norlex Formasjoner" />
             </ImageListItem>
           </ImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
@@ -180,44 +154,28 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             omregninger, laste inn data til kalkulatoren og jeg hadde en side
             hvor man kan finne nyttige kilder
           </p>
-          <ImageList cols={2}>
+          <ImageList cols={2} sx={{ p: "0.5rem" }}>
             <ImageListItem key={workImages.strategrafi.src}>
               <img src={workImages.strategrafi.src} alt="Norlex Hovedindeks" />
-              <ImageListItemBar
-                position="below"
-                title="Strategrafi"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Strategrafi" />
             </ImageListItem>
 
             <ImageListItem key={workImages.datatables.src}>
               <img src={workImages.datatables.src} alt="calculateGas" />
 
-              <ImageListItemBar
-                position="below"
-                title="Datatabeller"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Datatabeller" />
             </ImageListItem>
 
             <ImageListItem key={workImages.conversions.src}>
               <img src={workImages.conversions.src} alt="calculateGas" />
 
-              <ImageListItemBar
-                position="below"
-                title="Konversjoner"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Konversjoner" />
             </ImageListItem>
 
             <ImageListItem key={workImages.loadData.src}>
               <img src={workImages.loadData.src} alt="calculateGas" />
 
-              <ImageListItemBar
-                position="below"
-                title="Laste inn data"
-                sx={{ fontStyle: "italic" }}
-              />
+              <ImageListItemBar position="below" title="Laste inn data" />
             </ImageListItem>
           </ImageList>
         </Card>

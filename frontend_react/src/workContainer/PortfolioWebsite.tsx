@@ -16,6 +16,8 @@ import WorkSummary from "./Components/WorkSummary";
 import WorkHeader from "./Components/WorkHeader";
 import portfolioImg from "../constants/portfolioImages";
 
+import styles from "../styles/App.module.scss";
+
 interface Props {
   work: WorkItem;
 }
@@ -29,13 +31,13 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
         </Card>
       </Grid>
       <Grid item md={8}>
-        <Card variant="outlined" sx={{ p: 3 }}>
+        <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>
             I initially created my portfolio in 2015 with CSS, Javascript,
             Bootstrap and PHP. The old portfolio can be found here
           </p>
-          <br />
+
           <p>
             I wanted to create a portfolio that show more info about me in
             general and is built on modern technologies. I had some experience
@@ -52,7 +54,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             modifications. I believe in following tutorials to learn initial
             concepts instead of creating everything from sratch.
           </p>
-          <br />
+
           <p>
             The tutorial also introduced me to Sanity.io which is a content
             platform that provided an easy place to store and modify data. To
@@ -61,7 +63,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             directory that contains the models that describe the type and
             relationship between different sanity models
           </p>
-          <br />
+
           <ImageList cols={2}>
             <ImageListItem key={portfolioImg.sanityDir.src}>
               <img src={portfolioImg.sanityDir.src} alt="image" />
@@ -73,7 +75,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
               <ImageListItemBar position="below" title="Schemas" />
             </ImageListItem>
           </ImageList>
-          <br />
+
           <p></p>
         </Card>
       </Grid>
