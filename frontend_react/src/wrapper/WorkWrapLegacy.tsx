@@ -9,6 +9,7 @@ interface Props {
 
 const WorkWrapLegacy: React.FC<Props> = ({ projectLink, works }) => {
   const currentWork = works.find((work) => work.projectLink == projectLink);
+  if (currentWork === undefined) return <div>No Work was found</div>;
 
   return (
     <div className="container">
