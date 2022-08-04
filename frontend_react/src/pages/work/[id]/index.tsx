@@ -5,9 +5,8 @@ import { GetStaticProps, NextPage } from "next";
 import { WorkItem } from "../../../container/Work/WorkItem";
 import { client } from "../../../client";
 import { strings } from "../../../constants";
-import LegacyWorkWrap from "../../../wrapper/WorkWrapLegacy";
-import WorkWrap from "../../../wrapper/WorkWrap";
 import { SkillItem } from "../../../container/Skills/models";
+import WorkApp from "../../../workContainer/WorkApp";
 
 interface Props {
   projectLink: string;
@@ -15,22 +14,7 @@ interface Props {
 }
 
 const Work: NextPage<Props> = ({ projectLink, works }) => {
-  if (
-    projectLink === "aaberge_brudesalong" ||
-    projectLink === "black_oil_calculator"
-  ) {
-    return (
-      <div>
-        <Head>
-          <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-        </Head>
-
-        <LegacyWorkWrap projectLink={projectLink} works={works} />
-      </div>
-    );
-  } else {
-    return <WorkWrap projectLink={projectLink} works={works} />;
-  }
+  return <WorkApp projectLink={projectLink} works={works} />;
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
