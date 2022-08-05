@@ -47,7 +47,7 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            {projectLink.replaceAll("_", " ")}
+            {currentWork.title}
           </Typography>
         </Toolbar>
         <IconMenu />

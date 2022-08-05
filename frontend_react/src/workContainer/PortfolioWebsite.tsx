@@ -17,6 +17,7 @@ import WorkHeader from "./Components/WorkHeader";
 import portfolioImg from "../constants/portfolioImages";
 
 import styles from "../styles/App.module.scss";
+import { Container } from "@mui/system";
 
 interface Props {
   work: WorkItem;
@@ -42,7 +43,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             I wanted to create a portfolio that show more info about me in
             general and is built on modern technologies. I had some experience
             with React and Angular, but decided to go for React/Typescript as it
-            feel similar to Jetpack Compose and can be used in React Native.
+            feel similar to Jetpack Compose and has many other uses such as
+            React Native
           </p>
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Front Page
@@ -54,6 +56,33 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             modifications. I believe in following tutorials to learn initial
             concepts instead of creating everything from sratch.
           </p>
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.portfolioSkills.src}>
+              <img src={portfolioImg.portfolioSkills.src} alt="image" />
+              <ImageListItemBar position="below" title="Front Page Skills" />
+            </ImageListItem>
+          </ImageList>
+
+          <p>
+            After creating the front page, I decided to go for a more simple
+            approach when I created the information about portfolio projects. I
+            initially imported the old bootstrap into the react project, but it
+            was clearly not designed for it so I looked into Material UI.
+            Material UI felt similar to Bootstrap and allowed me to add
+            components that are well styled and easy to customize.
+          </p>
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.portfolioWork.src}>
+              <img src={portfolioImg.portfolioWork.src} alt="image" />
+              <ImageListItemBar position="below" title="Work portfolio" />
+            </ImageListItem>
+          </ImageList>
+
+          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+            Sanity
+          </Typography>
 
           <p>
             The tutorial also introduced me to Sanity.io which is a content
@@ -76,7 +105,33 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </ImageListItem>
           </ImageList>
 
-          <p></p>
+          <p>
+            The models create data structures that can be modified, deleted and
+            added in the sanity editor.
+          </p>
+
+          <p>Models:</p>
+
+          <Container sx={{ paddingInline: 3 }}>
+            <ul>
+              <li>Abouts: The 3 info fields in page 2</li>
+              <li>Brands: The brands that I have worked with</li>
+              <li>Contact: Contact request sent from the contact form</li>
+              <li>Experiences: Different years with work experience</li>
+              <li>Skills: The skills I know</li>
+              <li>Testimonals: The Testimonals that I have receieved</li>
+              <li>workExperience: The different places I have worked at</li>
+              <li>works: The portfolio projects I have done</li>
+            </ul>
+          </Container>
+          <br />
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.sanityDir.src}>
+              <img src={portfolioImg.sanityDir.src} alt="image" />
+              <ImageListItemBar position="below" title="Sanity" />
+            </ImageListItem>
+          </ImageList>
         </Card>
       </Grid>
     </Grid>
