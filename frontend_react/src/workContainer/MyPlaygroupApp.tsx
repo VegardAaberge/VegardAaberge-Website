@@ -94,23 +94,23 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={2}>
-            <ImageListItem key={workImages.camera.src}>
-              <img src={workImages.camera.src} alt="image" />
+            <ImageListItem key={workImages.myplaygroup_camera.src}>
+              <img src={workImages.myplaygroup_camera.src} alt="image" />
               <ImageListItemBar position="below" title="Profile Photo" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.profile.src}>
-              <img src={workImages.profile.src} alt="image" />
+            <ImageListItem key={workImages.myplaygroup_profile.src}>
+              <img src={workImages.myplaygroup_profile.src} alt="image" />
               <ImageListItemBar position="below" title="Create Profile" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.classes.src}>
-              <img src={workImages.classes.src} alt="image" />
+            <ImageListItem key={workImages.myplaygroup_classes.src}>
+              <img src={workImages.myplaygroup_classes.src} alt="image" />
               <ImageListItemBar position="below" title="User's classes" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.settings.src}>
-              <img src={workImages.settings.src} alt="image" />
+            <ImageListItem key={workImages.myplaygroup_settings.src}>
+              <img src={workImages.myplaygroup_settings.src} alt="image" />
               <ImageListItemBar position="below" title="User's settings" />
             </ImageListItem>
           </ImageList>

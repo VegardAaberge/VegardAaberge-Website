@@ -60,8 +60,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={1}>
-            <ImageListItem key={workImg.portfolioSkills.src}>
-              <img src={workImg.portfolioSkills.src} alt="image" />
+            <ImageListItem key={workImg.portfolio_skills.src}>
+              <img src={workImg.portfolio_skills.src} alt="image" />
               <ImageListItemBar position="below" title="Front Page Skills" />
             </ImageListItem>
           </ImageList>
@@ -76,8 +76,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={1}>
-            <ImageListItem key={workImg.portfolioWork.src}>
-              <img src={workImg.portfolioWork.src} alt="image" />
+            <ImageListItem key={workImg.portfolio_work.src}>
+              <img src={workImg.portfolio_work.src} alt="image" />
               <ImageListItemBar position="below" title="Work portfolio" />
             </ImageListItem>
           </ImageList>
@@ -96,13 +96,13 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={2}>
-            <ImageListItem key={workImg.sanityDir.src}>
-              <img src={workImg.sanityDir.src} alt="image" />
+            <ImageListItem key={workImg.portfolio_sanityDir.src}>
+              <img src={workImg.portfolio_sanityDir.src} alt="image" />
               <ImageListItemBar position="below" title="Directory" />
             </ImageListItem>
 
-            <ImageListItem key={workImg.sanitySchemas.src}>
-              <img src={workImg.sanitySchemas.src} alt="image" />
+            <ImageListItem key={workImg.portfolio_sanitySchemas.src}>
+              <img src={workImg.portfolio_sanitySchemas.src} alt="image" />
               <ImageListItemBar position="below" title="Schemas" />
             </ImageListItem>
           </ImageList>
@@ -129,8 +129,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <br />
 
           <ImageList cols={1}>
-            <ImageListItem key={workImg.sanityDir.src}>
-              <img src={workImg.sanityDir.src} alt="image" />
+            <ImageListItem key={workImg.portfolio_sanityDir.src}>
+              <img src={workImg.portfolio_sanityDir.src} alt="image" />
               <ImageListItemBar position="below" title="Sanity" />
             </ImageListItem>
           </ImageList>

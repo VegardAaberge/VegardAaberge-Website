@@ -1,59 +1,54 @@
 // Black Oil Calculator
-import calculateGas from "../assets/lundin/calculateGas.png";
-import calculateOil from "../assets/lundin/calculateOil.png";
-import conversions from "../assets/lundin/conversions.png";
-import datatables from "../assets/lundin/datatables.png";
-import loadData from "../assets/lundin/loadData.png";
-import mainten_create from "../assets/lundin/mainten_create.png";
-import mainten_front from "../assets/lundin/mainten_front.png";
-import mainten_list from "../assets/lundin/mainten_list.png";
-import mapBathemetry from "../assets/lundin/mapBathemetry.png";
-import mapGeology from "../assets/lundin/mapGeology.png";
-import mapNormal from "../assets/lundin/mapNormal.png";
-import norlex from "../assets/lundin/norlex.png";
-import norlexFormations from "../assets/lundin/norlexFormations.png";
-import strategrafi from "../assets/lundin/strategrafi.png";
-import bestill from "../assets/brudesalong/bestill.png";
-import database from "../assets/brudesalong/database.png";
-import database2 from "../assets/brudesalong/database2.png";
-import startside from "../assets/brudesalong/startside.jpg";
+import lundin_calculateGas from "../assets/lundin/calculateGas.png";
+import lundin_calculateOil from "../assets/lundin/calculateOil.png";
+import lundin_conversions from "../assets/lundin/conversions.png";
+import lundin_datatables from "../assets/lundin/datatables.png";
+import lundin_loadData from "../assets/lundin/loadData.png";
+import lundin_mapBathemetry from "../assets/lundin/mapBathemetry.png";
+import lundin_mapGeology from "../assets/lundin/mapGeology.png";
+import lundin_mapNormal from "../assets/lundin/mapNormal.png";
+import lundin_norlex from "../assets/lundin/norlex.png";
+import lundin_norlexFormations from "../assets/lundin/norlexFormations.png";
+import lundin_strategrafi from "../assets/lundin/strategrafi.png";
 
-import sanityDir from "../assets/portfolio/sanityDir.jpg";
-import sanitySchemas from "../assets/portfolio/sanitySchemas.jpg";
-import portfolioWork from "../assets/portfolio/portfolioWork.jpg";
-import portfolioSkills from "../assets/portfolio/portfolioSkills.jpg";
+import brudesalong_bestill from "../assets/brudesalong/bestill.png";
+import brudesalong_database from "../assets/brudesalong/database.png";
+import brudesalong_database2 from "../assets/brudesalong/database2.png";
+import brudesalong_startside from "../assets/brudesalong/startside.jpg";
 
-import camera from "../assets/myplaygroup/camera.jpg";
-import classes from "../assets/myplaygroup/classes.jpg";
-import profile from "../assets/myplaygroup/profile.jpg";
-import settings from "../assets/myplaygroup/settings.jpg";
+import portfolio_sanityDir from "../assets/portfolio/sanityDir.jpg";
+import portfolio_sanitySchemas from "../assets/portfolio/sanitySchemas.jpg";
+import portfolio_work from "../assets/portfolio/portfolioWork.jpg";
+import portfolio_skills from "../assets/portfolio/portfolioSkills.jpg";
+
+import myplaygroup_camera from "../assets/myplaygroup/camera.jpg";
+import myplaygroup_classes from "../assets/myplaygroup/classes.jpg";
+import myplaygroup_profile from "../assets/myplaygroup/profile.jpg";
+import myplaygroup_settings from "../assets/myplaygroup/settings.jpg";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  calculateGas,
-  calculateOil,
-  conversions,
-  datatables,
-  loadData,
-  mainten_create,
-  mainten_front,
-  mainten_list,
-  mapBathemetry,
-  mapGeology,
-  mapNormal,
-  norlex,
-  norlexFormations,
-  strategrafi,
-  bestill,
-  database,
-  database2,
-  startside,
-  sanityDir,
-  sanitySchemas,
-  portfolioWork,
-  portfolioSkills,
-  camera,
-  classes,
-  profile,
-  settings,
+  lundin_calculateGas,
+  lundin_calculateOil,
+  lundin_conversions,
+  lundin_datatables,
+  lundin_loadData,
+  lundin_mapBathemetry,
+  lundin_mapGeology,
+  lundin_mapNormal,
+  lundin_norlex,
+  lundin_norlexFormations,
+  lundin_strategrafi,
+  brudesalong_bestill,
+  brudesalong_database,
+  brudesalong_database2,
+  brudesalong_startside,
+  portfolio_sanityDir,
+  portfolio_sanitySchemas,
+  portfolio_work,
+  portfolio_skills,
+  myplaygroup_camera,
+  myplaygroup_classes,
+  myplaygroup_profile,
+  myplaygroup_settings,
 };

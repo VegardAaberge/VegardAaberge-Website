@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 
 import Grid from "@mui/material/Grid";
 import {
-  Box,
   Card,
   ImageList,
   ImageListItem,
@@ -48,8 +48,8 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             navigere seg til andre sider med topmenyen og bildene.
           </p>
           <ImageList cols={1}>
-            <ImageListItem key={workImages.startside.src}>
-              <img src={workImages.startside.src} alt="image" />
+            <ImageListItem key={workImages.brudesalong_startside.src}>
+              <img src={workImages.brudesalong_startside.src} alt="image" />
               <ImageListItemBar position="below" title="Hovedmeny" />
             </ImageListItem>
           </ImageList>
@@ -65,8 +65,8 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={1}>
-            <ImageListItem key={workImages.bestill.src}>
-              <img src={workImages.bestill.src} alt="image" />
+            <ImageListItem key={workImages.brudesalong_bestill.src}>
+              <img src={workImages.brudesalong_bestill.src} alt="image" />
               <ImageListItemBar position="below" title="Bestille time" />
             </ImageListItem>
           </ImageList>
@@ -93,13 +93,13 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
           </p>
 
           <ImageList cols={1}>
-            <ImageListItem key={portfolioImg.sanityDir.src}>
-              <img src={workImages.database.src} alt="image" />
+            <ImageListItem key={workImages.brudesalong_database.src}>
+              <img src={workImages.brudesalong_database.src} alt="image" />
               <ImageListItemBar position="below" title="Database login" />
             </ImageListItem>
 
-            <ImageListItem key={portfolioImg.sanitySchemas.src}>
-              <img src={workImages.database2.src} alt="image" />
+            <ImageListItem key={workImages.brudesalong_database2.src}>
+              <img src={workImages.brudesalong_database2.src} alt="image" />
               <ImageListItemBar position="below" title="Database kunder" />
             </ImageListItem>
           </ImageList>

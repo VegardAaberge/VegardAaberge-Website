@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 
 import Grid from "@mui/material/Grid";
 import {
-  Box,
   Card,
   ImageList,
   ImageListItem,
@@ -39,8 +39,8 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             lager nettsider. Jeg brukte ca 1 måned på å lære de forskjellige
             språkene og hvordan man bruker dem. Først så laget jeg kalkulatoren
             og lastefunksjonene, og så brukte jeg en del tid på kartet og
-            strategrafi bildeserien. Til slutt la jeg til flere funksjoner på
-            kartet og la til Norlex databasen.
+            lundin_strategrafi bildeserien. Til slutt la jeg til flere
+            funksjoner på kartet og la til Norlex databasen.
           </p>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Kalkulatoren
@@ -55,13 +55,19 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             fikk så en del oppdateringer iløpet av perioden.
           </p>
           <ImageList cols={2} sx={{ p: "0.5rem" }}>
-            <ImageListItem key={portfolioImg.sanityDir.src}>
-              <img src={workImages.calculateOil.src} alt="Oljekalkulator" />
+            <ImageListItem key={workImages.lundin_calculateOil.src}>
+              <img
+                src={workImages.lundin_calculateOil.src}
+                alt="Oljekalkulator"
+              />
               <ImageListItemBar position="below" title="Oljekalkulator" />
             </ImageListItem>
 
-            <ImageListItem key={portfolioImg.sanitySchemas.src}>
-              <img src={workImages.calculateGas.src} alt="Gaskalkulator" />
+            <ImageListItem key={workImages.lundin_calculateGas.src}>
+              <img
+                src={workImages.lundin_calculateGas.src}
+                alt="Gaskalkulator"
+              />
 
               <ImageListItemBar position="below" title="Gaskalkulator" />
             </ImageListItem>
@@ -88,18 +94,21 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             magnetisme) er laget med maptiler og så lagt til programmet.
           </p>
           <ImageList cols={3} sx={{ p: "0.5rem" }}>
-            <ImageListItem key={workImages.mapNormal.src}>
-              <img src={workImages.mapNormal.src} alt="Oljekalkulator" />
+            <ImageListItem key={workImages.lundin_mapNormal.src}>
+              <img src={workImages.lundin_mapNormal.src} alt="Oljekalkulator" />
               <ImageListItemBar position="below" title="Normal Kart" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.mapGeology.src}>
-              <img src={workImages.mapGeology.src} alt="Gaskalkulator" />
+            <ImageListItem key={workImages.lundin_mapGeology.src}>
+              <img src={workImages.lundin_mapGeology.src} alt="Gaskalkulator" />
 
               <ImageListItemBar position="below" title="Geologi Kart" />
             </ImageListItem>
-            <ImageListItem key={workImages.mapBathemetry.src}>
-              <img src={workImages.mapBathemetry.src} alt="Gaskalkulator" />
+            <ImageListItem key={workImages.lundin_mapBathemetry.src}>
+              <img
+                src={workImages.lundin_mapBathemetry.src}
+                alt="Gaskalkulator"
+              />
 
               <ImageListItemBar position="below" title="Bathemetri Kart" />
             </ImageListItem>
@@ -125,14 +134,17 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             som er etterspurt.
           </p>
           <ImageList cols={2} sx={{ p: "0.5rem" }}>
-            <ImageListItem key={workImages.norlex.src}>
-              <img src={workImages.norlex.src} alt="Norlex Hovedindeks" />
+            <ImageListItem key={workImages.lundin_norlex.src}>
+              <img
+                src={workImages.lundin_norlex.src}
+                alt="Norlex Hovedindeks"
+              />
               <ImageListItemBar position="below" title="Norlex Hovedindeks" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.norlexFormations.src}>
+            <ImageListItem key={workImages.lundin_norlexFormations.src}>
               <img
-                src={workImages.norlexFormations.src}
+                src={workImages.lundin_norlexFormations.src}
                 alt="Norlex Formasjoner"
               />
               <ImageListItemBar position="below" title="Norlex Formasjoner" />
@@ -143,7 +155,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
           </Typography>
           <p>
             Det ble også laget en del enklere funksjoner som Lundin mente det
-            var nyttig å ha. Jeg designet en strategrafi og datatabell
+            var nyttig å ha. Jeg designet en lundin_strategrafi og datatabell
             bildeserie. Piltastene brukes til å gå frem og tilbake, og bruker
             Jquery mobile animasjoner. Sidene er kategorisert etter hashtag, og
             på den måten kan den vite hvilke side den skal gå til.
@@ -154,25 +166,37 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             hvor man kan finne nyttige kilder
           </p>
           <ImageList cols={2} sx={{ p: "0.5rem" }}>
-            <ImageListItem key={workImages.strategrafi.src}>
-              <img src={workImages.strategrafi.src} alt="Norlex Hovedindeks" />
-              <ImageListItemBar position="below" title="Strategrafi" />
+            <ImageListItem key={workImages.lundin_strategrafi.src}>
+              <img
+                src={workImages.lundin_strategrafi.src}
+                alt="Norlex Hovedindeks"
+              />
+              <ImageListItemBar position="below" title="lundin_strategrafi" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.datatables.src}>
-              <img src={workImages.datatables.src} alt="calculateGas" />
+            <ImageListItem key={workImages.lundin_datatables.src}>
+              <img
+                src={workImages.lundin_datatables.src}
+                alt="lundin_calculateGas"
+              />
 
               <ImageListItemBar position="below" title="Datatabeller" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.conversions.src}>
-              <img src={workImages.conversions.src} alt="calculateGas" />
+            <ImageListItem key={workImages.lundin_conversions.src}>
+              <img
+                src={workImages.lundin_conversions.src}
+                alt="lundin_calculateGas"
+              />
 
               <ImageListItemBar position="below" title="Konversjoner" />
             </ImageListItem>
 
-            <ImageListItem key={workImages.loadData.src}>
-              <img src={workImages.loadData.src} alt="calculateGas" />
+            <ImageListItem key={workImages.lundin_loadData.src}>
+              <img
+                src={workImages.lundin_loadData.src}
+                alt="lundin_calculateGas"
+              />
 
               <ImageListItemBar position="below" title="Laste inn data" />
             </ImageListItem>
