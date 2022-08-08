@@ -14,7 +14,6 @@ import {
 import { WorkItem } from "../container/Work/WorkItem";
 import WorkSummary from "./Components/WorkSummary";
 import WorkHeader from "./Components/WorkHeader";
-import portfolioImg from "../constants/portfolioImages";
 import { workImages } from "../constants";
 
 import styles from "../styles/App.module.scss";

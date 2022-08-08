@@ -18,6 +18,16 @@ import database from "../assets/brudesalong/database.png";
 import database2 from "../assets/brudesalong/database2.png";
 import startside from "../assets/brudesalong/startside.jpg";
 
+import sanityDir from "../assets/portfolio/sanityDir.jpg";
+import sanitySchemas from "../assets/portfolio/sanitySchemas.jpg";
+import portfolioWork from "../assets/portfolio/portfolioWork.jpg";
+import portfolioSkills from "../assets/portfolio/portfolioSkills.jpg";
+
+import camera from "../assets/myplaygroup/camera.jpg";
+import classes from "../assets/myplaygroup/classes.jpg";
+import profile from "../assets/myplaygroup/profile.jpg";
+import settings from "../assets/myplaygroup/settings.jpg";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   calculateGas,
@@ -38,4 +48,12 @@ export default {
   database,
   database2,
   startside,
+  sanityDir,
+  sanitySchemas,
+  portfolioWork,
+  portfolioSkills,
+  camera,
+  classes,
+  profile,
+  settings,
 };

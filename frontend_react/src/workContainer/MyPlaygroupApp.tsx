@@ -1,12 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 import Grid from "@mui/material/Grid";
-import { Card, Typography } from "@mui/material";
+import {
+  Card,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
 
 import { WorkItem } from "../container/Work/WorkItem";
 import WorkSummary from "./Components/WorkSummary";
 import WorkHeader from "./Components/WorkHeader";
 import YoutubeEmbed from "../components/YoutubeEmbed/YoutubeEmbed";
+
+import { workImages } from "../constants";
 
 import styles from "../styles/App.module.scss";
 
@@ -53,7 +62,58 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             App
           </Typography>
 
+          <p>
+            After logging into the app, then admin will be navigated to the
+            admin panel and users will be navigated into the user panel.
+          </p>
+
+          <p>
+            After logging into the app, then admin will be navigated to the
+            admin panel. The admin panel allows the admin to create and edit
+            daily classes, user's monthly plans, user's payments and the users
+            themselves. Admin can also edit its own information and send
+            messages to users.
+          </p>
+
+          <p>Here is a video recording showing the admin panel</p>
+
           <YoutubeEmbed embedId="Zm_Pas6ss3s" />
+
+          <p>
+            Non-admin users get logged into the user panel. They will first need
+            to fill in some information about themselves and take a profile
+            photo. Then they can login with their new password and get logged
+            into the users panel. Here they can see which classes they have,
+            chat with admin and change their info
+          </p>
+
+          <p>
+            The chat screen uses websockets to get new messages in real time.
+            Each time a user open the chat screen, it will create a secure chat
+            session with admin.
+          </p>
+
+          <ImageList cols={2}>
+            <ImageListItem key={workImages.camera.src}>
+              <img src={workImages.camera.src} alt="image" />
+              <ImageListItemBar position="below" title="Profile Photo" />
+            </ImageListItem>
+
+            <ImageListItem key={workImages.profile.src}>
+              <img src={workImages.profile.src} alt="image" />
+              <ImageListItemBar position="below" title="Create Profile" />
+            </ImageListItem>
+
+            <ImageListItem key={workImages.classes.src}>
+              <img src={workImages.classes.src} alt="image" />
+              <ImageListItemBar position="below" title="User's classes" />
+            </ImageListItem>
+
+            <ImageListItem key={workImages.settings.src}>
+              <img src={workImages.settings.src} alt="image" />
+              <ImageListItemBar position="below" title="User's settings" />
+            </ImageListItem>
+          </ImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Backend
