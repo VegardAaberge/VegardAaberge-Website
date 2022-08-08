@@ -25,6 +25,16 @@ export default {
       type: "string",
     },
     {
+      name: "company",
+      title: "Company",
+      type: "string",
+    },
+    {
+      name: "period",
+      title: "Period",
+      type: "string",
+    },
+    {
       name: "imgUrl",
       title: "ImageUrl",
       type: "image",
@@ -32,7 +42,17 @@ export default {
         hotspot: true,
       },
     },
-
+    {
+      name: "skillsUsed",
+      title: "Skills",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "skills" }],
+        },
+      ],
+    },
     {
       name: "tags",
       title: "Tags",
