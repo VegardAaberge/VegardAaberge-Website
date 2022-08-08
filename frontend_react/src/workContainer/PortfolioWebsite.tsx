@@ -1,77 +1,137 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+import React from "react";
+import Image from "next/image";
+
 import Grid from "@mui/material/Grid";
-import AlignItemsList from "./AlignItemsList";
-import { Card, ListItem } from "@mui/material";
+import {
+  Box,
+  Card,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
 
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import CodeIcon from "@mui/icons-material/Code";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LanguageIcon from "@mui/icons-material/Language";
+import { WorkItem } from "../container/Work/WorkItem";
+import WorkSummary from "./Components/WorkSummary";
+import WorkHeader from "./Components/WorkHeader";
+import portfolioImg from "../constants/portfolioImages";
 
-const PortfolioWebsite: React.FC = () => {
+import styles from "../styles/App.module.scss";
+import { Container } from "@mui/system";
+
+interface Props {
+  work: WorkItem;
+}
+
+const PortfolioWebsite: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
       <Grid item md={4}>
         <Card variant="outlined">
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <ApartmentIcon />
-              </ListItemIcon>
-              Personal
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <CodeIcon />
-              </ListItemIcon>
-              React, Next.js, scss, javascript
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <GitHubIcon />
-              </ListItemIcon>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://github.com/
-              </a>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <LanguageIcon />
-              </ListItemIcon>
-              <a
-                href="https://vegardaaberge.no"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://vegardaaberge.no
-              </a>
-            </ListItem>
-          </List>
+          <WorkSummary work={work} />
         </Card>
       </Grid>
       <Grid item md={8}>
-        <Card variant="outlined" sx={{ p: 3 }}>
+        <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
+          <WorkHeader title={work.title} />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            I initially created my portfolio in 2015 with CSS, Javascript,
+            Bootstrap and PHP. The old portfolio can be found here
           </p>
+
+          <p>
+            I wanted to create a portfolio that show more info about me in
+            general and is built on modern technologies. I had some experience
+            with React and Angular, but decided to go for React/Typescript as it
+            feel similar to Jetpack Compose and has many other uses such as
+            React Native
+          </p>
+          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+            Front Page
+          </Typography>
+          <p>
+            For the front page, I followed a tutorial
+            https://youtu.be/3HNyXCPDQ7Q to create the initial look, but wrote
+            it in Typescript as I wanted type safety and then made significant
+            modifications. I believe in following tutorials to learn initial
+            concepts instead of creating everything from sratch.
+          </p>
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.portfolioSkills.src}>
+              <img src={portfolioImg.portfolioSkills.src} alt="image" />
+              <ImageListItemBar position="below" title="Front Page Skills" />
+            </ImageListItem>
+          </ImageList>
+
+          <p>
+            After creating the front page, I decided to go for a more simple
+            approach when I created the information about portfolio projects. I
+            initially imported the old bootstrap into the react project, but it
+            was clearly not designed for it so I looked into Material UI.
+            Material UI felt similar to Bootstrap and allowed me to add
+            components that are well styled and easy to customize.
+          </p>
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.portfolioWork.src}>
+              <img src={portfolioImg.portfolioWork.src} alt="image" />
+              <ImageListItemBar position="below" title="Work portfolio" />
+            </ImageListItem>
+          </ImageList>
+
+          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+            Sanity
+          </Typography>
+
+          <p>
+            The tutorial also introduced me to Sanity.io which is a content
+            platform that provided an easy place to store and modify data. To
+            initalize it, I needed to create a santiy backend directory which
+            can be seen below. Inside the directory, there is a schemas
+            directory that contains the models that describe the type and
+            relationship between different sanity models
+          </p>
+
+          <ImageList cols={2}>
+            <ImageListItem key={portfolioImg.sanityDir.src}>
+              <img src={portfolioImg.sanityDir.src} alt="image" />
+              <ImageListItemBar position="below" title="Directory" />
+            </ImageListItem>
+
+            <ImageListItem key={portfolioImg.sanitySchemas.src}>
+              <img src={portfolioImg.sanitySchemas.src} alt="image" />
+              <ImageListItemBar position="below" title="Schemas" />
+            </ImageListItem>
+          </ImageList>
+
+          <p>
+            The models create data structures that can be modified, deleted and
+            added in the sanity editor.
+          </p>
+
+          <p>Models:</p>
+
+          <Container sx={{ paddingInline: 3 }}>
+            <ul>
+              <li>Abouts: The 3 info fields in page 2</li>
+              <li>Brands: The brands that I have worked with</li>
+              <li>Contact: Contact request sent from the contact form</li>
+              <li>Experiences: Different years with work experience</li>
+              <li>Skills: The skills I know</li>
+              <li>Testimonals: The Testimonals that I have receieved</li>
+              <li>workExperience: The different places I have worked at</li>
+              <li>works: The portfolio projects I have done</li>
+            </ul>
+          </Container>
+          <br />
+
+          <ImageList cols={1}>
+            <ImageListItem key={portfolioImg.sanityDir.src}>
+              <img src={portfolioImg.sanityDir.src} alt="image" />
+              <ImageListItemBar position="below" title="Sanity" />
+            </ImageListItem>
+          </ImageList>
         </Card>
       </Grid>
     </Grid>

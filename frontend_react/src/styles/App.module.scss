@@ -78,3 +78,18 @@
     font-size: 0.9rem;
   }
 }
+
+.work_wrap {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.work_item {
+  p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -1,4 +1,7 @@
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import {
+  SanityImageSource,
+  SanityReference,
+} from "@sanity/image-url/lib/types/types";
 
 export interface WorkItem {
   _id: string;
@@ -6,6 +9,9 @@ export interface WorkItem {
   description: string;
   projectLink: string;
   codeLink: string;
+  company: string;
   imgUrl: SanityImageSource;
+  skillsUsed: Array<SanityReference>;
+  skillsUsedStrings: Array<string>;
   tags: string[];
 }

@@ -5,30 +5,48 @@ import { GetStaticProps, NextPage } from "next";
 import { WorkItem } from "../../../container/Work/WorkItem";
 import { client } from "../../../client";
 import { strings } from "../../../constants";
-import LegacyWorkWrap from "../../../wrapper/LegacyWorkWrap";
-import WorkWrap from "../../../wrapper/WorkWrap";
+import { SkillItem } from "../../../container/Skills/models";
+import WorkApp from "../../../workContainer/WorkApp";
+
+import {
+  ThemeProvider,
+  createTheme,
+  experimental_sx as sx,
+} from "@mui/material/styles";
 
 interface Props {
   projectLink: string;
+  works: WorkItem[];
 }
 
-const Work: NextPage<Props> = ({ projectLink }) => {
-  if (
-    projectLink === "aaberge_brudesalong" ||
-    projectLink === "black_oil_calculator"
-  ) {
-    return (
-      <div>
-        <Head>
-          <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-        </Head>
+const workTheme = createTheme({
+  components: {
+    MuiImageListItemBar: {
+      styleOverrides: {
+        root: sx({
+          fontStyle: "italic",
+          alignSelf: "center",
+          fontWeight: 600,
+        }),
+      },
+    },
+    MuiImageList: {
+      styleOverrides: {
+        root: sx({
+          paddingTop: "0.5rem",
+          paddingBottom: "0.5rem",
+        }),
+      },
+    },
+  },
+});
 
-        <LegacyWorkWrap projectLink={projectLink} />
-      </div>
-    );
-  } else {
-    return <WorkWrap projectLink={projectLink} />;
-  }
+const Work: NextPage<Props> = ({ projectLink, works }) => {
+  return (
+    <ThemeProvider theme={workTheme}>
+      <WorkApp projectLink={projectLink} works={works} />
+    </ThemeProvider>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -42,9 +60,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const projectLink = context.params.id;
 
+  let works: WorkItem[] = await client.fetch(strings.QUERY_WORKS);
+  let skills: SkillItem[] = await client.fetch(strings.QUERY_SKILLS);
+
+  works.map((work) => {
+    work.skillsUsedStrings = work.skillsUsed
+      .map((sRef) => skills.find((s) => s._id == sRef._ref)?.name)
+      .filter((s): s is string => !!s);
+  });
+
   return {
     props: {
       projectLink: projectLink,
+      works: works,
     },
   };
 };
