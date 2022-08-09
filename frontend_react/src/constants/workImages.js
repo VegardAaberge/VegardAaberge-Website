@@ -25,6 +25,9 @@ import myplaygroup_camera from "../assets/myplaygroup/camera.jpg";
 import myplaygroup_classes from "../assets/myplaygroup/classes.jpg";
 import myplaygroup_profile from "../assets/myplaygroup/profile.jpg";
 import myplaygroup_settings from "../assets/myplaygroup/settings.jpg";
+import myplaygroup_structure from "../assets/myplaygroup/structure.jpg";
+import myplaygroup_security from "../assets/myplaygroup/security.jpg";
+import myplaygroup_sockets from "../assets/myplaygroup/sockets.jpg";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -39,16 +42,22 @@ export default {
   lundin_norlex,
   lundin_norlexFormations,
   lundin_strategrafi,
+
   brudesalong_bestill,
   brudesalong_database,
   brudesalong_database2,
   brudesalong_startside,
+
   portfolio_sanityDir,
   portfolio_sanitySchemas,
   portfolio_work,
   portfolio_skills,
+
   myplaygroup_camera,
   myplaygroup_classes,
   myplaygroup_profile,
   myplaygroup_settings,
+  myplaygroup_structure,
+  myplaygroup_security,
+  myplaygroup_sockets,
 };
