@@ -16,6 +16,8 @@ import WorkSummary from "./Components/WorkSummary";
 import WorkHeader from "./Components/WorkHeader";
 import { workImages } from "../constants";
 
+import { DynamicImageList } from "../components";
+
 import styles from "../styles/App.module.scss";
 
 interface Props {
@@ -47,12 +49,12 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             under. Her kan kunden sende en melding, finne informasjon, og
             navigere seg til andre sider med topmenyen og bildene.
           </p>
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImages.brudesalong_startside.src}>
               <img src={workImages.brudesalong_startside.src} alt="image" />
               <ImageListItemBar position="below" title="Hovedmeny" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <p>
             Bestillingskjemaet er koblet til Aaberge Brudesalong AS sin
@@ -64,12 +66,12 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             på engelsk istedenfor.
           </p>
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImages.brudesalong_bestill.src}>
               <img src={workImages.brudesalong_bestill.src} alt="image" />
               <ImageListItemBar position="below" title="Bestille time" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Databasen
@@ -92,7 +94,7 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             loginformasjonen ikke lagret på serveren.
           </p>
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImages.brudesalong_database.src}>
               <img src={workImages.brudesalong_database.src} alt="image" />
               <ImageListItemBar position="below" title="Database login" />
@@ -102,7 +104,7 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
               <img src={workImages.brudesalong_database2.src} alt="image" />
               <ImageListItemBar position="below" title="Database kunder" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
         </Card>
       </Grid>
     </Grid>

@@ -19,7 +19,7 @@ import YoutubeEmbed from "../components/YoutubeEmbed/YoutubeEmbed";
 import { workImages } from "../constants";
 
 import styles from "../styles/App.module.scss";
-import { CodeBlock } from "../components";
+import { CodeBlock, DynamicImageList } from "../components";
 
 interface Props {
   work: WorkItem;
@@ -95,7 +95,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             session with admin.
           </p>
 
-          <ImageList cols={2}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImages.myplaygroup_camera.src}>
               <img src={workImages.myplaygroup_camera.src} alt="image" />
               <ImageListItemBar position="below" title="Profile Photo" />
@@ -115,7 +115,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
               <img src={workImages.myplaygroup_settings.src} alt="image" />
               <ImageListItemBar position="below" title="User's settings" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Spring Backend
@@ -153,7 +153,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             to security information such as which user made the request.
           </p>
 
-          <ImageList cols={2}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImages.myplaygroup_structure.src}>
               <img src={workImages.myplaygroup_structure.src} alt="image" />
               <ImageListItemBar position="below" title="Backend Structure" />
@@ -163,7 +163,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
               <img src={workImages.myplaygroup_security.src} alt="image" />
               <ImageListItemBar position="below" title="Security" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <p>
             The backend also provides chat sockets through the
@@ -173,7 +173,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             has been read.
           </p>
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImages.myplaygroup_sockets.src}>
               <img src={workImages.myplaygroup_sockets.src} alt="image" />
               <ImageListItemBar
@@ -181,7 +181,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
                 title="Message Socket Handler"
               />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Setting up the domain
@@ -446,7 +446,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            If everything is working, then we can set up the playgroup service.
+            If everything is working, then we can set up the playgroup service. 
             To setup a service, we will need to create a new service file
           </p>
 

@@ -16,6 +16,8 @@ import WorkSummary from "./Components/WorkSummary";
 import WorkHeader from "./Components/WorkHeader";
 import { workImages } from "../constants";
 
+import { DynamicImageList } from "../components";
+
 import styles from "../styles/App.module.scss";
 
 interface Props {
@@ -54,7 +56,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             som er lagret på serveren. Dette var den første siden jeg laget, men
             fikk så en del oppdateringer iløpet av perioden.
           </p>
-          <ImageList cols={2} sx={{ p: "0.5rem" }}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImages.lundin_calculateOil.src}>
               <img
                 src={workImages.lundin_calculateOil.src}
@@ -71,7 +73,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
 
               <ImageListItemBar position="below" title="Gaskalkulator" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Kartet
           </Typography>
@@ -93,7 +95,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             ved å bruke knappene. Bildekartene (gravitasjon, bathemetri,
             magnetisme) er laget med maptiler og så lagt til programmet.
           </p>
-          <ImageList cols={3} sx={{ p: "0.5rem" }}>
+          <DynamicImageList cols={3}>
             <ImageListItem key={workImages.lundin_mapNormal.src}>
               <img src={workImages.lundin_mapNormal.src} alt="Oljekalkulator" />
               <ImageListItemBar position="below" title="Normal Kart" />
@@ -112,7 +114,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
 
               <ImageListItemBar position="below" title="Bathemetri Kart" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Norlex
           </Typography>
@@ -133,7 +135,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             mulig å trykke på, og da vil den finne formasjonstopper for brønnen
             som er etterspurt.
           </p>
-          <ImageList cols={2} sx={{ p: "0.5rem" }}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImages.lundin_norlex.src}>
               <img
                 src={workImages.lundin_norlex.src}
@@ -149,7 +151,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
               />
               <ImageListItemBar position="below" title="Norlex Formasjoner" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
           <Typography variant="h6" align="center" sx={{ p: 2 }}>
             Andre Funksjoner
           </Typography>
@@ -165,7 +167,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             omregninger, laste inn data til kalkulatoren og jeg hadde en side
             hvor man kan finne nyttige kilder
           </p>
-          <ImageList cols={2} sx={{ p: "0.5rem" }}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImages.lundin_strategrafi.src}>
               <img
                 src={workImages.lundin_strategrafi.src}
@@ -200,7 +202,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
 
               <ImageListItemBar position="below" title="Laste inn data" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
         </Card>
       </Grid>
     </Grid>

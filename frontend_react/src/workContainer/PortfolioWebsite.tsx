@@ -18,6 +18,8 @@ import WorkHeader from "./Components/WorkHeader";
 
 import workImg from "../constants/workImages";
 
+import { DynamicImageList } from "../components";
+
 import styles from "../styles/App.module.scss";
 import { Container } from "@mui/system";
 
@@ -59,12 +61,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             concepts instead of creating everything from sratch.
           </p>
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImg.portfolio_skills.src}>
               <img src={workImg.portfolio_skills.src} alt="image" />
               <ImageListItemBar position="below" title="Front Page Skills" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <p>
             After creating the front page, I decided to go for a more simple
@@ -75,12 +77,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             components that are well styled and easy to customize.
           </p>
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImg.portfolio_work.src}>
               <img src={workImg.portfolio_work.src} alt="image" />
               <ImageListItemBar position="below" title="Work portfolio" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Sanity
@@ -95,7 +97,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             relationship between different sanity models
           </p>
 
-          <ImageList cols={2}>
+          <DynamicImageList cols={2}>
             <ImageListItem key={workImg.portfolio_sanityDir.src}>
               <img src={workImg.portfolio_sanityDir.src} alt="image" />
               <ImageListItemBar position="below" title="Directory" />
@@ -105,7 +107,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
               <img src={workImg.portfolio_sanitySchemas.src} alt="image" />
               <ImageListItemBar position="below" title="Schemas" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
 
           <p>
             The models create data structures that can be modified, deleted and
@@ -128,12 +130,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Container>
           <br />
 
-          <ImageList cols={1}>
+          <DynamicImageList cols={1}>
             <ImageListItem key={workImg.portfolio_sanityDir.src}>
               <img src={workImg.portfolio_sanityDir.src} alt="image" />
               <ImageListItemBar position="below" title="Sanity" />
             </ImageListItem>
-          </ImageList>
+          </DynamicImageList>
         </Card>
       </Grid>
     </Grid>
