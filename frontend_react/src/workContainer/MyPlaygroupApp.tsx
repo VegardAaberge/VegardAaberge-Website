@@ -401,9 +401,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <p>The following sources was used</p>
-          <p>
-            https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04
-          </p>
+          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04" target="_blank">How To Install and Use PostgreSQL on Ubuntu 20.04</a></p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Playgroup Service
