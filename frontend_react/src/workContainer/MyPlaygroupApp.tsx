@@ -258,8 +258,11 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <p>
             The guide that I used to setup the apache webswrver can be found
             here
-            https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04#step-5-%E2%80%94-setting-up-virtual-hosts-recommended
           </p>
+
+          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04#step-5-%E2%80%94-setting-up-virtual-hosts-recommended" target="_blank">
+          How To Install the Apache Web Server on Ubuntu 18.04
+          </a></p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Setting up SSL
@@ -309,10 +312,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <p>The following sources was used</p>
-          <p>
-            https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04
-          </p>
-          <p>https://dzone.com/articles/spring-boot-secured-by-lets-encrypt</p>
+          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04" target="_blank">
+            How To Secure Apache with Let's Encrypt on Ubuntu 18.04
+          </a></p>
+          <p><a href="https://dzone.com/articles/spring-boot-secured-by-lets-encrypt" target="_blank">
+            Spring Boot Secured By Let's Encrypt
+          </a></p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Installing Java
@@ -357,7 +362,9 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>The following sources was used</p>
-          <p>https://www.tecmint.com/install-java-with-apt-on-ubuntu/</p>
+          <p><a href="https://www.tecmint.com/install-java-with-apt-on-ubuntu/" target="_blank">
+          How To Install Java with Apt on Ubuntu 20.04
+          </a></p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Installing postgreSQL
