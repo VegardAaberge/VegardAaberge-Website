@@ -16,6 +16,7 @@ import { WorkItem } from "../container/Work/WorkItem";
 import NavWorkList from "../components/NavWorkList/NavWorkList";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconMenu from "./Components/IconMenu";
+import NavbarMenu from "../components/Navbar/NavbarMenu/NavbarMenu";
 
 import styles from "../styles/App.module.scss";
 
@@ -50,7 +51,7 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
             {currentWork.title}
           </Typography>
         </Toolbar>
-        <IconMenu />
+        <NavbarMenu links={works.map((work) => work.title)} />
       </AppBar>
       <Box component="main" sx={{ p: 3 }} className={styles.work_wrap}>
         <Grid container sx={{ paddingInline: 3 }} maxWidth="xl">

@@ -334,7 +334,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
               target="_blank"
               rel="noreferrer"
             >
-              How To Secure Apache with Let's Encrypt on Ubuntu 18.04
+              How To Secure Apache with Let&apos;s Encrypt on Ubuntu 18.04
             </a>
           </p>
           <p>
