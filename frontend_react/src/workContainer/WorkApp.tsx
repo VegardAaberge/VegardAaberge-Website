@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   AppBar,
@@ -18,6 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NavbarMenu from "../components/Navbar/NavbarMenu/NavbarMenu";
 
 import styles from "../styles/App.module.scss";
+import SideMenu from "../components/SideMenu/SideMenu";
 
 interface Props {
   projectLink: string;
@@ -25,11 +26,28 @@ interface Props {
 }
 
 const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
+  const [menuToggled, setMenuToggled] = useState(false);
+
   const currentWork = works.find((work) => work.projectLink == projectLink);
   if (currentWork === undefined) return <div>No Work was found</div>;
 
+  const menuClicked = () => {
+    setMenuToggled(true);
+  };
+
+  const menuToggleChanged = (isToggled: boolean) => {
+    setMenuToggled(isToggled);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
+      {menuToggled && (
+        <SideMenu
+          links={works.map((work) => work.title)}
+          setToggle={menuToggleChanged}
+        />
+      )}
+
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -38,19 +56,14 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2, display: { xs: "block", md: "none" } }}
+            onClick={menuClicked}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {currentWork.title}
           </Typography>
         </Toolbar>
-        <NavbarMenu links={works.map((work) => work.title)} />
       </AppBar>
       <Box component="main" sx={{ p: 3 }} className={styles.work_wrap}>
         <Grid container sx={{ paddingInline: 3 }} maxWidth="xl">
