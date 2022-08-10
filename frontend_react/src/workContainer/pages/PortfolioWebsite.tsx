@@ -27,12 +27,12 @@ interface Props {
 const PortfolioWebsite: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item md={4}>
+      <Grid item md={4} sm={12}>
         <Card variant="outlined">
           <WorkSummary work={work} />
         </Card>
       </Grid>
-      <Grid item md={8}>
+      <Grid item md={8} sm={12}>
         <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>

@@ -43,7 +43,7 @@ const Home: React.FC<Props> = ({ work }) => {
             </ListItemIcon>
             <Typography
               style={{ wordWrap: "break-word" }}
-              sx={{ width: "100%", paddingRight: 6 }}
+              sx={{ width: "100%" }}
             >
               <a href={work.codeLink} target="_blank" rel="noopener noreferrer">
                 {work.codeLink}
