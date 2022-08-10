@@ -8,6 +8,7 @@ import {
   ImageListItemBar,
   Typography,
 } from "@mui/material";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import { WorkItem } from "../container/Work/WorkItem";
 import WorkSummary from "./Components/WorkSummary";
@@ -46,8 +47,18 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             decided to build it natively for Android. I had experience with
             Android on Xamarin, but it was written in C#. To improve my
             understanding of the Android platform, I followed some tutorials
-            from
-            <a href="http://developer.android.com/reference">Philipp Lackner</a>
+            from{" "}
+            <a
+              href="https://www.youtube.com/c/PhilippLackner"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <YouTubeIcon
+                fontSize="small"
+                sx={{ transform: "translateY(20%)" }}
+              />{" "}
+              Philipp Lackner
+            </a>
             . After going through the Android Fundemental playlist I discovered
             Jetpack Compose.
           </p>
@@ -58,6 +69,14 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             doesn&apos;t use view bindings and instead relies on a state defined
             in the view model. That created a better connection between the data
             and the view and reduced the number of files required.
+          </p>
+
+          <p>
+            Jetpack compose needs other plugins to work. Retrofit was used to
+            communicate with the backend server, Dagger Hilt was used for
+            dependency injections, Coroutines was used for async operations,
+            ROOM was used for the Android local database and Ktor Client was
+            used for WebSockets.
           </p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
