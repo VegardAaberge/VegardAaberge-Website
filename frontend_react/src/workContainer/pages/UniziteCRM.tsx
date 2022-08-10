@@ -3,9 +3,14 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { Card } from "@mui/material";
 
-import { WorkItem } from "../container/Work/WorkItem";
-import WorkSummary from "./Components/WorkSummary";
-import WorkHeader from "./Components/WorkHeader";
+import { WorkItem } from "../../container/Work/WorkItem";
+import WorkSummary from "../Components/WorkSummary";
+import WorkHeader from "../Components/WorkHeader";
+import { workImages } from "../../constants";
+
+import { DynamicImageList } from "../../components";
+
+import styles from "../../styles/App.module.scss";
 
 interface Props {
   work: WorkItem;

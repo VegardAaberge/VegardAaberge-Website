@@ -15,7 +15,6 @@ import WorkItemSelector from "./WorkItemSelector";
 import { WorkItem } from "../container/Work/WorkItem";
 import NavWorkList from "../components/NavWorkList/NavWorkList";
 import MenuIcon from "@mui/icons-material/Menu";
-import IconMenu from "./Components/IconMenu";
 import NavbarMenu from "../components/Navbar/NavbarMenu/NavbarMenu";
 
 import styles from "../styles/App.module.scss";

@@ -1,13 +1,15 @@
 import React from "react";
 import { WorkItem } from "../container/Work/WorkItem";
 
-import AabergeBrudesalong from "./AabergeBrudesalong";
-import BlackOilCalculator from "./BlackOilCalculator";
-import DocMerge from "./DocMerge";
-import MyPlaygroupApp from "./MyPlaygroupApp";
-import PortfolioWebsite from "./PortfolioWebsite";
-import UniziteApp from "./UniziteApp";
-import UniziteCRM from "./UniziteCRM";
+import {
+  AabergeBrudesalong,
+  BlackOilCalculator,
+  DocMerge,
+  MyPlaygroupApp,
+  PortfolioWebsite,
+  UniziteApp,
+  UniziteCRM,
+} from "./pages";
 
 interface Props {
   work: WorkItem;

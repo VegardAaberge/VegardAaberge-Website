@@ -9,15 +9,15 @@ import {
   Typography,
 } from "@mui/material";
 
-import { WorkItem } from "../container/Work/WorkItem";
-import WorkSummary from "./Components/WorkSummary";
-import WorkHeader from "./Components/WorkHeader";
+import { WorkItem } from "../../container/Work/WorkItem";
+import WorkSummary from "../Components/WorkSummary";
+import WorkHeader from "../Components/WorkHeader";
 
-import workImg from "../constants/workImages";
+import workImg from "../../constants/workImages";
 
-import { DynamicImageList } from "../components";
+import { DynamicImageList } from "../../components";
 
-import styles from "../styles/App.module.scss";
+import styles from "../../styles/App.module.scss";
 import { Container } from "@mui/system";
 
 interface Props {

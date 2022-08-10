@@ -10,15 +10,14 @@ import {
 } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
-import { WorkItem } from "../container/Work/WorkItem";
-import WorkSummary from "./Components/WorkSummary";
-import WorkHeader from "./Components/WorkHeader";
-import YoutubeEmbed from "../components/YoutubeEmbed/YoutubeEmbed";
+import { WorkItem } from "../../container/Work/WorkItem";
+import YoutubeEmbed from "../../components/YoutubeEmbed/YoutubeEmbed";
+import WorkSummary from "../Components/WorkSummary";
+import WorkHeader from "../Components/WorkHeader";
+import { workImages } from "../../constants";
 
-import { workImages } from "../constants";
-
-import styles from "../styles/App.module.scss";
-import { CodeBlock, DynamicImageList } from "../components";
+import styles from "../../styles/App.module.scss";
+import { CodeBlock, DynamicImageList } from "../../components";
 
 interface Props {
   work: WorkItem;
