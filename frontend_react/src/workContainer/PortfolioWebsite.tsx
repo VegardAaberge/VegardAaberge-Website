@@ -1,12 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
 
 import Grid from "@mui/material/Grid";
 import {
-  Box,
   Card,
-  ImageList,
   ImageListItem,
   ImageListItemBar,
   Typography,
@@ -40,11 +37,19 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <WorkHeader title={work.title} />
           <p>
             I initially created my portfolio in 2015 with CSS, Javascript,
-            Bootstrap and PHP. The old portfolio can be found here
+            Bootstrap and PHP. The old portfolio can be found{" "}
+            <a
+              href="https://www.tecmint.com/install-java-with-apt-on-ubuntu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            .
           </p>
 
           <p>
-            I wanted to create a portfolio that show more info about me in
+            I wanted to create a portfolio that shosw more info about me in
             general and is built on modern technologies. I had some experience
             with React and Angular, but decided to go for React/Typescript as it
             feel similar to Jetpack Compose and has many other uses such as
@@ -54,11 +59,18 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             Front Page
           </Typography>
           <p>
-            For the front page, I followed a tutorial
-            https://youtu.be/3HNyXCPDQ7Q to create the initial look, but wrote
-            it in Typescript as I wanted type safety and then made significant
-            modifications. I believe in following tutorials to learn initial
-            concepts instead of creating everything from sratch.
+            For the front page, I followed a{" "}
+            <a
+              href="https://youtu.be/3HNyXCPDQ7Q"
+              target="_blank"
+              rel="noreferrer"
+            >
+              tutorial
+            </a>{" "}
+            to create the initial look, but wrote it in Typescript as I wanted
+            type safety and then made significant modifications. I believe in
+            following tutorials to learn initial concepts instead of creating
+            everything from scratch.
           </p>
 
           <DynamicImageList cols={1}>
@@ -69,12 +81,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </DynamicImageList>
 
           <p>
-            After creating the front page, I decided to go for a more simple
-            approach when I created the information about portfolio projects. I
-            initially imported the old bootstrap into the react project, but it
-            was clearly not designed for it so I looked into Material UI.
-            Material UI felt similar to Bootstrap and allowed me to add
-            components that are well styled and easy to customize.
+            After creating the front page, I wanted to use a style template for
+            the porfolio projects to avoid spending too much time on styling. I
+            initially imported the old Bootstrap into the react project, but
+            Bootstrap is not well designed for React projects, so I looked into
+            Material UI. Material UI felt similar to Bootstrap and allowed me to
+            add components that are well styled and easy to customize.
           </p>
 
           <DynamicImageList cols={1}>
@@ -90,11 +102,11 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
 
           <p>
             The tutorial also introduced me to Sanity.io which is a content
-            platform that provided an easy place to store and modify data. To
-            initalize it, I needed to create a santiy backend directory which
+            platform that provides an easy place to store and modify data. To
+            initialize it, I needed to create a Sanity backend directory which
             can be seen below. Inside the directory, there is a schemas
-            directory that contains the models that describe the type and
-            relationship between different sanity models
+            directory that contains the models that describe the types of the
+            different sanity models and their relationships.
           </p>
 
           <DynamicImageList cols={2}>
@@ -110,8 +122,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </DynamicImageList>
 
           <p>
-            The models create data structures that can be modified, deleted and
-            added in the sanity editor.
+            The models represent data structures that can be modified, deleted
+            and added in the sanity editor.
           </p>
 
           <p>Models:</p>

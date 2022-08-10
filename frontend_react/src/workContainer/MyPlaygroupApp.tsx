@@ -4,8 +4,6 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import {
   Card,
-  Paper,
-  ImageList,
   ImageListItem,
   ImageListItemBar,
   Typography,
@@ -44,20 +42,22 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </p>
 
           <p>
-            As iOS is not big in China and we have Kotlin Multiplatform, then I
-            decided to built it natively for Android. I had experience with
-            Android on Xamarin, but it was written in C#. To understand Android
-            platform better I followed some tutorials from philipp lackner.
-            After going through the Android Fundemandels playlist I discovered
+            As iOS is used less in China and we have Kotlin Multiplatform, I
+            decided to build it natively for Android. I had experience with
+            Android on Xamarin, but it was written in C#. To improve my
+            understanding of the Android platform, I followed some tutorials
+            from
+            <a href="http://developer.android.com/reference">Philipp Lackner</a>
+            . After going through the Android Fundemental playlist I discovered
             Jetpack Compose.
           </p>
 
           <p>
-            Jetpack compose do not use xml/xaml as in Xamarin and Android
-            Native. This means that no adapters is required and it doesn't use
-            view bindings and instead rely on a state defined in the viewmodel.
-            This created a better connection with the data and the view and
-            reduced the amount of files required to show a view.
+            Jetpack compose does not use XML/XAML as in Xamarin and Android
+            Native. That means that no adapters are required, and it
+            doesn&apos;t use view bindings and instead relies on a state defined
+            in the view model. That created a better connection between the data
+            and the view and reduced the number of files required.
           </p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
@@ -65,15 +65,10 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Typography>
 
           <p>
-            After logging into the app, then admin will be navigated to the
-            admin panel and users will be navigated into the user panel.
-          </p>
-
-          <p>
-            After logging into the app, then admin will be navigated to the
-            admin panel. The admin panel allows the admin to create and edit
-            daily classes, user's monthly plans, user's payments and the users
-            themselves. Admin can also edit its own information and send
+            After logging into the app, the admin will be navigated to the admin
+            panel. The admin panel allows the admin to create and edit daily
+            classes, users&apos; monthly plans, users&apos; payments, and the
+            users themselves. Admin can also edit its information and send
             messages to users.
           </p>
 
@@ -82,17 +77,18 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <YoutubeEmbed embedId="Zm_Pas6ss3s" />
 
           <p>
-            Non-admin users get logged into the user panel. They will first need
-            to fill in some information about themselves and take a profile
-            photo. Then they can login with their new password and get logged
-            into the users panel. Here they can see which classes they have,
-            chat with admin and change their info
+            Ordinary users get logged into the user panel. They will need to
+            fill in some information about themselves and take a profile photo.
+            Then they can log in with their new password and navigate to the
+            users&apos; panel. Here they can see which classes they have, chat
+            with the admin, and change their info.
           </p>
 
           <p>
-            The chat screen uses websockets to get new messages in real time.
-            Each time a user open the chat screen, it will create a secure chat
-            session with admin.
+            The chat screen uses WebSockets to get new messages in real-time.
+            Each time a user opens the chat screen, it will create a secure chat
+            session with the admin and whenever they leave it will disconnect
+            the chat session.
           </p>
 
           <DynamicImageList cols={2}>
@@ -122,22 +118,22 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Typography>
 
           <p>
-            The backend was created in Spring Boot. I had used PHP in the past,
-            but found it difficult to effectively debug and organize the code.
-            The earlier tutorial mentioned ktor, so I checked it out. It worked
-            well, but due to low usage it was difficult to search for solutions
-            to problems. I eventially decided to go for Spring Boot, which would
-            allow me to code in Java and was well documented.
+            The backend was created in Spring Boot. I have used PHP in the past
+            but found it difficult to debug and organize the code. Phillip
+            Lackner reccomeded Ktor, so I checked it out. It worked well, but as
+            it was less popular, it was difficult to search for solutions to
+            problems. I eventually decided to go for Spring Boot, which is well
+            documented and feels familiar due to the similarity with C#.
           </p>
 
           <p>
-            The Java backend was structures by features and inside each feature
-            there is a controller that takes incoming API requests such as
-            getting chat messages for an user. Then it transfered to the service
-            layer which will request data from the repository. The repository
-            will make a postgreSQL request to the database and send the data
-            back to the service layer, which will transform the data into the
-            right format and send it back to the controller
+            The Java backend is using feature structure. Inside each feature
+            there is a controller that takes incoming API requests, such as
+            getting chat messages for a user. The controller transfer the
+            request to the service layer that request data from the repository.
+            Then the repository layer makes a PostgreSQL request to the database
+            and send the data back to the service layer, which will transform
+            the data into the correct format and send it back to the controller.
           </p>
 
           <p>
@@ -167,10 +163,10 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
 
           <p>
             The backend also provides chat sockets through the
-            MessageSocketHandler which can connect and disconnect new members
-            and send messages. Also, when a user receives and read a message,
-            then it will send the message back to show the user that the message
-            has been read.
+            MessageSocketHandler that can connect and disconnect new members and
+            send messages. Also, when a user receives and reads a message, then
+            it will send the message back to show the user that the message has
+            been read.
           </p>
 
           <DynamicImageList cols={1}>
@@ -188,17 +184,20 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Typography>
 
           <p>
-            The spring boot server was hosted on a self managed Ubuntu VPS
-            server. Ubuntu was chosen as I wanted a server option that is well
+            The spring boot server is hosted on a self managed Ubuntu VPS
+            server. I chose Ubuntu as I wanted a server option that is well
             documented.
           </p>
 
           <p>
-            The first step to setup the spring boot server was to setup the
+            The first step to set up the spring boot server was to set up the
             domain.
           </p>
 
-          <p>I started with adjusting the firewall</p>
+          <p>
+            The firewall configurations are set up to allow the permitted
+            requests and deny others.
+          </p>
 
           <CodeBlock>
             <p>$ sudo ufw allow &apos;Apache Full&apos;</p>
@@ -208,8 +207,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            We will now need to create a new folder for the website and set the
-            required permissions
+            We created a new directory for the website and set up the required
+            permissions.
           </p>
 
           <CodeBlock>
@@ -218,7 +217,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>$ chmod -R 755 /var/www/vegardaaberge</p>
           </CodeBlock>
 
-          <p>Then we need to setup a virtual host for the domain</p>
+          <p>Then we need to setup a virtual host for the domain.</p>
 
           <CodeBlock>
             <p>$ nano /etc/apache2/sites-available/vegardaaberge.conf</p>
@@ -238,10 +237,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>{`</VirtualHost>`}/</p>
           </CodeBlock>
 
-          <p>
-            After this is done then we can enable the virtualhost file with
-            a2ensite
-          </p>
+          <p>The new virtual host was enabled with a2ensite.</p>
 
           <CodeBlock>
             <p>a2ensite vegardaaberge.conf</p>
@@ -249,57 +245,57 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>apache2ctl configtest</p>
           </CodeBlock>
 
-          <p>And then restart apache2</p>
+          <p>To apply the changes we needed to restart apache2.</p>
 
           <CodeBlock>
             <p>sudo systemctl restart apache2</p>
           </CodeBlock>
 
           <p>
-            The guide that I used to setup the apache webswrver can be found
-            here
+            The guide that I used to set up the apache webserver can be found
+            here.
           </p>
 
-          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04#step-5-%E2%80%94-setting-up-virtual-hosts-recommended" target="_blank">
-          How To Install the Apache Web Server on Ubuntu 18.04
-          </a></p>
+          <p>
+            <a
+              href="https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04#step-5-%E2%80%94-setting-up-virtual-hosts-recommended"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How To Install the Apache Web Server on Ubuntu 18.04
+            </a>
+          </p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Setting up SSL
           </Typography>
 
           <p>
-            It was decided to use Certbot to setup SSL as it will allow it to
-            handle SSL automatically. First we need to install certbot and
-            python3-certbot-apache
+            Certbot was used to set up SSL as it will allow it to handle SSL
+            automatically. To run Cerbot we needed to install certbot and
+            python3-certbot-apache.
           </p>
 
           <CodeBlock>
             <p>$ sudo apt install certbot python3-certbot-apache</p>
           </CodeBlock>
 
-          <p>To run the certbot plugin, the following command was run</p>
+          <p>The Certbot plugin was run with the following command.</p>
 
           <CodeBlock>
             <p>$ sudo certbot --apache</p>
           </CodeBlock>
 
           <p>
-            To use SSL for spring boot, then we needed to navigate to the
-            directory where the pem file is located
+            Certbot set up SSL for ordinary HTTPS requests, but not for the
+            Spring Boot application. To set up SSL for spring boot, we navigated
+            to the directory where the PEM file is located, and then we need to
+            generate a PKCS12 that will be used for spring SSL. The password
+            should match the password provided in the Spring server.yml file.
           </p>
 
           <CodeBlock>
             <p>$ cd /etc/letsencrypt/live/vegardaaberge.no</p>
-          </CodeBlock>
-
-          <p>
-            Then we need to generate the PKCS12 file that will be used for
-            spring SSL. The password should match the password provided in the
-            Spring server.yml file.
-          </p>
-
-          <CodeBlock>
             <p>
               $ openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out
               keystore.p12 -name tomcat -CAfile chain.pem -caname root
@@ -307,25 +303,38 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            This needs to be done every 3 months or the app will not be able to
-            communicate with the server.
+            Certbot does not automatically update the PKCS12, so it needs to be
+            regenerated every three months. If it is not regenerated, the app
+            will not be able to communicate with the server.
           </p>
 
-          <p>The following sources was used</p>
-          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04" target="_blank">
-            How To Secure Apache with Let's Encrypt on Ubuntu 18.04
-          </a></p>
-          <p><a href="https://dzone.com/articles/spring-boot-secured-by-lets-encrypt" target="_blank">
-            Spring Boot Secured By Let's Encrypt
-          </a></p>
+          <p>The guide that I used to set up SSL can be found here.</p>
+          <p>
+            <a
+              href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How To Secure Apache with Let's Encrypt on Ubuntu 18.04
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://dzone.com/articles/spring-boot-secured-by-lets-encrypt"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Spring Boot Secured By Let&apos;s Encrypt
+            </a>
+          </p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Installing Java
           </Typography>
 
           <p>
-            To run a Spring backend, then java need to be installed. To install
-            Java, we will need to install the default JRE and JDK
+            The Spring backend requires Java to be installed. To install Java,
+            we will need to install the default JRE and JDK.
           </p>
 
           <CodeBlock>
@@ -333,7 +342,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>$ sudo apt install default-jdk</p>
           </CodeBlock>
 
-          <p>Then we can check if is correctly installed by running</p>
+          <p>We can check if is correctly installed by running</p>
 
           <CodeBlock>
             <p>$ java =version</p>
@@ -341,9 +350,9 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            Then we need to set up the JAVA_HOME variable. We can use the
-            readlink to find the location and then add it as an environment
-            variable
+            After Java is installed then we need to set up the JAVA_HOME
+            variable. We can use the readlink to find the location and then add
+            it as an environment variable
           </p>
 
           <CodeBlock>
@@ -355,24 +364,31 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>JAVA_HOME=&quot;/usr/lib/jvm/java-11-openjdk-amd64/&quot;</p>
           </CodeBlock>
 
-          <p>Then we can apply the changes with</p>
+          <p>To apply the changes we need to run</p>
 
           <CodeBlock>
             <p>$ source /etc/environment</p>
           </CodeBlock>
 
-          <p>The following sources was used</p>
-          <p><a href="https://www.tecmint.com/install-java-with-apt-on-ubuntu/" target="_blank">
-          How To Install Java with Apt on Ubuntu 20.04
-          </a></p>
+          <p>The guide that I used to set up Java can be found here.</p>
+          <p>
+            <a
+              href="https://www.tecmint.com/install-java-with-apt-on-ubuntu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How To Install Java with Apt on Ubuntu 20.04
+            </a>
+          </p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Installing postgreSQL
           </Typography>
 
           <p>
-            The Spring Boot backend requires postgreSQL to be installed. To
-            install and run postgreSQL, we need to run the following command:
+            The Spring Boot backend uses PostgreSQL to communicate with the
+            database. To install and run PostgreSQL, we need to run the
+            following command.
           </p>
 
           <CodeBlock>
@@ -381,9 +397,9 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            After settting up postgreSQL, then we need to setup the database
-            environment for the spring application. To login we can run the
-            following command
+            After installing PostgreSQL, we can set up the database environment
+            for the spring application. To log in, we can run the following
+            command.
           </p>
 
           <CodeBlock>
@@ -391,8 +407,11 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            We will then create a database for the application and a user that
-            has access to the database with the required permissions
+            After logging in, then we created a playgroup database and a
+            superuser that will be used by the Spring Boot application to modify
+            the data. The password chosen need to match the password in the
+            server.yml, and the user need to get the required permissions to
+            modify the database.
           </p>
 
           <CodeBlock>
@@ -402,21 +421,25 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             <p>grant all privileges on database playgroup to superuser</p>
           </CodeBlock>
 
+          <p>The guide that I used to set up PostgreSQL can be found here.</p>
           <p>
-            The password chosen need to match the password in the server.yml
-            file
+            <a
+              href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How To Install and Use PostgreSQL on Ubuntu 20.04
+            </a>
           </p>
-
-          <p>The following sources was used</p>
-          <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04" target="_blank">How To Install and Use PostgreSQL on Ubuntu 20.04</a></p>
 
           <Typography variant="h6" align="center" sx={{ p: 1 }}>
             Playgroup Service
           </Typography>
 
           <p>
-            To setup the playgroup service, we will need to install Maven and
-            Github
+            The last step is to set up the playgroup service. The service needs
+            to be able to build the project, so we need to install Maven and
+            Git.
           </p>
 
           <CodeBlock>
@@ -425,8 +448,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            Then we need to create a directory for the spring boot files and
-            clone it
+            Then we created a directory for the spring boot files and cloned it
+            into the directory.
           </p>
 
           <CodeBlock>
@@ -438,9 +461,9 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            We first need to ensure that it is working before we make it in to a
-            service, so we run the maven build and then run the java file from
-            the server
+            Running the service without manually testing will lead to an error
+            loop as it keeps restarting the application. To make sure it is
+            working, we can run the application from the command line.
           </p>
 
           <CodeBlock>
@@ -453,29 +476,43 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </CodeBlock>
 
           <p>
-            If everything is working, then we can set up the playgroup service. 
-            To setup a service, we will need to create a new service file
+            If everything is working, then we can set up the playgroup service.
+            To set up the service, we will need to create a new service file.
           </p>
 
           <CodeBlock>
             <p>$ nano /etc/systemd/system/playgroup.service</p>
           </CodeBlock>
           <CodeBlock>
-            [Unit]<br />
-            Description=Playgroup Service<br />
-            After=network.target<br />
-            StartLimitIntervalSec=10<br />
-            StartLimitBurst=5<br />
+            [Unit]
             <br />
-            [Service]<br />
-            Type=simple<br />
-            Restart=always<br />
-            RestartSec=1<br />
-            User=root<br />
-            EnvironmentFile=/etc/environment<br />
-            ExecStart=java -jar /var/www/api/MyPlaygroup-Server/target/MyPlaygroup-Server-0><br />
+            Description=Playgroup Service
             <br />
-            [Install]<br />
+            After=network.target
+            <br />
+            StartLimitIntervalSec=10
+            <br />
+            StartLimitBurst=5
+            <br />
+            <br />
+            [Service]
+            <br />
+            Type=simple
+            <br />
+            Restart=always
+            <br />
+            RestartSec=1
+            <br />
+            User=root
+            <br />
+            EnvironmentFile=/etc/environment
+            <br />
+            ExecStart=java -jar
+            /var/www/api/MyPlaygroup-Server/target/MyPlaygroup-Server-0
+            <br />
+            <br />
+            [Install]
+            <br />
             WantedBy=multi-user.target
           </CodeBlock>
 

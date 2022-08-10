@@ -7,7 +7,7 @@ import { client } from "../../../client";
 import { strings } from "../../../constants";
 import { SkillItem } from "../../../container/Skills/models";
 import WorkApp from "../../../workContainer/WorkApp";
-import workTheme from "../../../styles/WorkTheme";
+import workTheme from "../../../styles/workTheme";
 import { ThemeProvider } from "@mui/material/styles";
 
 interface Props {
