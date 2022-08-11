@@ -8,12 +8,14 @@ import {
   ImageListItem,
   ImageListItemBar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 
 import { WorkItem } from "../../container/Work/WorkItem";
 import WorkSummary from "../Components/WorkSummary";
 import WorkHeader from "../Components/WorkHeader";
 import { workImages } from "../../constants";
+import workTheme from "../../styles/workTheme";
 
 import { DynamicImageList } from "../../components";
 
@@ -24,8 +26,10 @@ interface Props {
 }
 
 const BlackOilCalculator: React.FC<Props> = ({ work }) => {
+  const isMobile = useMediaQuery(workTheme.breakpoints.down("sm"));
+
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={isMobile ? 1 : 3}>
       <Grid item xl={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />

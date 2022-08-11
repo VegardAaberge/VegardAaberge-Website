@@ -50,7 +50,10 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
     <Box sx={{ flexGrow: 1 }}>
       {menuToggled && (
         <SideMenu
-          links={works.map((work) => work.title)}
+          links={works.map((work) => ({
+            title: work.title,
+            link: work.projectLink,
+          }))}
           setToggle={menuToggleChanged}
         />
       )}

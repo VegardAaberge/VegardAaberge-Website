@@ -17,7 +17,8 @@ const NavbarMenu: React.FC<Props> = ({ links }) => {
 
       {toggle && (
         <motion.div
-          whileInView={{ x: [300, 0] }}
+          initial={{ opacity: 1, x: 300 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <HiX onClick={() => setToggle(false)} />

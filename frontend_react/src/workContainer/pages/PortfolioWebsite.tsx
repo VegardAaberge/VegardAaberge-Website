@@ -8,6 +8,7 @@ import {
   ImageListItem,
   ImageListItemBar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 
 import { WorkItem } from "../../container/Work/WorkItem";
@@ -15,6 +16,7 @@ import WorkSummary from "../Components/WorkSummary";
 import WorkHeader from "../Components/WorkHeader";
 import workImg from "../../constants/workImages";
 import { DynamicImageList } from "../../components";
+import workTheme from "../../styles/workTheme";
 
 import styles from "../WorkApp.module.scss";
 
@@ -23,8 +25,10 @@ interface Props {
 }
 
 const PortfolioWebsite: React.FC<Props> = ({ work }) => {
+  const isMobile = useMediaQuery(workTheme.breakpoints.down("sm"));
+
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={isMobile ? 1 : 3}>
       <Grid item md={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />
