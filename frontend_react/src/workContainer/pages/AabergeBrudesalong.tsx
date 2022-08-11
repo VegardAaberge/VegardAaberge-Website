@@ -72,7 +72,7 @@ const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
             </ImageListItem>
           </DynamicImageList>
 
-          <Typography variant="h6" align="center" sx={{ p: 2 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Databasen
           </Typography>
           <p>

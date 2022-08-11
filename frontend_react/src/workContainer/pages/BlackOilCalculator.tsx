@@ -43,7 +43,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             lundin_strategrafi bildeserien. Til slutt la jeg til flere
             funksjoner på kartet og la til Norlex databasen.
           </p>
-          <Typography variant="h6" align="center" sx={{ p: 2 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Kalkulatoren
           </Typography>
           <p>
@@ -73,7 +73,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
               <ImageListItemBar position="below" title="Gaskalkulator" />
             </ImageListItem>
           </DynamicImageList>
-          <Typography variant="h6" align="center" sx={{ p: 2 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Kartet
           </Typography>
           <p>
@@ -120,7 +120,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
               <ImageListItemBar position="below" title="Bathemetri Kart" />
             </ImageListItem>
           </DynamicImageList>
-          <Typography variant="h6" align="center" sx={{ p: 2 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Norlex
           </Typography>
           <p>
@@ -157,7 +157,7 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
               <ImageListItemBar position="below" title="Norlex Formasjoner" />
             </ImageListItem>
           </DynamicImageList>
-          <Typography variant="h6" align="center" sx={{ p: 2 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Andre Funksjoner
           </Typography>
           <p>

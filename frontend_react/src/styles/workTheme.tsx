@@ -1,6 +1,10 @@
-import { createTheme, experimental_sx as sx } from "@mui/material/styles";
+import {
+  createTheme,
+  experimental_sx as sx,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 
-const workTheme = createTheme({
+let workTheme = createTheme({
   components: {
     MuiImageListItemBar: {
       styleOverrides: {
@@ -29,7 +33,15 @@ const workTheme = createTheme({
         }),
       },
     },
+    MuiListItemText: {
+      styleOverrides: {
+        primary: sx({
+          fontSize: "1.1rem",
+        }),
+      },
+    },
   },
 });
+workTheme = responsiveFontSizes(workTheme);
 
 export default workTheme;

@@ -25,12 +25,12 @@ interface Props {
 const PortfolioWebsite: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xl={4}>
+      <Grid item md={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />
         </Card>
       </Grid>
-      <Grid item xl={8}>
+      <Grid item md={8}>
         <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>
@@ -53,7 +53,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             feel similar to Jetpack Compose and has many other uses such as
             React Native
           </p>
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Front Page
           </Typography>
           <p>
@@ -94,7 +94,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </ImageListItem>
           </DynamicImageList>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Sanity
           </Typography>
 

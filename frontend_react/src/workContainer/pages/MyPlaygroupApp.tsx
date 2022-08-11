@@ -30,12 +30,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
 
   return (
     <Grid container spacing={isMobile ? 1 : 3}>
-      <Grid item xl={4}>
+      <Grid item lg={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />
         </Card>
       </Grid>
-      <Grid item xl={8}>
+      <Grid item lg={8}>
         <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>
@@ -82,7 +82,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             used for WebSockets.
           </p>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             App
           </Typography>
 
@@ -135,7 +135,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </ImageListItem>
           </DynamicImageList>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Spring Backend
           </Typography>
 
@@ -201,7 +201,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </ImageListItem>
           </DynamicImageList>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Setting up the domain
           </Typography>
 
@@ -288,7 +288,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </a>
           </p>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Setting up SSL
           </Typography>
 
@@ -350,7 +350,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </a>
           </p>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Installing Java
           </Typography>
 
@@ -403,7 +403,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </a>
           </p>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Installing postgreSQL
           </Typography>
 
@@ -454,7 +454,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             </a>
           </p>
 
-          <Typography variant="h6" align="center" sx={{ p: 1 }}>
+          <Typography variant="h5" align="center" sx={{ p: 2 }}>
             Playgroup Service
           </Typography>
 

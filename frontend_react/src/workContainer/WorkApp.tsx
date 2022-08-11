@@ -68,7 +68,7 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant={isMobile ? "body1" : "h6"}
+            variant={isMobile ? "h6" : "h5"}
             noWrap
             component="div"
             sx={{ flexGrow: 1 }}

@@ -9,7 +9,7 @@ interface Props {
 
 const WorkHeader: React.FC<Props> = ({ title }) => {
   return (
-    <Typography variant="h5" align="center" sx={{ p: 1 }}>
+    <Typography variant="h4" align="center" sx={{ p: 1 }}>
       {title}
     </Typography>
   );
