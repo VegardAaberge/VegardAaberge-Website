@@ -81,11 +81,17 @@ const BlackOilCalculator: React.FC<Props> = ({ work }) => {
             lisensene og oljefeltene, fant jeg ut at det var altfor tregt og
             fungerte ikke i det hele tatt på apple produkter. Jeg bestemte meg
             da for å bruke google fusion data istedenfor. Dataene er hentet fra
-            <a href="http://factpages.npd.no/ReportServer?/FactPages/geography/geography_all&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=1&CultureCode=nb-no">
+            <a
+              href="http://factpages.npd.no/ReportServer?/FactPages/geography/geography_all&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=1&CultureCode=nb-no"
+              target="_blank"
+              rel="noreferrer"
+            >
               factpages
             </a>
             og så modifisert til mine formål og deretter lastet opp med
-            <a href="http://shpescape.com/">shpescape</a>
+            <a href="http://shpescape.com/" target="_blank" rel="noreferrer">
+              shpescape
+            </a>
           </p>
           <p>
             Etter å ha laget kart med google fusion data, så hentet jeg dataene

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { HiX } from "react-icons/hi";
 
 import styles from "./SideMenu.module.scss";
+import Link from "next/link";
 
 interface Props {
   links: Array<string>;
@@ -20,9 +21,9 @@ const NavbarMenu: React.FC<Props> = ({ links, setToggle }) => {
         <ul>
           {links.map((item) => (
             <li key={item}>
-              <a href={`#${item}`} onClick={() => setToggle(false)}>
-                {item}
-              </a>
+              <Link href={`#${item}`} onClick={() => setToggle(false)}>
+                <a>{item}</a>
+              </Link>
             </li>
           ))}
         </ul>

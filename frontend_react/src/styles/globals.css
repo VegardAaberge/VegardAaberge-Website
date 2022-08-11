@@ -73,3 +73,7 @@ a {
   word-break: break-all;
   white-space: normal;
 }
+
+Button a {
+  color: inherit;
+}

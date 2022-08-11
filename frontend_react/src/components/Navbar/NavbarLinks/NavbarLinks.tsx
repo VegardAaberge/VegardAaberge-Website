@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./NavbarLinks.module.scss";
 import mainStyles from "../../../styles/App.module.scss";
+import Link from "next/link";
 
 interface Props {
   links: Array<string>;
@@ -16,7 +17,9 @@ const NavbarLinks: React.FC<Props> = ({ links }) => {
           key={`link-${item}`}
         >
           <div />
-          <a href={`#${item}`}>{item}</a>
+          <Link href={`#${item}`}>
+            <a>{item}</a>
+          </Link>
         </li>
       ))}
     </ul>

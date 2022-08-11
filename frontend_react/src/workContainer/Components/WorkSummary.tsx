@@ -45,7 +45,7 @@ const Home: React.FC<Props> = ({ work }) => {
               style={{ wordWrap: "break-word" }}
               sx={{ width: "100%" }}
             >
-              <a href={work.codeLink} target="_blank" rel="noopener noreferrer">
+              <a href={work.codeLink} target="_blank" rel="noreferrer">
                 {work.codeLink}
               </a>
             </Typography>

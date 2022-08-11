@@ -4,25 +4,29 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Button from "@mui/material/Button";
 import styles from "./HomeBtns.module.scss";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HomeBtns: React.FC = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.home_btns}>
-      <Button
-        variant="contained"
-        startIcon={<GitHubIcon />}
-        onClick={() =>
-          (window.location.href = "https://github.com/VegardAaberge")
-        }
-      >
-        Visit my GitHub
+      <Button variant="contained" startIcon={<GitHubIcon />}>
+        <a
+          href="https://github.com/VegardAaberge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit my GitHub
+        </a>
       </Button>
 
       <Button
         variant="contained"
         color="secondary"
         startIcon={<EmailOutlinedIcon />}
-        onClick={() => (window.location.href = "#contact")}
+        onClick={() => router.push("#contact")}
       >
         Contact me
       </Button>
