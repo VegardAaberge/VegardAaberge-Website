@@ -4,6 +4,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import {
   Card,
+  Container,
   ImageListItem,
   ImageListItemBar,
   Typography,
@@ -12,13 +13,10 @@ import {
 import { WorkItem } from "../../container/Work/WorkItem";
 import WorkSummary from "../Components/WorkSummary";
 import WorkHeader from "../Components/WorkHeader";
-
 import workImg from "../../constants/workImages";
-
 import { DynamicImageList } from "../../components";
 
-import styles from "../../styles/App.module.scss";
-import { Container } from "@mui/system";
+import styles from "../WorkApp.module.scss";
 
 interface Props {
   work: WorkItem;
@@ -27,12 +25,12 @@ interface Props {
 const PortfolioWebsite: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item md={4} sm={12}>
+      <Grid item xl={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />
         </Card>
       </Grid>
-      <Grid item md={8} sm={12}>
+      <Grid item xl={8}>
         <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>

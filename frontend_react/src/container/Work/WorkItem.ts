@@ -10,6 +10,7 @@ export interface WorkItem {
   projectLink: string;
   codeLink: string;
   company: string;
+  period: string;
   imgUrl: SanityImageSource;
   skillsUsed: Array<SanityReference>;
   skillsUsedStrings: Array<string>;

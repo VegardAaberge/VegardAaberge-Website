@@ -5,10 +5,13 @@ const workTheme = createTheme({
     MuiImageListItemBar: {
       styleOverrides: {
         root: sx({
-          fontStyle: "italic",
           alignSelf: "center",
-          fontWeight: 600,
         }),
+        title: {
+          fontStyle: "italic",
+          fontWeight: 600,
+          fontSize: "0.9rem",
+        },
       },
     },
     MuiImageList: {
@@ -16,6 +19,13 @@ const workTheme = createTheme({
         root: sx({
           paddingTop: "0.5rem",
           paddingBottom: "0.5rem",
+        }),
+      },
+    },
+    MuiGrid: {
+      styleOverrides: {
+        root: sx({
+          flexBasis: "100%",
         }),
       },
     },

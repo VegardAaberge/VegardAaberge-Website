@@ -17,7 +17,7 @@ import { workImages } from "../../constants";
 
 import { DynamicImageList } from "../../components";
 
-import styles from "../../styles/App.module.scss";
+import styles from "../WorkApp.module.scss";
 
 interface Props {
   work: WorkItem;
@@ -26,12 +26,12 @@ interface Props {
 const AabergeBrudesalong: React.FC<Props> = ({ work }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item md={4}>
+      <Grid item xl={4}>
         <Card variant="outlined">
           <WorkSummary work={work} />
         </Card>
       </Grid>
-      <Grid item md={8}>
+      <Grid item xl={8}>
         <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
           <p>

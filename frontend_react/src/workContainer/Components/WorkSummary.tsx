@@ -22,19 +22,19 @@ const Home: React.FC<Props> = ({ work }) => {
           <ListItemIcon>
             <ApartmentIcon sx={{ fontSize: 30 }} />
           </ListItemIcon>
-          {work.company}
+          <p>{work.company}</p>
         </ListItem>
         <ListItem sx={{ paddingTop: 2 }}>
           <ListItemIcon>
             <DateRangeIcon sx={{ fontSize: 30 }} />
           </ListItemIcon>
-          {work.period}
+          <p>{work.period}</p>
         </ListItem>
         <ListItem sx={{ paddingTop: 2 }}>
           <ListItemIcon>
             <CodeIcon sx={{ fontSize: 30 }} />
           </ListItemIcon>
-          {work.skillsUsedStrings.join(", ")}
+          <p>{work.skillsUsedStrings.join(", ")}</p>
         </ListItem>
         {work.codeLink?.length > 0 && (
           <ListItem sx={{ paddingTop: 2 }}>
