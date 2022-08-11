@@ -77,3 +77,12 @@ a {
 Button a {
   color: inherit;
 }
+
+#nprogress .bar {
+  background: #ffbb00 !important;
+}
+
+#nprogress .spinner .spinner-icon {
+  border-top-color: #ffbb00 !important;
+  border-left-color: #ffbb00 !important;
+}
