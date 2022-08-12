@@ -11,3 +11,10 @@
     font-size: 1.7rem;
   }
 }
+
+.dropdown_link {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}

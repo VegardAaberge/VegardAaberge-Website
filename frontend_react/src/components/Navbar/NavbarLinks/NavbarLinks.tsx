@@ -18,7 +18,13 @@ const NavbarLinks: React.FC<Props> = ({ links }) => {
           className={`${mainStyles.flex_center} ${mainStyles.p_text}`}
           key={navLink.link}
         >
-          <div className={styles.navbar_circle} />
+          <div
+            className={
+              navLink.dropdown !== undefined
+                ? styles.navbar_padding
+                : styles.navbar_circle
+            }
+          />
           <NavbarLink navLink={navLink} />
         </li>
       ))}

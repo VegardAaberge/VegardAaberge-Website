@@ -58,7 +58,7 @@ const NavbarLink: React.FC<Props> = ({ navLink }) => {
   if (navLink.dropdown !== undefined) {
     return (
       <div>
-        <a>
+        <a className={styles.dropdown_link}>
           {navLink.title}
           <KeyboardArrowDownIcon className={styles.arrow_down} />
         </a>
@@ -75,9 +75,11 @@ const NavbarLink: React.FC<Props> = ({ navLink }) => {
     );
   } else {
     return (
-      <Link href={navLink.link}>
-        <a>{navLink.title}</a>
-      </Link>
+      <>
+        <Link href={navLink.link}>
+          <a>{navLink.title}</a>
+        </Link>
+      </>
     );
   }
 };

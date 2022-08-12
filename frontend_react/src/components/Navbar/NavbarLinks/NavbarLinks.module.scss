@@ -10,6 +10,12 @@
     cursor: pointer;
     flex-direction: column;
 
+    .navbar_padding {
+      height: 4px;
+      margin-bottom: 5px;
+      background: transparent;
+    }
+
     .navbar_circle {
       width: 4px;
       height: 4px;
@@ -42,7 +48,7 @@
     }
 
     &:hover {
-      div {
+      .navbar_circle {
         background: var(--secondary-color);
       }
     }

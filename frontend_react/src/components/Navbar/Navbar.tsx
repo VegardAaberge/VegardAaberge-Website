@@ -21,10 +21,10 @@ interface Props {
 
 const Navbar: React.FC<Props> = ({ works }) => {
   const links: NavLink[] = [
-    { title: strings.ID_HOME, link: "/" + strings.ID_HOME },
-    { title: strings.ID_WORK, link: "/" + strings.ID_WORK },
-    { title: strings.ID_SKILLS, link: "/" + strings.ID_SKILLS },
-    { title: strings.ID_CONTACT, link: "/" + strings.ID_CONTACT },
+    { title: strings.ID_HOME, link: "/#" + strings.ID_HOME },
+    { title: strings.ID_WORK, link: "/#" + strings.ID_WORK },
+    { title: strings.ID_SKILLS, link: "/#" + strings.ID_SKILLS },
+    { title: strings.ID_CONTACT, link: "/#" + strings.ID_CONTACT },
     {
       title: "Projects",
       link: "work/",
