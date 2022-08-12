@@ -6,20 +6,43 @@ import styles from "./Navbar.module.scss";
 
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
+import Link from "next/link";
+import { WorkItem } from "../../container/Work/WorkItem";
 
-const links = [
-  strings.ID_HOME,
-  strings.ID_ABOUT,
-  strings.ID_WORK,
-  strings.ID_SKILLS,
-  strings.ID_CONTACT,
-];
+export interface NavLink {
+  link: string;
+  title: string;
+  dropdown?: Array<NavLink>;
+}
 
-const Navbar: React.FC = () => {
+interface Props {
+  works: WorkItem[];
+}
+
+const Navbar: React.FC<Props> = ({ works }) => {
+  const links: NavLink[] = [
+    { title: strings.ID_HOME, link: "/" + strings.ID_HOME },
+    { title: strings.ID_WORK, link: "/" + strings.ID_WORK },
+    { title: strings.ID_SKILLS, link: "/" + strings.ID_SKILLS },
+    { title: strings.ID_CONTACT, link: "/" + strings.ID_CONTACT },
+    {
+      title: "Projects",
+      link: "work/",
+      dropdown: works.map((work) => ({
+        title: work.title,
+        link: work.projectLink,
+      })),
+    },
+  ];
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Image src={images.logo} alt="logo" />
+        <Link href="/">
+          <a>
+            <Image src={images.logo} alt="logo" />
+          </a>
+        </Link>
       </div>
       <NavbarLinks links={links} />
       <NavbarMenu links={links} />

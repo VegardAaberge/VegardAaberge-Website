@@ -3,23 +3,23 @@ import React from "react";
 import styles from "./NavbarLinks.module.scss";
 import mainStyles from "../../../styles/App.module.scss";
 import Link from "next/link";
+import { NavLink } from "../Navbar";
+import NavbarLink from "../NavbarLink/NavbarLink";
 
 interface Props {
-  links: Array<string>;
+  links: Array<NavLink>;
 }
 
 const NavbarLinks: React.FC<Props> = ({ links }) => {
   return (
     <ul className={styles.navbar_links}>
-      {links.map((item) => (
+      {links.map((navLink) => (
         <li
           className={`${mainStyles.flex_center} ${mainStyles.p_text}`}
-          key={`link-${item}`}
+          key={navLink.link}
         >
-          <div />
-          <Link href={`#${item}`}>
-            <a>{item}</a>
-          </Link>
+          <div className={styles.navbar_circle} />
+          <NavbarLink navLink={navLink} />
         </li>
       ))}
     </ul>

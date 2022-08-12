@@ -18,7 +18,7 @@ const MainApp: React.FC<MainProps> = ({
 }) => {
   return (
     <div className={styles.app}>
-      <Navbar />
+      <Navbar works={works} />
       <AppWrap
         idName={strings.ID_HOME}
         motionWrap={false}

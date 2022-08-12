@@ -1,0 +1,13 @@
+.arrow_down {
+  position: absolute;
+
+  font-size: 1.1rem;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.7rem;
+  }
+}

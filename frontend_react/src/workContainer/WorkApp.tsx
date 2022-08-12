@@ -51,7 +51,7 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Navbar />
+      <Navbar works={works} />
 
       <Box
         component="main"

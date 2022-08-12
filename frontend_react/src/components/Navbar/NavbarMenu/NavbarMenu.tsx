@@ -3,9 +3,11 @@ import styles from "./NavbarMenu.module.scss";
 import { motion } from "framer-motion";
 import { HiX, HiMenuAlt4 } from "react-icons/hi";
 import Link from "next/link";
+import { NavLink } from "../Navbar";
+import NavbarLink from "../NavbarLink/NavbarLink";
 
 interface Props {
-  links: Array<string>;
+  links: Array<NavLink>;
 }
 
 const NavbarMenu: React.FC<Props> = ({ links }) => {
@@ -23,11 +25,9 @@ const NavbarMenu: React.FC<Props> = ({ links }) => {
         >
           <HiX onClick={() => setToggle(false)} />
           <ul>
-            {links.map((item) => (
-              <li key={item}>
-                <Link href={`#${item}`} onClick={() => setToggle(false)}>
-                  <a>{item}</a>
-                </Link>
+            {links.map((navLink) => (
+              <li key={navLink.link}>
+                <NavbarLink navLink={navLink} />
               </li>
             ))}
           </ul>
