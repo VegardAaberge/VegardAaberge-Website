@@ -71,9 +71,19 @@ const NavbarLink: React.FC<Props> = ({ navLink }) => {
         <Listbox className={showDropdown ? "" : "hidden"}>
           {navLink.dropdown.map((option) => (
             <li key={option.link}>
-              <Link href={"/work/" + option.link}>
-                <a>{option.title}</a>
-              </Link>
+              {option.external === true ? (
+                <a
+                  href={navLink.link + option.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {option.title}
+                </a>
+              ) : (
+                <Link href={navLink.link + option.link}>
+                  <a>{option.title}</a>
+                </Link>
+              )}
             </li>
           ))}
         </Listbox>

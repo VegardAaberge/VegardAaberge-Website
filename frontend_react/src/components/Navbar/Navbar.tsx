@@ -12,6 +12,7 @@ import { WorkItem } from "../../container/Work/WorkItem";
 export interface NavLink {
   link: string;
   title: string;
+  external?: boolean;
   dropdown?: Array<NavLink>;
 }
 
@@ -27,11 +28,32 @@ const Navbar: React.FC<Props> = ({ works }) => {
     { title: strings.ID_CONTACT, link: "/#" + strings.ID_CONTACT },
     {
       title: "Projects",
-      link: "work/",
+      link: "/work/",
       dropdown: works.map((work) => ({
         title: work.title,
         link: work.projectLink,
       })),
+    },
+    {
+      title: "Other",
+      link: "",
+      dropdown: [
+        {
+          title: "Old website",
+          link: "/old-website/index.html",
+          external: true,
+        },
+        {
+          title: "Brudesalong Website",
+          link: "/brudesalong/index.html",
+          external: true,
+        },
+        {
+          title: "My Github",
+          link: "https://github.com/VegardAaberge",
+          external: true,
+        },
+      ],
     },
   ];
 
