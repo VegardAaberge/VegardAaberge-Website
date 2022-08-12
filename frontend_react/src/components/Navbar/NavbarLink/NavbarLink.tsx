@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import { styled } from "@mui/system";
 import { NavLink } from "../Navbar";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -55,14 +56,19 @@ const Listbox = styled("ul")(
 );
 
 const NavbarLink: React.FC<Props> = ({ navLink }) => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   if (navLink.dropdown !== undefined) {
     return (
-      <div>
+      <div
+        onMouseEnter={() => setShowDropdown(true)}
+        onMouseLeave={() => setShowDropdown(false)}
+      >
         <a className={styles.dropdown_link}>
           {navLink.title}
           <KeyboardArrowDownIcon className={styles.arrow_down} />
         </a>
-        <Listbox>
+        <Listbox className={showDropdown ? "" : "hidden"}>
           {navLink.dropdown.map((option) => (
             <li key={option.link}>
               <Link href={"/work/" + option.link}>
