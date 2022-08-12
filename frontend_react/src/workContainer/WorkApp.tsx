@@ -8,6 +8,7 @@ import {
   Divider,
   Grid,
   IconButton,
+  Link,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -16,12 +17,14 @@ import WorkItemSelector from "./WorkItemSelector";
 import { WorkItem } from "../container/Work/WorkItem";
 import NavWorkList from "../components/NavWorkList/NavWorkList";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 import NavbarMenu from "../components/Navbar/NavbarMenu/NavbarMenu";
 
 import workTheme from "../styles/workTheme";
 
 import styles from "./WorkApp.module.scss";
 import SideMenu from "../components/SideMenu/SideMenu";
+import { Navbar } from "../components";
 
 interface Props {
   projectLink: string;
@@ -48,41 +51,11 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      {menuToggled && (
-        <SideMenu
-          links={works.map((work) => ({
-            title: work.title,
-            link: work.projectLink,
-          }))}
-          setToggle={menuToggleChanged}
-        />
-      )}
+      <Navbar />
 
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2, display: { xs: "block", md: "none" } }}
-            onClick={menuClicked}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant={isMobile ? "h6" : "h5"}
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            {currentWork.title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <Box
         component="main"
-        sx={{ p: isMobile ? 1 : 3 }}
+        sx={{ p: isMobile ? 1 : 3, paddingTop: "100px" }}
         className={styles.work_wrap}
       >
         <Grid
