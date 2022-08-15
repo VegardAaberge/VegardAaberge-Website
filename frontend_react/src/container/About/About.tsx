@@ -18,7 +18,7 @@ const About: React.FC<Props> = ({ iAbouts }) => {
 
   useEffect(() => {
     setAbouts(iAbouts);
-  }, []);
+  }, [iAbouts]);
 
   return (
     <div className={styles.about}>

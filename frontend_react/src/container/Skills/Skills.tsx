@@ -33,7 +33,7 @@ const Skills: React.FC<Props> = ({ iWorks, iExperiences, iSkills }) => {
     setWorks(iWorks);
     setExperiences(iExperiences);
     setSkills(iSkills);
-  }, []);
+  }, [iWorks, iExperiences, iSkills]);
 
   const containSkill = (
     skill: SkillItem,

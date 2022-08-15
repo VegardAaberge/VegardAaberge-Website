@@ -33,7 +33,7 @@ const Works: React.FC<Props> = ({ iWorks }) => {
   useEffect(() => {
     works = iWorks;
     setFilterWorks(works);
-  }, []);
+  }, [iWorks]);
 
   const handleWorkFilter = (item: string) => {
     setActiveFilter(item);

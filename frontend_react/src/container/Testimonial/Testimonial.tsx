@@ -22,7 +22,7 @@ const Testimonial: React.FC<Props> = ({ iBrands, iTestimonials }) => {
   useEffect(() => {
     setBrands(iBrands);
     setTestimonals(iTestimonials);
-  }, []);
+  }, [iBrands, iTestimonials]);
 
   return (
     <>
