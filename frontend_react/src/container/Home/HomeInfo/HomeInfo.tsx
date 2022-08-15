@@ -7,8 +7,10 @@ import mainStyles from "../../../styles/App.module.scss";
 const HomeInfo: NextPage = () => {
   return (
     <div className={styles.home_info}>
-      <h2 className={styles.home_info_intro}>Hello, My name is</h2>
-      <h1 className={styles.home_info_name}>Vegard Aaberge</h1>
+      <h2 className={styles.home_info_intro}>Hi, I am</h2>
+      <h1 className={styles.home_info_name}>
+        Vegard <br /> Aaberge
+      </h1>
       <div className={styles.home_info_title}>
         <div className={styles.home_info_title_wrapper}>
           {["Xamarin", "Native Android", "UI/UX", "React", "Spring Boot"].map(

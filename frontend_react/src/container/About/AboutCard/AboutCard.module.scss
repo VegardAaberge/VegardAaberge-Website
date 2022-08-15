@@ -28,7 +28,7 @@
 }
 
 .about_card_description {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-family: Open Sans;
   font-weight: 400;
@@ -38,8 +38,12 @@
   color: var(--dl-color-gray-500);
   text-align: center;
 
+  @media screen and (min-width: 1200px) {
+    font-size: 1rem;
+  }
+
   @media screen and (min-width: 1600px) {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 }
 

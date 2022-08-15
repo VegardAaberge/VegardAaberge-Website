@@ -2,14 +2,13 @@
   width: 100%;
   height: auto;
   display: flex;
-  min-height: 100vh;
   align-items: center;
   flex-direction: column;
   max-width: var(--dl-size-size-maxcontent);
-  padding-top: var(--dl-space-space-tenunits);
-  padding-left: var(--dl-space-space-tripleunit);
-  padding-right: var(--dl-space-space-tripleunit);
-  padding-bottom: var(--dl-space-space-tenunits);
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .about_cards {

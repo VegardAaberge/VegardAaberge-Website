@@ -18,7 +18,7 @@ const HomeBtns: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit my GitHub
+          My GitHub
         </a>
       </Button>
 

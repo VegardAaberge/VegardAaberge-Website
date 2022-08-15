@@ -18,6 +18,13 @@ const AppWrapBody: React.FC<Props> = ({ idName, className, children }) => {
       ? mainStyles.whitebg
       : mainStyles.primarybg;
 
+  if (idName == strings.ID_HOME) {
+    return (
+      <div className={`${styles.home_wrapper} ${mainStyles.flex_center}`}>
+        {children}
+      </div>
+    );
+  }
   return (
     <div id={idName} className={`${styles.container} ${style}`}>
       <SocialMedia />

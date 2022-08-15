@@ -1,15 +1,12 @@
 .home_info {
-  height: 250px;
+  margin-left: 3rem;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (min-width: 1200px) {
-    height: 300px;
-  }
-
-  @media screen and (min-width: 1600px) {
-    height: 350px;
+    width: 500px;
   }
 
   @media (max-width: 768px) {
@@ -22,15 +19,16 @@
 }
 
 .home_info_intro {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  color: orange;
 
   @media screen and (min-width: 1200px) {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 
   @media screen and (min-width: 1600px) {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -43,6 +41,7 @@
 }
 
 .home_info_title {
+  margin-top: 10px;
   height: 50px;
   overflow: hidden;
 }
@@ -82,6 +81,10 @@
   @media screen and (min-width: 1600px) {
     font-size: 1.6rem;
   }
+}
+
+.home_info_desc {
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 480px) {
