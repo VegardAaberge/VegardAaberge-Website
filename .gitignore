@@ -5,7 +5,6 @@ scripts/flow/*/.flowconfig
 *.pyc
 _SpecRunner.html
 __benchmarks__
-build/
 remote-repo/
 coverage/
 .module-cache
