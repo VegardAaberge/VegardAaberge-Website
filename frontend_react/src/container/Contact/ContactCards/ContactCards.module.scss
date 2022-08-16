@@ -7,7 +7,6 @@
   margin: 4rem 1.25rem 2rem;
 
   .contact_card {
-    min-width: 290px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -42,9 +41,13 @@
     @media screen and (max-width: 450px) {
       width: 100%;
     }
+
+    @media screen and (min-width: 451px) {
+      min-width: 290px;
+    }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 }

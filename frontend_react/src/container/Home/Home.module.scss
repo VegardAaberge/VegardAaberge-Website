@@ -24,4 +24,14 @@
   @media screen and (min-width: 1600px) {
     min-height: 600px;
   }
+
+  @media (max-width: 450px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (max-width: 380px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
