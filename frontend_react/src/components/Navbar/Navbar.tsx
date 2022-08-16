@@ -27,16 +27,16 @@ const Navbar: React.FC<Props> = ({ works }) => {
     { title: strings.ID_SKILLS, link: "/#" + strings.ID_SKILLS },
     { title: strings.ID_CONTACT, link: "/#" + strings.ID_CONTACT },
     {
-      title: "Projects",
-      link: "/work/",
+      title: strings.PROJECTS,
+      link: strings.LINK_PROJECTS,
       dropdown: works.map((work) => ({
         title: work.title,
         link: work.projectLink,
       })),
     },
     {
-      title: "Other",
-      link: "",
+      title: strings.OTHER,
+      link: strings.LINK_OTHER,
       dropdown: [
         {
           title: "Old website",

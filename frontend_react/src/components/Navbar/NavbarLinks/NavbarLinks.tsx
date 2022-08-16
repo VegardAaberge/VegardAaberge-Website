@@ -25,7 +25,7 @@ const NavbarLinks: React.FC<Props> = ({ links }) => {
                 : styles.navbar_circle
             }
           />
-          <NavbarLink navLink={navLink} />
+          <NavbarLink navLink={navLink} isMenu={false} />
         </li>
       ))}
     </ul>

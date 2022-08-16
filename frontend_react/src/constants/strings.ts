@@ -5,6 +5,11 @@ export const ID_SKILLS = "skills";
 export const ID_TESTIMONIALS = "testimonials";
 export const ID_CONTACT = "contact";
 
+export const PROJECTS = "Projects";
+export const LINK_PROJECTS = "/work/";
+export const OTHER = "Other";
+export const LINK_OTHER = "";
+
 export const CLASS_WHITE_BG = "app__whitebg";
 export const CLASS_PRIMARY_BG = "app__primarybg";
 

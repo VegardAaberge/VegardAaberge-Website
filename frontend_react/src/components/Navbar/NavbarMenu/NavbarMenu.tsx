@@ -13,13 +13,19 @@ interface Props {
 const NavbarMenu: React.FC<Props> = ({ links }) => {
   const [toggle, setToggle] = useState(false);
 
+  const onLinkClick = () => {
+    setTimeout(() => {
+      setToggle(false);
+    }, 500);
+  };
+
   return (
     <div className={styles.navbar_menu}>
       <HiMenuAlt4 onClick={() => setToggle(true)} />
 
       {toggle && (
         <motion.div
-          initial={{ opacity: 1, x: 300 }}
+          initial={{ opacity: 1, x: 400 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
@@ -27,7 +33,11 @@ const NavbarMenu: React.FC<Props> = ({ links }) => {
           <ul>
             {links.map((navLink) => (
               <li key={navLink.link}>
-                <NavbarLink navLink={navLink} />
+                <NavbarLink
+                  navLink={navLink}
+                  isMenu={true}
+                  onLinkClick={onLinkClick}
+                />
               </li>
             ))}
           </ul>
