@@ -3,8 +3,12 @@ import React from "react";
 
 import styles from "./HomeInfo.module.scss";
 import mainStyles from "../../../styles/App.module.scss";
+import { useMediaQuery } from "@mui/material";
+import HomeImg from "../HomeImg/HomeImg";
 
 const HomeInfo: NextPage = () => {
+  const isMobile = useMediaQuery("(max-width:767px)");
+
   return (
     <div className={styles.home_info}>
       <h2 className={styles.home_info_intro}>Hi, I am</h2>
@@ -26,6 +30,7 @@ const HomeInfo: NextPage = () => {
         I have severall years of experience developing mobile apps and web
         applications for both small and large customers.
       </p>
+      {isMobile && <HomeImg />}
     </div>
   );
 };

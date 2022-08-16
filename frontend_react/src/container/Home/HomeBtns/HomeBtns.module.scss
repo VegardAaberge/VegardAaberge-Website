@@ -1,5 +1,5 @@
 .home_btns {
-  margin-left: 3rem;
+  padding-left: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -16,14 +16,18 @@
     width: 500px;
   }
 
-  @media (max-width: 450px) {
-    flex-direction: column;
-    button {
-      width: 350px;
-    }
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 90%;
   }
 
   @media (max-width: 450px) {
+    flex-direction: column;
+    width: 100%;
+
     button {
       width: 100%;
     }
