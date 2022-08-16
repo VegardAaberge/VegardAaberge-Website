@@ -1,8 +1,6 @@
 .home_wrapper {
   display: flex;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -11,6 +9,8 @@
 
 .home_left {
   flex: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
