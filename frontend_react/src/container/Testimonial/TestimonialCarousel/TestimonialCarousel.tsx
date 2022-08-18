@@ -49,6 +49,9 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
           <p className={mainStyles.p_text}>{testimonal.feedback}</p>
           <div>
             <h4 className={mainStyles.bold_text}>{testimonal.name}</h4>
+            <h5 className={mainStyles.p_text} style={{ fontStyle: "italic" }}>
+              {testimonal.position}
+            </h5>
             <h5 className={mainStyles.p_text}>{testimonal.company}</h5>
           </div>
         </div>
