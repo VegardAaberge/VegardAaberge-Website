@@ -12,7 +12,7 @@ import styles from "./Skills.module.scss";
 
 export interface SelectedWorkItem {
   item: WorkExperienceItem | null;
-  year?: string;
+  year?: number;
 }
 
 interface Props {

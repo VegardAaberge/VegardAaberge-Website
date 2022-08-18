@@ -6,7 +6,7 @@ export default {
     {
       name: "year",
       title: "Year",
-      type: "string",
+      type: "number",
     },
     {
       name: "works",

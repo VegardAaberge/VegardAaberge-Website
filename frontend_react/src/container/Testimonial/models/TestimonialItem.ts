@@ -8,4 +8,5 @@ export interface TestimonialItem {
   imgurl: SanityImageSource;
   feedback: string;
   documentPath: string;
+  priority: number;
 }

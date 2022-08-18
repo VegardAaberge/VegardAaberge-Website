@@ -4,4 +4,5 @@ export interface SkillItem {
   _id: string;
   name: string;
   icon: SanityImageSource;
+  priority: number;
 }

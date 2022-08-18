@@ -5,4 +5,5 @@ export interface AboutItem {
   title: string;
   description: string;
   imgUrl: SanityImageSource;
+  priority: number;
 }

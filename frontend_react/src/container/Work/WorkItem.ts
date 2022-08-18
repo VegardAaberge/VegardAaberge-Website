@@ -15,4 +15,5 @@ export interface WorkItem {
   skillsUsed: Array<SanityReference>;
   skillsUsedStrings: Array<string>;
   tags: string[];
+  priority: number;
 }

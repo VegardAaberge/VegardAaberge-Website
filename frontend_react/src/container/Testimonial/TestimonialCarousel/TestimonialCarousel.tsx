@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { GrDocumentPdf } from "react-icons/gr";
+import FileOpenIcon from "@mui/icons-material/FileOpen";
 
 import { urlFor } from "../../../client";
 import { TestimonialItem } from "../models";
@@ -7,6 +9,8 @@ import { TestimonialItem } from "../models";
 import styles from "./TestimonialCarousel.module.scss";
 import mainStyles from "../../../styles/App.module.scss";
 import Image from "next/image";
+import { IconContext } from "react-icons";
+import Link from "next/link";
 
 interface Props {
   testimonials: TestimonialItem[];
@@ -47,12 +51,23 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
         </div>
         <div className={styles.testimonial_carousel_content}>
           <p className={mainStyles.p_text}>{testimonal.feedback}</p>
-          <div>
-            <h4 className={mainStyles.bold_text}>{testimonal.name}</h4>
-            <h5 className={mainStyles.p_text} style={{ fontStyle: "italic" }}>
-              {testimonal.position}
-            </h5>
-            <h5 className={mainStyles.p_text}>{testimonal.company}</h5>
+          <div className={styles.testimonial_carousel_info}>
+            <div>
+              <h4 className={mainStyles.bold_text}>{testimonal.name}</h4>
+              <h5 className={mainStyles.p_text} style={{ fontStyle: "italic" }}>
+                {testimonal.position}
+              </h5>
+              <h5 className={mainStyles.p_text}>{testimonal.company}</h5>
+            </div>
+            <div className={styles.testimonial_pdf}>
+              <a
+                href={`/pdf/${testimonal.documentPath}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GrDocumentPdf />
+              </a>
+            </div>
           </div>
         </div>
       </div>

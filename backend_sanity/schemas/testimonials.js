@@ -36,5 +36,10 @@ export default {
       title: "DocumentPath",
       type: "string",
     },
+    {
+      name: "priority",
+      title: "Priority",
+      type: "number",
+    },
   ],
 };

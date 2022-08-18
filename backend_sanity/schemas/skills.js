@@ -16,5 +16,10 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "priority",
+      title: "Priority",
+      type: "number",
+    },
   ],
 };

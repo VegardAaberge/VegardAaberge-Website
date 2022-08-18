@@ -83,6 +83,22 @@ export const getStaticProps: GetStaticProps = async () => {
   skills = verify(skills);
   abouts = verify(abouts);
 
+  works.sort((a, b) => {
+    return b.priority - a.priority;
+  });
+
+  testimonials.sort((a, b) => {
+    return b.priority - a.priority;
+  });
+
+  experiences.sort((a, b) => {
+    return b.year - a.year;
+  });
+
+  skills.sort((a, b) => {
+    return b.priority - a.priority;
+  });
+
   return {
     props: {
       works,

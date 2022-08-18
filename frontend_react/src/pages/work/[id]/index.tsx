@@ -43,6 +43,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
       .filter((s): s is string => !!s);
   });
 
+  works.sort((a, b) => {
+    return b.priority - a.priority;
+  });
+
   return {
     props: {
       projectLink: projectLink,
