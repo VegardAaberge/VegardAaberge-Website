@@ -9,6 +9,7 @@ import Brand from "./Brand/Brand";
 
 import styles from "./Testimonial.module.scss";
 import mainStyles from "../../styles/App.module.scss";
+import { Grid } from "@mui/material";
 
 interface Props {
   iBrands: BrandItem[];
@@ -28,11 +29,13 @@ const Testimonial: React.FC<Props> = ({ iBrands, iTestimonials }) => {
     <>
       <TestimonialCarousel testimonials={testimonials} />
 
-      <div className={`${styles.testimonial_brands} ${mainStyles.flex_center}`}>
+      <Grid container sx={{ maxWidth: "1000px", minHeight: "130px" }}>
         {brands.map((brand) => (
-          <Brand key={brand._id} brand={brand} />
+          <Grid key={brand.name} item lg={3} md={4} xs={6}>
+            <Brand key={brand._id} brand={brand} />
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </>
   );
 };
