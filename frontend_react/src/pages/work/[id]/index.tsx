@@ -9,6 +9,7 @@ import { SkillItem } from "../../../container/Skills/models";
 import WorkApp from "../../../workContainer/WorkApp";
 import workTheme from "../../../styles/workTheme";
 import { ThemeProvider } from "@mui/material/styles";
+import Footer from "../../../components/Footer/Footer";
 
 interface Props {
   projectLink: string;
@@ -19,6 +20,7 @@ const Work: NextPage<Props> = ({ projectLink, works }) => {
   return (
     <ThemeProvider theme={workTheme}>
       <WorkApp projectLink={projectLink} works={works} />
+      <Footer />
     </ThemeProvider>
   );
 };
