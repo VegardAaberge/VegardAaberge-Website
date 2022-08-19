@@ -128,11 +128,14 @@
 
 .testimonial_pdf {
   right: 0;
-  align-self: end;
   padding-bottom: 0.5rem;
   padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
   svg {
+    vertical-align: middle;
     width: 50px;
     height: 50px;
     cursor: pointer;
