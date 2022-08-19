@@ -64,8 +64,10 @@ const TestimonialCarousel: React.FC<Props> = ({ testimonials }) => {
                 href={`/pdf/${testimonal.documentPath}`}
                 target="_blank"
                 rel="noreferrer"
+                className={styles.testimonial_pdf}
               >
                 <GrDocumentPdf />
+                {testimonal.documentPath}
               </a>
             </div>
           </div>
