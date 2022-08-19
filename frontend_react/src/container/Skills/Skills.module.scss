@@ -39,3 +39,13 @@
 .skills_divider {
   min-width: 5rem;
 }
+
+.skills_exp {
+  margin-top: 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: fit-content;
+}

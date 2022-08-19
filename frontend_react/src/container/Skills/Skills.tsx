@@ -8,6 +8,7 @@ import AppWrap from "../../wrapper/AppWrap";
 import Skill from "./Skill/Skill";
 import Experience from "./Experience/Experience";
 
+import mainStyles from "./../../styles/App.module.scss";
 import styles from "./Skills.module.scss";
 
 export interface SelectedWorkItem {
@@ -52,25 +53,30 @@ const Skills: React.FC<Props> = ({ iWorks, iExperiences, iSkills }) => {
       : skills.filter((s) => containSkill(s, selectedWorkItem));
 
   return (
-    <div className={styles.skills_container}>
-      <motion.div className={styles.skills_exp}>
-        {experiences.map((experience) => (
-          <Experience
-            key={experience.year}
-            experience={experience}
-            works={works}
-            selectedWorkItem={selectedWorkItem}
-            setSelectedWorkItem={setSelectedWorkItem}
-          />
-        ))}
-      </motion.div>
-      <div className={styles.skills_divider}></div>
-      <motion.div className={styles.skills_list}>
-        {filteredSkills.map((skill) => (
-          <Skill key={skill.name} skill={skill} />
-        ))}
-      </motion.div>
-    </div>
+    <>
+      <h2 className={mainStyles.head_text}>
+        Timeline & <span>Skills</span>
+      </h2>
+      <div className={styles.skills_container}>
+        <motion.div className={styles.skills_exp}>
+          {experiences.map((experience) => (
+            <Experience
+              key={experience.year}
+              experience={experience}
+              works={works}
+              selectedWorkItem={selectedWorkItem}
+              setSelectedWorkItem={setSelectedWorkItem}
+            />
+          ))}
+        </motion.div>
+        <div className={styles.skills_divider}></div>
+        <motion.div className={styles.skills_list}>
+          {filteredSkills.map((skill) => (
+            <Skill key={skill.name} skill={skill} />
+          ))}
+        </motion.div>
+      </div>
+    </>
   );
 };
 

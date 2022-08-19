@@ -5,10 +5,11 @@ import { strings } from "../../constants";
 import { client } from "../../client";
 import { WorkItem } from "./WorkItem";
 import AppWrap from "../../wrapper/AppWrap";
-import WorkHeader from "./WorkHeader/WorkHeader";
 import WorkCard from "./WorkCard/WorkCard";
 import WorkFilter from "./WorkFilter/WorkFilter";
 import styles from "./Work.module.scss";
+
+import mainStyles from "./../../styles/App.module.scss";
 
 interface AnimateCard {
   y: number;
@@ -52,7 +53,9 @@ const Works: React.FC<Props> = ({ iWorks }) => {
 
   return (
     <div className={styles.work}>
-      <WorkHeader />
+      <h2 className={mainStyles.head_text}>
+        My <span>Portfolio</span>
+      </h2>
 
       <WorkFilter
         activeFilter={activeFilter}
