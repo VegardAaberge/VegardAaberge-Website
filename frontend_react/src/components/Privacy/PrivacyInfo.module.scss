@@ -1,6 +1,7 @@
 .privacy_container {
   background-color: var(--primary-color);
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   flex-direction: row;
 
@@ -8,11 +9,7 @@
   font-size: 16px;
   line-height: 28px;
   margin: 0;
-
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 28px;
-  margin: 0;
+  padding-top: 70px;
 
   h1,
   h2,

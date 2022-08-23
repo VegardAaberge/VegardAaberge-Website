@@ -20,15 +20,17 @@ import { Navbar } from "../components";
 import PrivacyInfo from "../components/Privacy/PrivacyInfo";
 import Header from "../components/Header/Header";
 
-interface Props {}
+interface Props {
+  works: WorkItem[];
+}
 
-const privacy: React.FC<Props> = () => {
+const privacy: React.FC<Props> = ({ works }) => {
   return (
     <div className={styles.container}>
       <Header />
 
       <main className={styles.app}>
-        <Navbar works={[]} />
+        <Navbar works={works} />
         <PrivacyInfo />
       </main>
 
@@ -36,5 +38,26 @@ const privacy: React.FC<Props> = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps = async () => {
+  let works: WorkItem[] = await client.fetch(strings.QUERY_WORKS);
+
+  works = verify(works);
+
+  works.sort((a, b) => {
+    return b.priority - a.priority;
+  });
+
+  return {
+    props: {
+      works,
+    },
+  };
+};
+
+function verify<T>(data: any): Array<T> {
+  if (data === undefined || data === null) return new Array<T>();
+  return data;
+}
 
 export default privacy;
