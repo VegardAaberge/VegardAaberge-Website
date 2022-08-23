@@ -10,6 +10,7 @@ import WorkApp from "../../../workContainer/WorkApp";
 import workTheme from "../../../styles/workTheme";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "../../../components/Footer/Footer";
+import Header from "../../../components/Header/Header";
 
 interface Props {
   projectLink: string;
@@ -19,6 +20,7 @@ interface Props {
 const Work: NextPage<Props> = ({ projectLink, works }) => {
   return (
     <ThemeProvider theme={workTheme}>
+      <Header />
       <WorkApp projectLink={projectLink} works={works} />
       <Footer />
     </ThemeProvider>
