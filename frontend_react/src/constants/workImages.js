@@ -29,6 +29,9 @@ import myplaygroup_structure from "../assets/myplaygroup/structure.jpg";
 import myplaygroup_security from "../assets/myplaygroup/security.jpg";
 import myplaygroup_sockets from "../assets/myplaygroup/sockets.jpg";
 
+import docmerge_template from "../assets/docmerge/template.jpg";
+import docmerge_generated from "../assets/docmerge/generated.jpg";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   lundin_calculateGas,
@@ -60,4 +63,7 @@ export default {
   myplaygroup_structure,
   myplaygroup_security,
   myplaygroup_sockets,
+
+  docmerge_template,
+  docmerge_generated,
 };

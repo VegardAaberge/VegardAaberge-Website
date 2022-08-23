@@ -1,7 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 import Grid from "@mui/material/Grid";
-import { Card, useMediaQuery } from "@mui/material";
+import {
+  Card,
+  ImageListItem,
+  ImageListItemBar,
+  useMediaQuery,
+} from "@mui/material";
 
 import { WorkItem } from "../../container/Work/WorkItem";
 import WorkSummary from "../Components/WorkSummary";
@@ -27,9 +33,8 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
         </Card>
       </Grid>
       <Grid item xl={8}>
-        <Card variant="outlined" sx={{ p: 3 }}>
+        <Card variant="outlined" sx={{ p: 3 }} className={styles.work_item}>
           <WorkHeader title={work.title} />
-          <p>DocMerge Description</p>
           <p>
             DocMerge is a plugin created for unizite that generate docx
             documents. It was used to tailor custom reports for customers in
@@ -43,13 +48,31 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
             generic functions to customize the data.
           </p>
           <p>
-            Initially _{variableKey}* was used as a generic parameter and, _
-            {data - key}:{variableKey}:{startIndex}/{endIndex}/{type}* was used
-            for table generators. This allowed it to create a report with some
-            general data and then a table that displayed the data of a checklist
-            or an incident.
+            Initially _&#123;variableKey&#125;* was used as a generic parameter
+            and, _&#123;data - key&#125;:&#123;variableKey&#125; was used to
+            create table parameters. For additional info about table keys,
+            :&#123;startIndex&#125;/&#123;interval&#125;/&#123;type&#125;*
+            provide info about what data to select and how to display it. With
+            this level of customization, it was possible to create all kinds of
+            reports with tables.
           </p>
-          <p>PICTURE OF SAMPLE REPORT AND OUTPUT</p>
+          <DynamicImageList cols={2}>
+            <ImageListItem key={workImages.lundin_calculateGas.src}>
+              <img
+                src={workImages.docmerge_template.src}
+                alt="DocMerge Template"
+              />
+              <ImageListItemBar position="below" title="Template" />
+            </ImageListItem>
+
+            <ImageListItem key={workImages.lundin_calculateOil.src}>
+              <img
+                src={workImages.docmerge_generated.src}
+                alt="DocMerge Generated"
+              />
+              <ImageListItemBar position="below" title="Generated" />
+            </ImageListItem>
+          </DynamicImageList>
           <p>
             After a few years of use, I was asked to expand the scope of the
             report generator to handle nested data, such as seeing incidents
