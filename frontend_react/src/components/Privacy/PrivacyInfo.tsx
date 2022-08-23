@@ -151,9 +151,6 @@ const PrivacyInfo: React.FC<Props> = () => {
               <li>
                 <p>Phone number</p>
               </li>
-              <li>
-                <p>Usage Data</p>
-              </li>
             </ul>
             <h4>Usage Data</h4>
             <p>Usage Data is not collected when using the Service.</p>
@@ -222,13 +219,6 @@ const PrivacyInfo: React.FC<Props> = () => {
               comply with our legal obligations (for example, if we are required
               to retain your data to comply with applicable laws), resolve
               disputes, and enforce our legal agreements and policies.
-            </p>
-            <p>
-              The Company will also retain Usage Data for internal analysis
-              purposes. Usage Data is generally retained for a shorter period of
-              time, except when this data is used to strengthen the security or
-              to improve the functionality of Our Service, or We are legally
-              obligated to retain this data for longer time periods.
             </p>
             <h3>Transfer of Your Personal Data</h3>
             <p>
