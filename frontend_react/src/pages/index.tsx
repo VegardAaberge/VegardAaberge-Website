@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { client } from "../client";
 import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 import { strings } from "../constants";
 import MainApp from "../container/MainApp";
 import { MainProps } from "../container/MainProps";
@@ -27,31 +28,7 @@ const Main: NextPage<MainProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Vegard Aaberge Website</title>
-        <meta
-          name="description"
-          content="This is Vegard Aaberge website, generared with react/next"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest"></link>
-      </Head>
+      <Header />
 
       <main className={styles.main}>
         <MainApp
