@@ -38,6 +38,9 @@ import unizite_frontPage from "../assets/unizite/frontPage.jpg";
 import unizite_drawingPage from "../assets/unizite/drawingPage.jpg";
 import unizite_pdfPage from "../assets/unizite/pdfPage.jpg";
 
+import crm_login from "../assets/crm/login.jpg";
+import crm_main from "../assets/crm/main.jpg";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   lundin_calculateGas,
@@ -78,4 +81,7 @@ export default {
   unizite_frontPage,
   unizite_drawingPage,
   unizite_pdfPage,
+
+  crm_login,
+  crm_main,
 };
