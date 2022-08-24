@@ -144,7 +144,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Container>
           <br />
 
-          <DynamicImageList cols={1}>
+          <DynamicImageList cols={1} maxWidth={400}>
             <ImageListItem key={workImg.portfolio_sanityDir.src}>
               <img src={workImg.portfolio_sanityDir.src} alt="image" />
               <ImageListItemBar position="below" title="Sanity" />
