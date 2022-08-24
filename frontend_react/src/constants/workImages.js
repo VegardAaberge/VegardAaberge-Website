@@ -31,6 +31,8 @@ import myplaygroup_sockets from "../assets/myplaygroup/sockets.jpg";
 
 import docmerge_template from "../assets/docmerge/template.jpg";
 import docmerge_generated from "../assets/docmerge/generated.jpg";
+import docmerge_repeatTemplate from "../assets/docmerge/repeatTemplate.jpg";
+import docmerge_repeatGenerated from "../assets/docmerge/repeatGenerated.jpg";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -66,4 +68,6 @@ export default {
 
   docmerge_template,
   docmerge_generated,
+  docmerge_repeatTemplate,
+  docmerge_repeatGenerated,
 };
