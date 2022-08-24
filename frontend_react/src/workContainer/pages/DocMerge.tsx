@@ -110,11 +110,11 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </DynamicImageList>
           <p>
             DocMerge had many sample reports that were used as a reference to
-            ensure that changes don't break existing reports. When we updated
-            the replacement logic, we also created a verification program that
-            could check if the new report was identical to the old report. To
-            automate it, we added a makefile that would run the integration
-            tests for all the directories in the test folder.
+            ensure that changes don&apos;t break existing reports. When we
+            updated the replacement logic, we also created a verification
+            program that could check if the new report was identical to the old
+            report. To automate it, we added a makefile that would run the
+            integration tests for all the directories in the test folder.
           </p>
 
           <YoutubeEmbed embedId="KFjtWjE1UWY?" />
