@@ -38,33 +38,34 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <p>
             Unizite provides field construction software for construction
             projects. Unizite has a web portal and an app that can be used in
-            the field. In 2016, I was tasked with developing the mobile app on
-            iOS and Android. It is a large app that allows multiple construction
-            users to collaberate using a graphical interface.
+            the field. In 2016, I was tasked with developing a mobile app on iOS
+            and Android. It is a large app that allows multiple construction
+            users to collaborate using a graphical interface.
           </p>
           <p>
             The basic interface was coded in Xamarin Forms with Xaml. However,
             the drawing interface needed to be implement natively and was coded
-            with C# Java on Android and C# Swift on iOS. This gave me experience
+            with C# Java on Android and C# Swift on iOS. That gave me experience
             with Android and iOS development.
           </p>
           <p>
-            Some other developers had created a basic interface and I was tasked
-            at adding new features, removing bugs and improving the look of the
-            app. After a few years of developing the app, I got two coworker
-            from Sweden that worked along with me and we created a totally new
-            interface for the app to improve workflow of the app.
+            Some other developers had created a basic interface for the app, and
+            I was tasked at adding new features, removing bugs, and improving
+            the look of the app. After a few years of developing the app, I got
+            two coworkers from Sweden, that worked along with me, and we created
+            a totally new interface for the app to improve the workflow of the
+            app.
           </p>
           <p>
-            Unizite was then bought up by Tribia. They replaced the Swedish
+            In 2020 Unizite was bought up by Tribia. They replaced the Swedish
             employees with two Indian contractors that I helped train and
             manage. We then added some functionality to replace the missing
-            features from the old iOS app made by the founder of Unizite, added
+            features from the old iOS app made by the founder of Unizite added
             UI tests to the app and started integrating the new 3D viewer from
             another department in Tribia.
           </p>
           <p>
-            Here are some screenshots that show how an user will navigate to the
+            Here are some screenshots that show how a user will navigate to the
             drawing selection page and then open the PDF page
           </p>
           <DynamicImageList cols={3}>
