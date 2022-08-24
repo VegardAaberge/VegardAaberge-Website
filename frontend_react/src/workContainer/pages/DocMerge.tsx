@@ -38,7 +38,7 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           <p>
             DocMerge is a plugin created for unizite that generates DOCX
             documents. The plugin was used to tailor custom reports for
-            customers in unizite such as GK and Consto.
+            customers in unizite such as GK, PEAB and Consto.
           </p>
           <p>
             Unizite had a lot of report generators before I arrived, but they

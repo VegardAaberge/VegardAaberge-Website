@@ -34,6 +34,10 @@ import docmerge_generated from "../assets/docmerge/generated.jpg";
 import docmerge_repeatTemplate from "../assets/docmerge/repeatTemplate.jpg";
 import docmerge_repeatGenerated from "../assets/docmerge/repeatGenerated.jpg";
 
+import unizite_frontPage from "../assets/unizite/frontPage.jpg";
+import unizite_drawingPage from "../assets/unizite/drawingPage.jpg";
+import unizite_pdfPage from "../assets/unizite/pdfPage.jpg";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   lundin_calculateGas,
@@ -70,4 +74,8 @@ export default {
   docmerge_generated,
   docmerge_repeatTemplate,
   docmerge_repeatGenerated,
+
+  unizite_frontPage,
+  unizite_drawingPage,
+  unizite_pdfPage,
 };
