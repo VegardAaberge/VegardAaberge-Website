@@ -1,8 +1,8 @@
 import React from "react";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { FiMail } from "react-icons/fi";
 
 import styles from "./SocialMedia.module.scss";
-import { BsTwitter, BsInstagram } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
 
 interface Props {}
 
@@ -10,13 +10,27 @@ const SocialMedia: React.FC<Props> = () => {
   return (
     <div className={styles.social}>
       <div>
-        <BsTwitter />
+        <a
+          href="https://www.linkedin.com/in/vegard-aaberge-a0a38426"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsLinkedin />
+        </a>
       </div>
       <div>
-        <FaFacebook />
+        <a
+          href="https://github.com/VegardAaberge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsGithub />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a href="mailto:vegard.aaberge@gmail.com">
+          <FiMail />
+        </a>
       </div>
     </div>
   );

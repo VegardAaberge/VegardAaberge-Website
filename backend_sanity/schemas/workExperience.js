@@ -12,7 +12,7 @@ export default {
     {
       name: "desc",
       title: "Desc",
-      type: "string",
+      type: "text",
     },
     {
       name: "skillsUsed",
