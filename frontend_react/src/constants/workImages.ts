@@ -20,6 +20,7 @@ import portfolio_sanityDir from "../assets/portfolio/sanityDir.jpg";
 import portfolio_sanitySchemas from "../assets/portfolio/sanitySchemas.jpg";
 import portfolio_work from "../assets/portfolio/portfolioWork.jpg";
 import portfolio_skills from "../assets/portfolio/portfolioSkills.jpg";
+import portfolio_sanity from "../assets/portfolio/sanity.jpg";
 
 import myplaygroup_camera from "../assets/myplaygroup/camera.jpg";
 import myplaygroup_classes from "../assets/myplaygroup/classes.jpg";
@@ -64,6 +65,7 @@ export default {
   portfolio_sanitySchemas,
   portfolio_work,
   portfolio_skills,
+  portfolio_sanity,
 
   myplaygroup_camera,
   myplaygroup_classes,

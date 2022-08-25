@@ -144,10 +144,12 @@ const PortfolioWebsite: React.FC<Props> = ({ work }) => {
           </Container>
           <br />
 
-          <DynamicImageList cols={1} maxWidth={400}>
-            <ImageListItem key={workImg.portfolio_sanityDir.src}>
-              <img src={workImg.portfolio_sanityDir.src} alt="image" />
-              <ImageListItemBar position="below" title="Sanity" />
+          <p>The data is managed through the sanity platform</p>
+
+          <DynamicImageList cols={1}>
+            <ImageListItem key={workImg.portfolio_sanity.src}>
+              <img src={workImg.portfolio_sanity.src} alt="image" />
+              <ImageListItemBar position="below" title="Sanity Platform" />
             </ImageListItem>
           </DynamicImageList>
         </Card>
