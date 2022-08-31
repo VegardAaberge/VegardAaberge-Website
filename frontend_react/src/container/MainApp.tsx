@@ -52,7 +52,7 @@ const MainApp: React.FC<MainProps> = ({
         />
       </AppWrap>
       <AppWrap
-        idName={strings.ID_SKILLS}
+        idName={strings.ID_TESTIMONIALS}
         motionWrap={true}
         classBackground={strings.CLASS_PRIMARY_BG}
       >

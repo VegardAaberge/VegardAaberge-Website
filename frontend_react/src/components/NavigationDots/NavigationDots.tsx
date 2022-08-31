@@ -9,7 +9,6 @@ interface Props {
 
 const links = [
   strings.ID_HOME,
-  strings.ID_ABOUT,
   strings.ID_WORK,
   strings.ID_SKILLS,
   strings.ID_TESTIMONIALS,

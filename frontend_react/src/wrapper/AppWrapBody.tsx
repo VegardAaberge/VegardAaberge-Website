@@ -20,7 +20,10 @@ const AppWrapBody: React.FC<Props> = ({ idName, className, children }) => {
 
   if (idName == strings.ID_HOME) {
     return (
-      <div className={`${styles.home_wrapper} ${mainStyles.flex_center}`}>
+      <div
+        id={idName}
+        className={`${styles.home_wrapper} ${mainStyles.flex_center}`}
+      >
         {children}
       </div>
     );
