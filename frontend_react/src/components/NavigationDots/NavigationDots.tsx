@@ -16,6 +16,11 @@ const links = [
 ];
 
 const NavigationDots: React.FC<Props> = ({ activeItem }) => {
+  // Set the active item for About to Home, as the navigation dot represent home.
+  if (activeItem === strings.ID_ABOUT) {
+    activeItem = strings.ID_HOME;
+  }
+
   return (
     <div className={styles.navigation}>
       {links.map((item, index) => (
