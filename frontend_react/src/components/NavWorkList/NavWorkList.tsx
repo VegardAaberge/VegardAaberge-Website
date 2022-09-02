@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
@@ -11,13 +11,12 @@ import { WorkItem } from "../../container/Work/WorkItem";
 import styles from "./NavWorkList.module.scss";
 import { urlFor } from "../../client";
 import Link from "next/link";
+import { WorkContextType } from "../../context/WorkContextType";
+import { WorkContext } from "../../context/WorkContext";
 
-interface Props {
-  projectLink: string;
-  works: WorkItem[];
-}
+const NavWorkList: React.FC = () => {
+  const { works, projectLink } = useContext<WorkContextType>(WorkContext);
 
-const NavWorkList: React.FC<Props> = ({ projectLink, works }) => {
   return (
     <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       {works.map((work) => (
