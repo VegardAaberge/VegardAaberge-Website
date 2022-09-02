@@ -31,7 +31,7 @@ const WorkApp: React.FC = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Navbar />
+      <Navbar works={works} />
 
       <Box
         component="main"

@@ -7,9 +7,9 @@ import styles from "./Navbar.module.scss";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
 import Link from "next/link";
-import { WorkItem } from "../../container/Work/WorkItem";
 import { WorkContextType } from "../../context/WorkContextType";
 import { WorkContext } from "../../context/WorkContext";
+import { WorkItem } from "../../container/Work/WorkItem";
 
 export interface NavLink {
   link: string;
@@ -18,9 +18,11 @@ export interface NavLink {
   dropdown?: Array<NavLink>;
 }
 
-const Navbar: React.FC = () => {
-  const { works } = useContext<WorkContextType>(WorkContext);
+interface Props {
+  works: WorkItem[];
+}
 
+const Navbar: React.FC<Props> = ({ works }) => {
   const links: NavLink[] = [
     { title: strings.ID_HOME, link: "/#" + strings.ID_HOME },
     { title: strings.ID_WORK, link: "/#" + strings.ID_WORK },
