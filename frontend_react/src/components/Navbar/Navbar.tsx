@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Image from "next/image";
 
 import { images, strings } from "../../constants";
@@ -7,8 +7,6 @@ import styles from "./Navbar.module.scss";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
 import Link from "next/link";
-import { WorkContextType } from "../../context/WorkContextType";
-import { WorkContext } from "../../context/WorkContext";
 import { WorkItem } from "../../container/Work/WorkItem";
 
 export interface NavLink {
