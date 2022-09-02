@@ -19,7 +19,7 @@ const HomeInfo: NextPage = () => {
         <div className={styles.home_info_title_wrapper}>
           {["Xamarin", "Native Android", "UI/UX", "React", "Spring Boot"].map(
             (item) => (
-              <div key="1" className={styles.home_info_title_item}>
+              <div key={item} className={styles.home_info_title_item}>
                 {item}
               </div>
             )
