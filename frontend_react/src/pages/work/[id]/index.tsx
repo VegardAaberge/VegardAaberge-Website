@@ -11,6 +11,7 @@ import workTheme from "../../../styles/workTheme";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
+import WorkContextProvider from "../../../context/WorkContext";
 
 interface Props {
   projectLink: string;
@@ -21,7 +22,9 @@ const Work: NextPage<Props> = ({ projectLink, works }) => {
   return (
     <ThemeProvider theme={workTheme}>
       <Header />
-      <WorkApp projectLink={projectLink} works={works} />
+      <WorkContextProvider projectLink={projectLink} works={works}>
+        <WorkApp />
+      </WorkContextProvider>
       <Footer />
     </ThemeProvider>
   );
