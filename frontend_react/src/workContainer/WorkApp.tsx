@@ -1,53 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 import {
-  AppBar,
   Box,
   Card,
-  Container,
   Divider,
   Grid,
-  IconButton,
-  Link,
-  Toolbar,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 import WorkItemSelector from "./WorkItemSelector";
-import { WorkItem } from "../container/Work/WorkItem";
+import { WorkContextType } from "../context/WorkContextType";
+import { WorkContext } from "../context/WorkContext";
 import NavWorkList from "../components/NavWorkList/NavWorkList";
-import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
-import NavbarMenu from "../components/Navbar/NavbarMenu/NavbarMenu";
-
+import { Navbar } from "../components";
 import workTheme from "../styles/workTheme";
 
 import styles from "./WorkApp.module.scss";
-import SideMenu from "../components/SideMenu/SideMenu";
-import { Navbar } from "../components";
 
-interface Props {
-  projectLink: string;
-  works: WorkItem[];
-}
-
-const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
-  const [menuToggled, setMenuToggled] = useState(false);
+const WorkApp: React.FC = () => {
+  console.log("WorkApp");
+  const { works, projectLink } = useContext<WorkContextType>(WorkContext);
+  console.log("WorkApp", works);
 
   const isMobile = useMediaQuery(workTheme.breakpoints.down("sm"));
   const isSm = useMediaQuery(workTheme.breakpoints.only("sm"));
   const isMd = useMediaQuery(workTheme.breakpoints.only("md"));
 
   const currentWork = works.find((work) => work.projectLink == projectLink);
-  if (currentWork === undefined) return <div>No Work was found</div>;
-
-  const menuClicked = () => {
-    setMenuToggled(true);
-  };
-
-  const menuToggleChanged = (isToggled: boolean) => {
-    setMenuToggled(isToggled);
-  };
+  if (currentWork === undefined) return <div>Work item not found</div>;
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -82,7 +62,7 @@ const WorkApp: React.FC<Props> = ({ projectLink, works }) => {
                 Portfolio projects
               </Typography>
               <Divider sx={{ marginInline: 3 }} />
-              <NavWorkList projectLink={projectLink} works={works} />
+              <NavWorkList />
             </Card>
           </Grid>
         </Grid>
