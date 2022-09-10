@@ -19,8 +19,7 @@ const AboutHeader: React.FC = () => {
         After university, I moved back to Norway and did a freelance project for
         Lundin before I got a job at Unizite, where I provided support for
         clients developed C# tools and created the Xamarin app used in Unizite
-        to manage construction projects. In 2018 I moved to China with my
-        Chinese spouse China and kept working for Unizite remotely.
+        to manage construction projects.
       </span>
     </div>
   );
